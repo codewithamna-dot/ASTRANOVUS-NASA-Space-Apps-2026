@@ -1,0 +1,27 @@
+{
+ "frozen_utc": "2026-11-15T07:15:35+00:00",
+ "rule": "parity of sha256(site_id): even -> C, odd -> B (made before scoring)",
+ "C_members": [
+  "ctl:east_antarctic_plateau",
+  "ctl:fennoscandian_shield",
+  "ctl:libyan_sand_sea",
+  "ctl:parana_basalts",
+  "ctl:sahel_savanna",
+  "ctl:siberian_traps",
+  "gobustan_azerbaijan",
+  "jeju_manjanggul",
+  "qaidam_dalangtan",
+  "white_sands_nm"
+ ],
+ "B_members": [
+  "black_point_flow",
+  "ctl:canadian_shield_forest",
+  "ctl:deccan_traps",
+  "ctl:greenland_interior",
+  "ctl:mongolian_steppe",
+  "jingpo_lake",
+  "lanzarote_corona"
+ ],
+ "sha256": "c37954543c22760ab70f2687092ceeee3d098f3b62bba72c292da877991d500b",
+ "protocol": "Candidate scoring variants are selected using cohorts A+B and physical reasoning only. Cohort C is scored once per candidate for disclosure, never used to choose among candidates, and the membership above must not change after this file is written."
+}

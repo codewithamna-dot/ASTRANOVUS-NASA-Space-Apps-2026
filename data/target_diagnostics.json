@@ -1,0 +1,318 @@
+{
+ "dimension_spearman": {
+  "D1_cold": {
+   "D1_cold": 1.0,
+   "D2_aridity": 0.54,
+   "D7_polar_light": 0.97,
+   "D8_thermal_swing": -0.79,
+   "D4_terrain": -0.05,
+   "D3_barren": 0.01,
+   "D5_rock": 0.41,
+   "D6_ice": 0.97
+  },
+  "D2_aridity": {
+   "D1_cold": 0.54,
+   "D2_aridity": 1.0,
+   "D7_polar_light": 0.57,
+   "D8_thermal_swing": -0.25,
+   "D4_terrain": -0.14,
+   "D3_barren": 0.81,
+   "D5_rock": -0.68,
+   "D6_ice": 0.47
+  },
+  "D7_polar_light": {
+   "D1_cold": 0.97,
+   "D2_aridity": 0.57,
+   "D7_polar_light": 1.0,
+   "D8_thermal_swing": -0.8,
+   "D4_terrain": -0.11,
+   "D3_barren": 0.07,
+   "D5_rock": 0.39,
+   "D6_ice": 0.96
+  },
+  "D8_thermal_swing": {
+   "D1_cold": -0.79,
+   "D2_aridity": -0.25,
+   "D7_polar_light": -0.8,
+   "D8_thermal_swing": 1.0,
+   "D4_terrain": 0.14,
+   "D3_barren": 0.55,
+   "D5_rock": -0.05,
+   "D6_ice": -0.83
+  },
+  "D4_terrain": {
+   "D1_cold": -0.05,
+   "D2_aridity": -0.14,
+   "D7_polar_light": -0.11,
+   "D8_thermal_swing": 0.14,
+   "D4_terrain": 1.0,
+   "D3_barren": 0.13,
+   "D5_rock": 0.61,
+   "D6_ice": 0.0
+  },
+  "D3_barren": {
+   "D1_cold": 0.01,
+   "D2_aridity": 0.81,
+   "D7_polar_light": 0.07,
+   "D8_thermal_swing": 0.55,
+   "D4_terrain": 0.13,
+   "D3_barren": 1.0,
+   "D5_rock": -0.54,
+   "D6_ice": -0.04
+  },
+  "D5_rock": {
+   "D1_cold": 0.41,
+   "D2_aridity": -0.68,
+   "D7_polar_light": 0.39,
+   "D8_thermal_swing": -0.05,
+   "D4_terrain": 0.61,
+   "D3_barren": -0.54,
+   "D5_rock": 1.0,
+   "D6_ice": 0.66
+  },
+  "D6_ice": {
+   "D1_cold": 0.97,
+   "D2_aridity": 0.47,
+   "D7_polar_light": 0.96,
+   "D8_thermal_swing": -0.83,
+   "D4_terrain": 0.0,
+   "D3_barren": -0.04,
+   "D5_rock": 0.66,
+   "D6_ice": 1.0
+  }
+ },
+ "targets": {
+  "MOON_SP_RIDGE": {
+   "weight_share_by_category": {
+    "climate": 0.642,
+    "surface_exposure": 0.214,
+    "terrain": 0.143
+   },
+   "rank_correlation_of_each_dimension_with_score": {
+    "D1_cold": 0.77,
+    "D2_aridity": 0.87,
+    "D3_barren": 0.84,
+    "D4_terrain": 0.15,
+    "D7_polar_light": 0.77,
+    "D8_thermal_swing": -0.46
+   },
+   "top50_adjusted_by_region": {
+    "Antarctica": 38,
+    "other": 7,
+    "Arctic": 5
+   },
+   "top50_mean_coverage": 0.837,
+   "top50_mean_similarity": {
+    "D1_cold": 0.84,
+    "D2_aridity": 0.89,
+    "D3_barren": 0.96,
+    "D4_terrain": 0.64,
+    "D7_polar_light": 0.84,
+    "D8_thermal_swing": 0.28
+   }
+  },
+  "MOON_PSR": {
+   "weight_share_by_category": {
+    "climate": 0.385,
+    "surface_exposure": 0.231,
+    "ice_proxy": 0.231,
+    "terrain": 0.154
+   },
+   "rank_correlation_of_each_dimension_with_score": {
+    "D1_cold": 0.86,
+    "D2_aridity": 0.82,
+    "D3_barren": 0.66,
+    "D6_ice": 0.83,
+    "D4_terrain": 0.24
+   },
+   "top50_adjusted_by_region": {
+    "Antarctica": 50
+   },
+   "top50_mean_coverage": 0.769,
+   "top50_mean_similarity": {
+    "D1_cold": 0.98,
+    "D2_aridity": 0.96,
+    "D3_barren": NaN,
+    "D6_ice": 0.86,
+    "D4_terrain": 0.92
+   }
+  },
+  "MOON_LAVATUBE": {
+   "weight_share_by_category": {
+    "composition_proxy": 0.25,
+    "surface_exposure": 0.25,
+    "climate": 0.334,
+    "terrain": 0.167
+   },
+   "rank_correlation_of_each_dimension_with_score": {
+    "D5_rock": 0.46,
+    "D3_barren": 0.91,
+    "D2_aridity": 0.69,
+    "D4_terrain": 0.33,
+    "D8_thermal_swing": 0.3
+   },
+   "top50_adjusted_by_region": {
+    "other": 50
+   },
+   "top50_mean_coverage": 1.0,
+   "top50_mean_similarity": {
+    "D5_rock": 0.76,
+    "D3_barren": 0.91,
+    "D2_aridity": 0.77,
+    "D4_terrain": 0.93,
+    "D8_thermal_swing": 0.94
+   }
+  },
+  "MARS_ICE": {
+   "weight_share_by_category": {
+    "climate": 0.462,
+    "ice_proxy": 0.231,
+    "terrain": 0.154,
+    "surface_exposure": 0.154
+   },
+   "rank_correlation_of_each_dimension_with_score": {
+    "D1_cold": 0.86,
+    "D2_aridity": 0.82,
+    "D6_ice": 0.82,
+    "D4_terrain": 0.26,
+    "D3_barren": 0.62,
+    "D8_thermal_swing": -0.6
+   },
+   "top50_adjusted_by_region": {
+    "Antarctica": 50
+   },
+   "top50_mean_coverage": 0.846,
+   "top50_mean_similarity": {
+    "D1_cold": 0.99,
+    "D2_aridity": 0.96,
+    "D6_ice": 0.86,
+    "D4_terrain": 0.9,
+    "D3_barren": NaN,
+    "D8_thermal_swing": 0.21
+   }
+  },
+  "MARS_JEZERO": {
+   "weight_share_by_category": {
+    "climate": 0.462,
+    "surface_exposure": 0.231,
+    "composition_proxy": 0.154,
+    "terrain": 0.154
+   },
+   "rank_correlation_of_each_dimension_with_score": {
+    "D2_aridity": 0.85,
+    "D3_barren": 0.91,
+    "D5_rock": 0.07,
+    "D4_terrain": 0.29,
+    "D8_thermal_swing": 0.08,
+    "D1_cold": 0.14
+   },
+   "top50_adjusted_by_region": {
+    "other": 50
+   },
+   "top50_mean_coverage": 1.0,
+   "top50_mean_similarity": {
+    "D2_aridity": 0.85,
+    "D3_barren": 0.95,
+    "D5_rock": 0.6,
+    "D4_terrain": 0.91,
+    "D8_thermal_swing": 0.96,
+    "D1_cold": 0.55
+   }
+  },
+  "MARS_MUDVOLC": {
+   "weight_share_by_category": {
+    "climate": 0.444,
+    "surface_exposure": 0.222,
+    "terrain": 0.333
+   },
+   "rank_correlation_of_each_dimension_with_score": {
+    "D2_aridity": 0.83,
+    "D3_barren": 0.65,
+    "D4_terrain": 0.58,
+    "D1_cold": 0.6
+   },
+   "top50_adjusted_by_region": {
+    "Antarctica": 50
+   },
+   "top50_mean_coverage": 0.778,
+   "top50_mean_similarity": {
+    "D2_aridity": 0.95,
+    "D3_barren": NaN,
+    "D4_terrain": 0.93,
+    "D1_cold": 0.98
+   }
+  },
+  "MARS_CHLORIDE": {
+   "weight_share_by_category": {
+    "climate": 0.5,
+    "surface_exposure": 0.3,
+    "terrain": 0.2
+   },
+   "rank_correlation_of_each_dimension_with_score": {
+    "D2_aridity": 0.77,
+    "D3_barren": 0.89,
+    "D4_terrain": 0.38,
+    "D8_thermal_swing": 0.23
+   },
+   "top50_adjusted_by_region": {
+    "other": 50
+   },
+   "top50_mean_coverage": 1.0,
+   "top50_mean_similarity": {
+    "D2_aridity": 0.95,
+    "D3_barren": 0.96,
+    "D4_terrain": 0.81,
+    "D8_thermal_swing": 0.92
+   }
+  },
+  "MARS_AEOLIAN": {
+   "weight_share_by_category": {
+    "climate": 0.5,
+    "surface_exposure": 0.3,
+    "terrain": 0.2
+   },
+   "rank_correlation_of_each_dimension_with_score": {
+    "D2_aridity": 0.77,
+    "D3_barren": 0.89,
+    "D4_terrain": 0.38,
+    "D8_thermal_swing": 0.23
+   },
+   "top50_adjusted_by_region": {
+    "other": 50
+   },
+   "top50_mean_coverage": 1.0,
+   "top50_mean_similarity": {
+    "D2_aridity": 0.95,
+    "D3_barren": 0.96,
+    "D4_terrain": 0.81,
+    "D8_thermal_swing": 0.92
+   }
+  },
+  "MOON_MARE": {
+   "weight_share_by_category": {
+    "composition_proxy": 0.167,
+    "terrain": 0.25,
+    "surface_exposure": 0.25,
+    "climate": 0.334
+   },
+   "rank_correlation_of_each_dimension_with_score": {
+    "D5_rock": -0.48,
+    "D4_terrain": 0.55,
+    "D3_barren": 0.81,
+    "D2_aridity": 0.62,
+    "D8_thermal_swing": 0.3
+   },
+   "top50_adjusted_by_region": {
+    "other": 50
+   },
+   "top50_mean_coverage": 0.99,
+   "top50_mean_similarity": {
+    "D5_rock": 0.37,
+    "D4_terrain": 0.84,
+    "D3_barren": 0.93,
+    "D2_aridity": 0.84,
+    "D8_thermal_swing": 0.92
+   }
+  }
+ }
+}

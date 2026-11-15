@@ -1,0 +1,84 @@
+{
+ "grid_ranges": {
+  "ok": true,
+  "dimensions": [
+   "D1_cold",
+   "D2_aridity",
+   "D3_barren",
+   "D4_terrain",
+   "D5_rock",
+   "D6_ice",
+   "D7_polar_light",
+   "D8_thermal_swing"
+  ]
+ },
+ "physical_ranges": {
+  "ok": true,
+  "violations": {}
+ },
+ "fill_contamination": {
+  "ok": true,
+  "columns": {},
+  "exact_zero_lst_values": 0
+ },
+ "orientation": {
+  "ok": true,
+  "checks": {
+   "Tibetan plateau (33.75N, 88.75E) mean elevation > 4000 m": true,
+   "Great Hungarian Plain (46.25N, 21.25E) mean elevation < 250 m": true,
+   "Amazon basin (3.75S, 61.25W) mean elevation < 300 m": true,
+   "Atacama (23.75S, 68.75W) mean elevation > 2000 m": true,
+   "Sahara (21.25N, 11.25E) mean annual LST > 295 K": true,
+   "Antarctic plateau (78.75S, 43.75E) mean LST < 240 K": true,
+   "Amazon (3.75S, 61.25W) NDVI peak > 0.7": true,
+   "Sahara (21.25N, 11.25E) precip < 0.5 mm/day": true,
+   "Himalaya cell (28.75N, 86.25E) relief > 3000 m": true
+  }
+ },
+ "dimension_direction": {
+  "ok": true,
+  "checks": {
+   "D1 cold: Antarctica > 0.95, Amazon < 0.2": true,
+   "D2 aridity: Sahara > 0.9, Amazon < 0.2": true,
+   "D3 barren: Sahara > 0.9, Amazon < 0.2": true,
+   "D6 snow proxy: Antarctica > 0.8, Sahara < 0.2": true
+  }
+ },
+ "dates": {
+  "ok": true,
+  "modis_gpm_months": 12,
+  "snow_years": [
+   2015,
+   2024
+  ],
+  "snow_months_listed": 118
+ },
+ "proxy_labels": {
+  "ok": true,
+  "found": {
+   "D1_cold": "derived",
+   "D2_aridity": "derived",
+   "D3_barren": "derived",
+   "D4_terrain": "derived",
+   "D5_rock": "proxy",
+   "D6_ice": "proxy",
+   "D7_polar_light": "derived",
+   "D8_thermal_swing": "derived"
+  }
+ },
+ "reasons": {
+  "ok": true,
+  "vegetated_cells_labelled_snow": 0
+ },
+ "d6_definition": {
+  "ok": true,
+  "definition": "percentile of mean snow cover over observed months"
+ },
+ "known_issues": {
+  "D6_ties_at_maximum": 0.296,
+  "share_flagged_perennial_snow_ice": 0.314,
+  "negative_day_night_range_cells": 141,
+  "note": "Remaining D6 ties are cells with snow cover in every observed month (permanent snow/ice), which is a real plateau, not information loss."
+ },
+ "all_ok": true
+}

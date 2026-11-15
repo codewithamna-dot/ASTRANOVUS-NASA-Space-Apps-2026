@@ -1,0 +1,612 @@
+{
+ "available": true,
+ "provenance": {
+  "git_commit": "46e141bd9f953cc8804bd206482b99be600f4209",
+  "scoring_files_modified_since_commit": true,
+  "targets_json_sha256_16": "b5e56abdec7f3766",
+  "dataset_sha256_16": "3d9ae8be9e5680be",
+  "grid_sha256_16": "f4c1cae4d9622129",
+  "readiness_sha256_16": "ed21ec372a8c0655",
+  "random_seed_bootstrap": "numpy default_rng(20261115) / 7 for paired",
+  "inclusion": "positives: validation_eligibility in {eligible, eligible_historical} for primary metrics; exploratory reported separately; nearest land cell within 5 deg (A) / 3.5 deg (B, C)"
+ },
+ "adopted_variant": "adjusted_50_exposed_surface",
+ "dataset": {
+  "positive_sites": 18,
+  "eligible_sites": 15,
+  "exploratory_sites": 3,
+  "rejected_candidates": 17,
+  "controls": 25,
+  "hard_controls": 19,
+  "cohorts": {
+   "A_historical": 11,
+   "B_development": 3,
+   "C_frozen_independent": 4
+  }
+ },
+ "variants": [
+  {
+   "id": "raw",
+   "label": "Raw weighted similarity",
+   "dev_A+B": {
+    "n_pairs": 15,
+    "n_sites": 11,
+    "median_percentile": 0.782,
+    "median_ci95_site_cluster": [
+     0.559,
+     0.912
+    ],
+    "top10_hit": 0.267,
+    "top25_hit": 0.667,
+    "auc_vs_all_controls_by_target": 0.868,
+    "auc_vs_hard_controls_by_target": 0.778,
+    "reliable": true
+   },
+   "frozen_C": {
+    "n_pairs": 3,
+    "n_sites": 3,
+    "median_percentile": 0.81,
+    "median_ci95_site_cluster": [
+     0.247,
+     0.927
+    ],
+    "top10_hit": 0.333,
+    "top25_hit": 0.667,
+    "auc_vs_all_controls_by_target": 0.333,
+    "auc_vs_hard_controls_by_target": 0.333,
+    "reliable": false
+   }
+  },
+  {
+   "id": "adjusted_50",
+   "label": "Evidence-adjusted",
+   "dev_A+B": {
+    "n_pairs": 15,
+    "n_sites": 11,
+    "median_percentile": 0.828,
+    "median_ci95_site_cluster": [
+     0.64,
+     0.936
+    ],
+    "top10_hit": 0.333,
+    "top25_hit": 0.667,
+    "auc_vs_all_controls_by_target": 0.887,
+    "auc_vs_hard_controls_by_target": 0.811,
+    "reliable": true
+   },
+   "frozen_C": {
+    "n_pairs": 3,
+    "n_sites": 3,
+    "median_percentile": 0.853,
+    "median_ci95_site_cluster": [
+     0.239,
+     0.928
+    ],
+    "top10_hit": 0.333,
+    "top25_hit": 0.667,
+    "auc_vs_all_controls_by_target": 0.5,
+    "auc_vs_hard_controls_by_target": 0.5,
+    "reliable": false
+   }
+  },
+  {
+   "id": "equal_adjusted_50",
+   "label": "Equal weights, evidence-adjusted",
+   "dev_A+B": {
+    "n_pairs": 15,
+    "n_sites": 11,
+    "median_percentile": 0.861,
+    "median_ci95_site_cluster": [
+     0.566,
+     0.923
+    ],
+    "top10_hit": 0.333,
+    "top25_hit": 0.667,
+    "auc_vs_all_controls_by_target": 0.848,
+    "auc_vs_hard_controls_by_target": 0.732,
+    "reliable": true
+   },
+   "frozen_C": {
+    "n_pairs": 3,
+    "n_sites": 3,
+    "median_percentile": 0.849,
+    "median_ci95_site_cluster": [
+     0.307,
+     0.908
+    ],
+    "top10_hit": 0.333,
+    "top25_hit": 0.667,
+    "auc_vs_all_controls_by_target": 0.167,
+    "auc_vs_hard_controls_by_target": 0.167,
+    "reliable": false
+   }
+  },
+  {
+   "id": "adjusted_50_exposed_surface",
+   "label": "Adopted: evidence-adjusted + exposed-surface rule",
+   "dev_A+B": {
+    "n_pairs": 14,
+    "n_sites": 10,
+    "median_percentile": 0.817,
+    "median_ci95_site_cluster": [
+     0.59,
+     0.925
+    ],
+    "top10_hit": 0.357,
+    "top25_hit": 0.643,
+    "auc_vs_all_controls_by_target": 0.905,
+    "auc_vs_hard_controls_by_target": 0.831,
+    "reliable": true
+   },
+   "frozen_C": {
+    "n_pairs": 3,
+    "n_sites": 3,
+    "median_percentile": 0.798,
+    "median_ci95_site_cluster": [
+     0.332,
+     0.896
+    ],
+    "top10_hit": 0.0,
+    "top25_hit": 0.667,
+    "auc_vs_all_controls_by_target": 0.333,
+    "auc_vs_hard_controls_by_target": 0.333,
+    "reliable": false
+   }
+  },
+  {
+   "id": "baseline_aridity_only",
+   "label": "Baseline: aridity only",
+   "dev_A+B": {
+    "n_pairs": 14,
+    "n_sites": 10,
+    "median_percentile": 0.84,
+    "median_ci95_site_cluster": [
+     0.525,
+     0.906
+    ],
+    "top10_hit": 0.357,
+    "top25_hit": 0.643,
+    "auc_vs_all_controls_by_target": 0.871,
+    "auc_vs_hard_controls_by_target": 0.805,
+    "reliable": true
+   },
+   "frozen_C": {
+    "n_pairs": 3,
+    "n_sites": 3,
+    "median_percentile": 0.789,
+    "median_ci95_site_cluster": [
+     0.766,
+     0.946
+    ],
+    "top10_hit": 0.333,
+    "top25_hit": 1.0,
+    "auc_vs_all_controls_by_target": 1.0,
+    "auc_vs_hard_controls_by_target": 1.0,
+    "reliable": false
+   }
+  },
+  {
+   "id": "baseline_dry_and_barren",
+   "label": "Baseline: dry + barren (no target rules)",
+   "dev_A+B": {
+    "n_pairs": 14,
+    "n_sites": 10,
+    "median_percentile": 0.857,
+    "median_ci95_site_cluster": [
+     0.705,
+     0.925
+    ],
+    "top10_hit": 0.214,
+    "top25_hit": 0.643,
+    "auc_vs_all_controls_by_target": 0.942,
+    "auc_vs_hard_controls_by_target": 0.889,
+    "reliable": true
+   },
+   "frozen_C": {
+    "n_pairs": 3,
+    "n_sites": 3,
+    "median_percentile": 0.809,
+    "median_ci95_site_cluster": [
+     0.752,
+     0.958
+    ],
+    "top10_hit": 0.333,
+    "top25_hit": 1.0,
+    "auc_vs_all_controls_by_target": 1.0,
+    "auc_vs_hard_controls_by_target": 1.0,
+    "reliable": false
+   }
+  },
+  {
+   "id": "baseline_dry_barren_flat",
+   "label": "Baseline: dry + barren + flat",
+   "dev_A+B": {
+    "n_pairs": 14,
+    "n_sites": 10,
+    "median_percentile": 0.707,
+    "median_ci95_site_cluster": [
+     0.466,
+     0.846
+    ],
+    "top10_hit": 0.071,
+    "top25_hit": 0.286,
+    "auc_vs_all_controls_by_target": 0.754,
+    "auc_vs_hard_controls_by_target": 0.643,
+    "reliable": true
+   },
+   "frozen_C": {
+    "n_pairs": 3,
+    "n_sites": 3,
+    "median_percentile": 0.672,
+    "median_ci95_site_cluster": [
+     0.492,
+     0.804
+    ],
+    "top10_hit": 0.0,
+    "top25_hit": 0.333,
+    "auc_vs_all_controls_by_target": 0.333,
+    "auc_vs_hard_controls_by_target": 0.333,
+    "reliable": false
+   }
+  }
+ ],
+ "ablations": [
+  {
+   "id": "exposed_adj_drop_D1_cold",
+   "label": "without D1 cold",
+   "dev_A+B": {
+    "n_pairs": 14,
+    "n_sites": 10,
+    "median_percentile": 0.804,
+    "median_ci95_site_cluster": [
+     0.59,
+     0.919
+    ],
+    "top10_hit": 0.357,
+    "top25_hit": 0.643,
+    "auc_vs_all_controls_by_target": 0.902,
+    "auc_vs_hard_controls_by_target": 0.826,
+    "reliable": true
+   }
+  },
+  {
+   "id": "exposed_adj_drop_D2_aridity",
+   "label": "without D2 aridity",
+   "dev_A+B": {
+    "n_pairs": 14,
+    "n_sites": 10,
+    "median_percentile": 0.797,
+    "median_ci95_site_cluster": [
+     0.684,
+     0.878
+    ],
+    "top10_hit": 0.214,
+    "top25_hit": 0.571,
+    "auc_vs_all_controls_by_target": 0.832,
+    "auc_vs_hard_controls_by_target": 0.737,
+    "reliable": true
+   }
+  },
+  {
+   "id": "exposed_adj_drop_D3_barren",
+   "label": "without D3 barren",
+   "dev_A+B": {
+    "n_pairs": 14,
+    "n_sites": 10,
+    "median_percentile": 0.774,
+    "median_ci95_site_cluster": [
+     0.381,
+     0.889
+    ],
+    "top10_hit": 0.214,
+    "top25_hit": 0.571,
+    "auc_vs_all_controls_by_target": 0.758,
+    "auc_vs_hard_controls_by_target": 0.695,
+    "reliable": true
+   }
+  },
+  {
+   "id": "exposed_adj_drop_D4_terrain",
+   "label": "without D4 terrain",
+   "dev_A+B": {
+    "n_pairs": 14,
+    "n_sites": 10,
+    "median_percentile": 0.886,
+    "median_ci95_site_cluster": [
+     0.75,
+     0.976
+    ],
+    "top10_hit": 0.429,
+    "top25_hit": 0.786,
+    "auc_vs_all_controls_by_target": 0.968,
+    "auc_vs_hard_controls_by_target": 0.94,
+    "reliable": true
+   }
+  },
+  {
+   "id": "exposed_adj_drop_D5_rock",
+   "label": "without D5 composition proxy",
+   "dev_A+B": {
+    "n_pairs": 14,
+    "n_sites": 10,
+    "median_percentile": 0.82,
+    "median_ci95_site_cluster": [
+     0.592,
+     0.925
+    ],
+    "top10_hit": 0.286,
+    "top25_hit": 0.571,
+    "auc_vs_all_controls_by_target": 0.905,
+    "auc_vs_hard_controls_by_target": 0.831,
+    "reliable": true
+   }
+  },
+  {
+   "id": "exposed_adj_drop_D6_ice",
+   "label": "without D6 snow proxy",
+   "dev_A+B": {
+    "n_pairs": 14,
+    "n_sites": 10,
+    "median_percentile": 0.817,
+    "median_ci95_site_cluster": [
+     0.59,
+     0.919
+    ],
+    "top10_hit": 0.357,
+    "top25_hit": 0.643,
+    "auc_vs_all_controls_by_target": 0.888,
+    "auc_vs_hard_controls_by_target": 0.798,
+    "reliable": true
+   }
+  },
+  {
+   "id": "exposed_adj_drop_D8_thermal_swing",
+   "label": "without D8 thermal swing",
+   "dev_A+B": {
+    "n_pairs": 14,
+    "n_sites": 10,
+    "median_percentile": 0.766,
+    "median_ci95_site_cluster": [
+     0.622,
+     0.904
+    ],
+    "top10_hit": 0.286,
+    "top25_hit": 0.571,
+    "auc_vs_all_controls_by_target": 0.883,
+    "auc_vs_hard_controls_by_target": 0.804,
+    "reliable": true
+   }
+  },
+  {
+   "id": "exposed_adj_drop_proxies_D5_D6_D7",
+   "label": "without D5, D6, D7",
+   "dev_A+B": {
+    "n_pairs": 14,
+    "n_sites": 10,
+    "median_percentile": 0.82,
+    "median_ci95_site_cluster": [
+     0.592,
+     0.925
+    ],
+    "top10_hit": 0.286,
+    "top25_hit": 0.571,
+    "auc_vs_all_controls_by_target": 0.888,
+    "auc_vs_hard_controls_by_target": 0.798,
+    "reliable": true
+   }
+  }
+ ],
+ "paired_differences_adopted_minus_other": {
+  "raw": {
+   "A+B": {
+    "n_pairs": 14,
+    "n_sites": 10,
+    "mean_diff": 0.022,
+    "ci95": [
+     -0.006,
+     0.066
+    ]
+   },
+   "C": {
+    "n_pairs": 3,
+    "n_sites": 3,
+    "mean_diff": 0.014,
+    "ci95": [
+     -0.032,
+     0.085
+    ]
+   }
+  },
+  "adjusted_50": {
+   "A+B": {
+    "n_pairs": 14,
+    "n_sites": 10,
+    "mean_diff": -0.011,
+    "ci95": [
+     -0.039,
+     0.035
+    ]
+   },
+   "C": {
+    "n_pairs": 3,
+    "n_sites": 3,
+    "mean_diff": 0.002,
+    "ci95": [
+     -0.055,
+     0.093
+    ]
+   }
+  },
+  "equal_adjusted_50": {
+   "A+B": {
+    "n_pairs": 14,
+    "n_sites": 10,
+    "mean_diff": -0.004,
+    "ci95": [
+     -0.044,
+     0.052
+    ]
+   },
+   "C": {
+    "n_pairs": 3,
+    "n_sites": 3,
+    "mean_diff": -0.013,
+    "ci95": [
+     -0.051,
+     0.025
+    ]
+   }
+  },
+  "exposed_adj_equal_weights": {
+   "A+B": {
+    "n_pairs": 14,
+    "n_sites": 10,
+    "mean_diff": 0.01,
+    "ci95": [
+     -0.009,
+     0.033
+    ]
+   },
+   "C": {
+    "n_pairs": 3,
+    "n_sites": 3,
+    "mean_diff": -0.019,
+    "ci95": [
+     -0.094,
+     0.029
+    ]
+   }
+  },
+  "baseline_aridity_only": {
+   "A+B": {
+    "n_pairs": 14,
+    "n_sites": 10,
+    "mean_diff": 0.054,
+    "ci95": [
+     -0.016,
+     0.155
+    ]
+   },
+   "C": {
+    "n_pairs": 3,
+    "n_sites": 3,
+    "mean_diff": -0.158,
+    "ci95": [
+     -0.434,
+     0.01
+    ]
+   }
+  },
+  "baseline_dry_and_barren": {
+   "A+B": {
+    "n_pairs": 14,
+    "n_sites": 10,
+    "mean_diff": -0.027,
+    "ci95": [
+     -0.055,
+     0.012
+    ]
+   },
+   "C": {
+    "n_pairs": 3,
+    "n_sites": 3,
+    "mean_diff": -0.164,
+    "ci95": [
+     -0.42,
+     -0.011
+    ]
+   }
+  },
+  "baseline_dry_barren_flat": {
+   "A+B": {
+    "n_pairs": 14,
+    "n_sites": 10,
+    "mean_diff": 0.135,
+    "ci95": [
+     0.096,
+     0.173
+    ]
+   },
+   "C": {
+    "n_pairs": 3,
+    "n_sites": 3,
+    "mean_diff": 0.019,
+    "ci95": [
+     -0.159,
+     0.126
+    ]
+   }
+  }
+ },
+ "frozen_pairs": [
+  {
+   "site_id": "gobustan_azerbaijan",
+   "target": "MARS_MUDVOLC",
+   "percentile": 0.332,
+   "coverage": 1.0,
+   "exploratory": false
+  },
+  {
+   "site_id": "qaidam_dalangtan",
+   "target": "MARS_CHLORIDE",
+   "percentile": 0.896,
+   "coverage": 1.0,
+   "exploratory": false
+  },
+  {
+   "site_id": "qaidam_dalangtan",
+   "target": "MARS_AEOLIAN",
+   "percentile": 0.896,
+   "coverage": 1.0,
+   "exploratory": true
+  },
+  {
+   "site_id": "white_sands_nm",
+   "target": "MARS_AEOLIAN",
+   "percentile": 0.798,
+   "coverage": 1.0,
+   "exploratory": false
+  },
+  {
+   "site_id": "jeju_manjanggul",
+   "target": "MOON_LAVATUBE",
+   "percentile": 0.181,
+   "coverage": 0.75,
+   "exploratory": true
+  }
+ ],
+ "random_reference": {
+  "median_percentile": 0.5,
+  "top25_hit": 0.25,
+  "top10_hit": 0.1,
+  "auc": 0.5
+ },
+ "ranking_stability": {
+  "weights": {
+   "mean_jaccard_top5": 0.629,
+   "top1_stays_within_5deg": 0.651,
+   "worst_top1_stability": 0.25
+  },
+  "missing_20pct": {
+   "mean_jaccard_top5": 0.169,
+   "top1_stays_within_5deg": 0.332,
+   "worst_top1_stability": 0.0
+  },
+  "proxies_off": {
+   "mean_jaccard_top5": 0.546,
+   "top1_unchanged_share": 0.52
+  }
+ },
+ "experiment_matrix": {
+  "pairs": 25,
+  "pass": 2,
+  "pass_with_warnings": 23,
+  "fail": 0
+ },
+ "statements": [
+  "The frozen cohort (3 primary pairs from 3 sites) is scored once and is too small for a confirmatory claim.",
+  "A simple dry-and-barren baseline performs as well as the full model on this benchmark: no advantage of the target-specific rules is demonstrated.",
+  "Single-cell rankings are unstable; read results as broad regions.",
+  "Lava-tube, mare, mud-volcano, Jezero, chloride and dune targets are climate/terrain similarity only (geology is not measured)."
+ ]
+}

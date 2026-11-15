@@ -1,0 +1,1222 @@
+{
+ "built_utc": "2026-11-15T07:15:35+00:00",
+ "retrieved_on": "2026-11-16",
+ "analog_type_vocabulary": [
+  "geological",
+  "climatic_environmental",
+  "terrain_rover_mobility",
+  "ice_resource",
+  "operational",
+  "astrobiology_science"
+ ],
+ "cohort_definitions": {
+  "A_historical": "existed before this phase; influenced development",
+  "B_development": "new; may be used to diagnose failures",
+  "C_frozen_independent": "new; frozen before any new-site scoring; never used to select or tune anything"
+ },
+ "assignment_rule": "parity of sha256(site_id): even -> C, odd -> B (made before scoring)",
+ "sites": [
+  {
+   "site_id": "atacama",
+   "name": "Atacama Desert, Chile",
+   "country": "Chile",
+   "lat": -24.0,
+   "lon": -69.5,
+   "coordinate_source": "from data/known_analogs.json (approximate centroid)",
+   "approx_extent_km": null,
+   "environmental_characteristics": "see known_analogs.json citation",
+   "cohort": "A_historical",
+   "pairs": [
+    {
+     "target": "MARS_JEZERO",
+     "analog_types": [
+      "climatic_environmental",
+      "astrobiology_science"
+     ],
+     "relationship": "NASA Science: researchers collect soil samples in Chile's Atacama Desert to study conditions relevant to Mars; NASA lists Atacama among analog field sites.",
+     "purposes": []
+    },
+    {
+     "target": "MARS_CHLORIDE",
+     "analog_types": [
+      "climatic_environmental",
+      "astrobiology_science"
+     ],
+     "relationship": "NASA Science: researchers collect soil samples in Chile's Atacama Desert to study conditions relevant to Mars; NASA lists Atacama among analog field sites.",
+     "purposes": []
+    }
+   ],
+   "sources": [
+    {
+     "label": "NASA Science - Planetary Analogs",
+     "url": "https://science.nasa.gov/solar-system/planetary-analogs/",
+     "retrieval": "primary_fetched"
+    }
+   ],
+   "evidence_category": "documented_analog_site",
+   "support_strength": "strong",
+   "limitations": "NASA page states soil sampling for Mars-relevant dryness; says nothing about chloride deposits or Jezero geology specifically.",
+   "validation_eligibility": "eligible_historical",
+   "eligibility_reason": "used during development; not independent",
+   "verification_status": "primary_fetched",
+   "role": "positive"
+  },
+  {
+   "site_id": "devon_haughton",
+   "name": "Devon Island / Haughton crater, Canada",
+   "country": "Canada (Nunavut)",
+   "lat": 75.4,
+   "lon": -89.8,
+   "coordinate_source": "from data/known_analogs.json (approximate centroid)",
+   "approx_extent_km": null,
+   "environmental_characteristics": "see known_analogs.json citation",
+   "cohort": "A_historical",
+   "pairs": [
+    {
+     "target": "MARS_ICE",
+     "analog_types": [
+      "ice_resource",
+      "operational",
+      "geological"
+     ],
+     "relationship": "NASA-led Haughton-Mars Project: barren, freezing, isolated polar-desert terrain used to simulate Mars (and Moon) exploration.",
+     "purposes": []
+    }
+   ],
+   "sources": [
+    {
+     "label": "Mars Institute - Haughton-Mars Project (station coordinates 75 26 N, 89 52 W as reported by search)",
+     "url": "https://www.marsinstitute.no/hmp",
+     "retrieval": "search_summary"
+    }
+   ],
+   "evidence_category": "documented_analog_site",
+   "support_strength": "strong",
+   "limitations": "Impact-crater + polar desert; ice-rich permafrost but not Arcadia-style buried ice plains.",
+   "validation_eligibility": "eligible_historical",
+   "eligibility_reason": "used during development; not independent",
+   "verification_status": "search_summary_or_unverified",
+   "role": "positive"
+  },
+  {
+   "site_id": "lava_beds",
+   "name": "Lava Beds National Monument, USA",
+   "country": "USA (California)",
+   "lat": 41.7,
+   "lon": -121.5,
+   "coordinate_source": "from data/known_analogs.json (approximate centroid)",
+   "approx_extent_km": null,
+   "environmental_characteristics": "see known_analogs.json citation",
+   "cohort": "A_historical",
+   "pairs": [
+    {
+     "target": "MOON_LAVATUBE",
+     "analog_types": [
+      "geological"
+     ],
+     "relationship": "NASA Science: researchers map lava tubes at Lava Beds National Monument with GPR, magnetometers and seismometers, linked to Moon and Mars.",
+     "purposes": []
+    }
+   ],
+   "sources": [
+    {
+     "label": "NASA Science - Planetary Analogs",
+     "url": "https://science.nasa.gov/solar-system/planetary-analogs/",
+     "retrieval": "primary_fetched"
+    }
+   ],
+   "evidence_category": "documented_analog_site",
+   "support_strength": "strong",
+   "limitations": "NASA page: mapping and detecting lava tubes; the subsurface property itself is invisible to a surface model.",
+   "validation_eligibility": "eligible_historical",
+   "eligibility_reason": "used during development; not independent",
+   "verification_status": "primary_fetched",
+   "role": "positive"
+  },
+  {
+   "site_id": "kilauea",
+   "name": "Kilauea volcano, Hawaii, USA",
+   "country": "USA (Hawaii)",
+   "lat": 19.4,
+   "lon": -155.3,
+   "coordinate_source": "from data/known_analogs.json (approximate centroid)",
+   "approx_extent_km": null,
+   "environmental_characteristics": "see known_analogs.json citation",
+   "cohort": "A_historical",
+   "pairs": [
+    {
+     "target": "MOON_LAVATUBE",
+     "analog_types": [
+      "geological",
+      "operational"
+     ],
+     "relationship": "NASA analog missions page: Hawaii's Kilauea Volcano is a planetary analog site used to simulate Moon and Mars conditions.",
+     "purposes": []
+    }
+   ],
+   "sources": [
+    {
+     "label": "NASA - Analog Missions",
+     "url": "https://www.nasa.gov/analog-missions/",
+     "retrieval": "primary_fetched"
+    }
+   ],
+   "evidence_category": "documented_analog_site",
+   "support_strength": "moderate",
+   "limitations": "NASA: timing of geologist/astronaut tasks in volcanic terrain similar to the lunar surface; not a lava-tube analog statement.",
+   "validation_eligibility": "eligible_historical",
+   "eligibility_reason": "used during development; not independent",
+   "verification_status": "primary_fetched",
+   "role": "positive"
+  },
+  {
+   "site_id": "iceland",
+   "name": "Icelandic volcanic fields",
+   "country": "Iceland",
+   "lat": 64.9,
+   "lon": -17.5,
+   "coordinate_source": "from data/known_analogs.json (approximate centroid)",
+   "approx_extent_km": null,
+   "environmental_characteristics": "see known_analogs.json citation",
+   "cohort": "A_historical",
+   "pairs": [
+    {
+     "target": "MOON_LAVATUBE",
+     "analog_types": [
+      "geological"
+     ],
+     "relationship": "NASA: Iceland has served as a lunar stand-in for astronaut geology training since Apollo (1967), and the Artemis II crew trained there in 2024; both Iceland and the Moon feature basalts and breccias.",
+     "purposes": []
+    }
+   ],
+   "sources": [
+    {
+     "label": "Lunar lava tube base construction / terrestrial test-site reviews (as surfaced by search; specific attribution unverified)",
+     "url": "https://katalog.lib.cas.cz/KNAV/EdsRecord/edsdoj,edsdoj.208af1acf1ee4e34a7022ce5d94f84ec",
+     "retrieval": "search_summary"
+    }
+   ],
+   "evidence_category": "documented_analog_site",
+   "support_strength": "moderate",
+   "limitations": "Geological style analog (Apollo-era training); no verified source in this project for lava tubes specifically.",
+   "validation_eligibility": "eligible_historical",
+   "eligibility_reason": "used during development; not independent",
+   "verification_status": "search_summary_or_unverified",
+   "role": "positive"
+  },
+  {
+   "site_id": "death_valley",
+   "name": "Death Valley, USA",
+   "country": "USA",
+   "lat": 36.5,
+   "lon": -117.1,
+   "coordinate_source": "from data/known_analogs.json (approximate centroid)",
+   "approx_extent_km": null,
+   "environmental_characteristics": "see known_analogs.json citation",
+   "cohort": "A_historical",
+   "pairs": [
+    {
+     "target": "MARS_CHLORIDE",
+     "analog_types": [
+      "terrain_rover_mobility"
+     ],
+     "relationship": "NASA Science highlights drone and field tests in Death Valley as planetary-analog testing.",
+     "purposes": []
+    },
+    {
+     "target": "MARS_JEZERO",
+     "analog_types": [
+      "terrain_rover_mobility"
+     ],
+     "relationship": "NASA Science highlights drone and field tests in Death Valley as planetary-analog testing.",
+     "purposes": []
+    }
+   ],
+   "sources": [
+    {
+     "label": "NASA Science - Planetary Analogs",
+     "url": "https://science.nasa.gov/solar-system/planetary-analogs/",
+     "retrieval": "primary_fetched"
+    }
+   ],
+   "evidence_category": "documented_analog_site",
+   "support_strength": "weak",
+   "limitations": "NASA page: drone testing for Martian sands and skies. Evaporite geology is general knowledge, not from that page.",
+   "validation_eligibility": "eligible_historical",
+   "eligibility_reason": "used during development; not independent",
+   "verification_status": "primary_fetched",
+   "role": "positive"
+  },
+  {
+   "site_id": "colorado_desert",
+   "name": "Colorado Desert, California, USA",
+   "country": "USA/Mexico",
+   "lat": 33.0,
+   "lon": -115.8,
+   "coordinate_source": "from data/known_analogs.json (approximate centroid)",
+   "approx_extent_km": null,
+   "environmental_characteristics": "see known_analogs.json citation",
+   "cohort": "A_historical",
+   "pairs": [
+    {
+     "target": "MOON_MARE",
+     "analog_types": [
+      "climatic_environmental"
+     ],
+     "relationship": "NASA/JPL field-tested the ERNEST prototype rover in the Colorado Desert (March 2026) for future Moon (and possibly Mars) rovers.",
+     "purposes": []
+    },
+    {
+     "target": "MARS_JEZERO",
+     "analog_types": [
+      "climatic_environmental"
+     ],
+     "relationship": "NASA/JPL field-tested the ERNEST prototype rover in the Colorado Desert (March 2026) for future Moon (and possibly Mars) rovers.",
+     "purposes": []
+    }
+   ],
+   "sources": [
+    {
+     "label": "NASA/JPL field-tested the ERNEST prototype rover in the Colorado Desert (March 2026) for future Moon (and possibly Mars) rovers.",
+     "url": "https://www.nasa.gov/solar-system/moon/nasa-testing-advanced-capabilities-for-moon-mars-rovers/",
+     "retrieval": "not_verified"
+    }
+   ],
+   "evidence_category": "documented_analog_site",
+   "support_strength": "weak",
+   "limitations": "Original v1 label; no specific source retained.",
+   "validation_eligibility": "eligible_historical",
+   "eligibility_reason": "used during development; not independent",
+   "verification_status": "search_summary_or_unverified",
+   "role": "positive"
+  },
+  {
+   "site_id": "mcmurdo_dry_valleys",
+   "name": "McMurdo Dry Valleys, Antarctica",
+   "country": "Antarctica",
+   "lat": -77.5,
+   "lon": 162.5,
+   "coordinate_source": "from data/known_analogs.json (approximate centroid)",
+   "approx_extent_km": null,
+   "environmental_characteristics": "see known_analogs.json citation",
+   "cohort": "A_historical",
+   "pairs": [
+    {
+     "target": "MARS_ICE",
+     "analog_types": [
+      "ice_resource",
+      "climatic_environmental"
+     ],
+     "relationship": "NASA NTRS: the McMurdo Dry Valleys are the best-known Earth analog of the Martian high-northern plains where Phoenix landed (ground ice, permafrost, instrument testing); NASA Astrobiology describes Beacon and University Valley ice-cemented ground as Mars analogs.",
+     "purposes": []
+    }
+   ],
+   "sources": [
+    {
+     "label": "NASA NTRS: the McMurdo Dry Valleys are the best-known Earth analog of the Martian high-northern plains where Phoenix landed (ground ice, permafrost, instrument testing); NASA Astrobiology describes Beacon and University Valley ice-cemented ground as Mars analogs.",
+     "url": "https://ntrs.nasa.gov/citations/20100003844",
+     "retrieval": "not_verified"
+    }
+   ],
+   "evidence_category": "documented_analog_site",
+   "support_strength": "strong",
+   "limitations": "Ground ice under dry permafrost is widely published as a Phoenix-site analog (search summary of Planetary & Space Science 2013 and others); this cell is mostly ice-sheet at 2.5 deg.",
+   "validation_eligibility": "eligible_historical",
+   "eligibility_reason": "used during development; not independent",
+   "verification_status": "search_summary_or_unverified",
+   "role": "positive"
+  },
+  {
+   "site_id": "svalbard",
+   "name": "Svalbard, Norway (AMASE)",
+   "country": "Norway",
+   "lat": 78.2,
+   "lon": 15.6,
+   "coordinate_source": "from data/known_analogs.json (approximate centroid)",
+   "approx_extent_km": null,
+   "environmental_characteristics": "see known_analogs.json citation",
+   "cohort": "A_historical",
+   "pairs": [
+    {
+     "target": "MARS_JEZERO",
+     "analog_types": [
+      "astrobiology_science"
+     ],
+     "relationship": "NASA Goddard: the Arctic Mars Analogue Svalbard Expedition (AMASE) has tested flight-like Mars instruments and studied basaltic carbonates (ALH84001-like) at Svalbard sites since 2003.",
+     "purposes": []
+    }
+   ],
+   "sources": [
+    {
+     "label": "NASA Goddard: the Arctic Mars Analogue Svalbard Expedition (AMASE) has tested flight-like Mars instruments and studied basaltic carbonates (ALH84001-like) at Svalbard sites since 2003.",
+     "url": "https://science.gsfc.nasa.gov/solarsystem/projects/247",
+     "retrieval": "not_verified"
+    }
+   ],
+   "evidence_category": "documented_analog_site",
+   "support_strength": "moderate",
+   "limitations": "Astrobiology field site (AMASE); relation to Jezero geology is thematic.",
+   "validation_eligibility": "eligible_historical",
+   "eligibility_reason": "used during development; not independent",
+   "verification_status": "search_summary_or_unverified",
+   "role": "positive"
+  },
+  {
+   "site_id": "craters_of_the_moon",
+   "name": "Craters of the Moon National Monument, Idaho, USA",
+   "country": "USA (Idaho)",
+   "lat": 43.2,
+   "lon": -113.5,
+   "coordinate_source": "from data/known_analogs.json (approximate centroid)",
+   "approx_extent_km": null,
+   "environmental_characteristics": "see known_analogs.json citation",
+   "cohort": "A_historical",
+   "pairs": [
+    {
+     "target": "MOON_MARE",
+     "analog_types": [
+      "geological",
+      "astrobiology_science"
+     ],
+     "relationship": "US National Park Service: Apollo 14 crew members visited in August 1969 to study volcanic geology (the NPS FAQ notes they did not formally train there); NASA Earth Observatory describes the lava landscape as lunar-like. Basaltic lava field with lava tubes.",
+     "purposes": []
+    },
+    {
+     "target": "MOON_LAVATUBE",
+     "analog_types": [
+      "geological",
+      "astrobiology_science"
+     ],
+     "relationship": "US National Park Service: Apollo 14 crew members visited in August 1969 to study volcanic geology (the NPS FAQ notes they did not formally train there); NASA Earth Observatory describes the lava landscape as lunar-like. Basaltic lava field with lava tubes.",
+     "purposes": []
+    }
+   ],
+   "sources": [
+    {
+     "label": "Basaltic terrains in Idaho and Hawai'i as planetary analogs for Mars geology and astrobiology (Astrobiology 2019, as surfaced by search)",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6442300",
+     "retrieval": "search_summary"
+    }
+   ],
+   "evidence_category": "documented_analog_site",
+   "support_strength": "moderate",
+   "limitations": "BASALT: Mars basalt geology/astrobiology and operations. Its v2 mapping to Moon targets was our own mapping.",
+   "validation_eligibility": "eligible_historical",
+   "eligibility_reason": "used during development; not independent",
+   "verification_status": "search_summary_or_unverified",
+   "role": "positive"
+  },
+  {
+   "site_id": "mdrs_utah",
+   "name": "Mars Desert Research Station area (San Rafael Swell), Utah, USA",
+   "country": "USA (Utah)",
+   "lat": 38.4,
+   "lon": -110.8,
+   "coordinate_source": "from data/known_analogs.json (approximate centroid)",
+   "approx_extent_km": null,
+   "environmental_characteristics": "see known_analogs.json citation",
+   "cohort": "A_historical",
+   "pairs": [
+    {
+     "target": "MARS_JEZERO",
+     "analog_types": [
+      "operational"
+     ],
+     "relationship": "NASA NTRS / NASA Astrobiology Institute reports describe the Morrison Formation area around MDRS as an analogue for Mars geomorphology and sedimentary processes (soil cores from the main geologic units).",
+     "purposes": []
+    }
+   ],
+   "sources": [
+    {
+     "label": "NASA NTRS / NASA Astrobiology Institute reports describe the Morrison Formation area around MDRS as an analogue for Mars geomorphology and sedimentary processes (soil cores from the main geologic units).",
+     "url": "https://ntrs.nasa.gov/citations/20110014304",
+     "retrieval": "not_verified"
+    }
+   ],
+   "evidence_category": "documented_analog_site",
+   "support_strength": "moderate",
+   "limitations": "Mars Desert Research Station: operational analog; geology is sedimentary desert.",
+   "validation_eligibility": "eligible_historical",
+   "eligibility_reason": "used during development; not independent",
+   "verification_status": "search_summary_or_unverified",
+   "role": "positive"
+  },
+  {
+   "site_id": "gobustan_azerbaijan",
+   "name": "Gobustan / Caspian mud-volcano province",
+   "country": "Azerbaijan",
+   "lat": 40.1,
+   "lon": 49.4,
+   "coordinate_source": "approximate centroid (general geographic knowledge, not from the cited paper)",
+   "approx_extent_km": 100,
+   "environmental_characteristics": "Largest onshore concentration of mud volcanoes; sparse vegetation; semi-arid.",
+   "cohort": "C_frozen_independent",
+   "pairs": [
+    {
+     "target": "MARS_MUDVOLC",
+     "analog_types": [
+      "geological"
+     ],
+     "relationship": "Earth region studied as morphologic and sedimentary analog of Martian cones/domes in Acidalia",
+     "purposes": [
+      "MARS_GEOLOGY_SAMPLING",
+      "MARS_ASTROBIOLOGY"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "label": "Allen & Oehler 2010, Mud Volcanoes - Analogs to Martian Cones and Domes (AGU abstract)",
+     "url": "https://ntrs.nasa.gov/citations/20100033209",
+     "retrieval": "primary_fetched"
+    }
+   ],
+   "evidence_category": "literature_supported_analog",
+   "support_strength": "strong",
+   "limitations": "Authors name Gulf of Cadiz submarine volcanoes as the closest morphologic analogs; land climate (semi-arid, warm) is unlike Acidalia. Match is geological, not climatic.",
+   "validation_eligibility": "eligible",
+   "eligibility_reason": "",
+   "verification_status": "primary_fetched",
+   "role": "positive"
+  },
+  {
+   "site_id": "lanzarote_corona",
+   "name": "Corona lava tube, Lanzarote",
+   "country": "Spain (Canary Islands)",
+   "lat": 29.05,
+   "lon": -13.43,
+   "coordinate_source": "approximate centroid (general geographic knowledge, not from the cited paper)",
+   "approx_extent_km": 10,
+   "environmental_characteristics": "Basaltic volcanic island; ~8 km lava tube mapped in 3D; hyperarid maritime climate.",
+   "cohort": "B_development",
+   "pairs": [
+    {
+     "target": "MOON_LAVATUBE",
+     "analog_types": [
+      "geological",
+      "operational"
+     ],
+     "relationship": "Used by ESA PANGAEA/CAVES for planetary cave and lava-tube training and mapping",
+     "purposes": [
+      "MOON_HABITAT_OPS"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "label": "ESA PANGAEA training programme (eoPortal)",
+     "url": "https://www.eoportal.org/other-space-activities/pangaea",
+     "retrieval": "search_summary"
+    },
+    {
+     "label": "Sauro et al. 2020, Lava tubes on Earth, Moon and Mars: a review (Earth-Science Reviews)",
+     "url": "https://cris.unibo.it/retrieve/bf298592-3a07-4d19-8979-599f91ae8131/2020%2bSauro%2bet%2bal%2bESR%2bLava%2btubes.pdf",
+     "retrieval": "search_summary"
+    }
+   ],
+   "evidence_category": "literature_supported_analog",
+   "support_strength": "strong",
+   "limitations": "Surface model sees basaltic climate only; tube geometry is invisible at 2.5 deg. Earth tubes are far narrower than lunar ones (Sauro et al.).",
+   "validation_eligibility": "eligible",
+   "eligibility_reason": "",
+   "verification_status": "search_summary",
+   "role": "positive"
+  },
+  {
+   "site_id": "qaidam_dalangtan",
+   "name": "Dalangtan playa, Qaidam Basin",
+   "country": "China",
+   "lat": 38.3,
+   "lon": 91.3,
+   "coordinate_source": "approximate centroid (general geographic knowledge, not from the cited paper)",
+   "approx_extent_km": 150,
+   "environmental_characteristics": "High-altitude hyperarid evaporite basin: salt lakes, playas, sulfate/chloride-type salts, 20,000 km2 yardang fields.",
+   "cohort": "C_frozen_independent",
+   "pairs": [
+    {
+     "target": "MARS_CHLORIDE",
+     "analog_types": [
+      "geological",
+      "climatic_environmental"
+     ],
+     "relationship": "Evaporite assemblages and polygonal salt crusts compared with Martian salt deposits",
+     "purposes": [
+      "MARS_GEOLOGY_SAMPLING",
+      "MARS_ASTROBIOLOGY"
+     ]
+    },
+    {
+     "target": "MARS_AEOLIAN",
+     "analog_types": [
+      "geological",
+      "terrain_rover_mobility"
+     ],
+     "relationship": "Yardang fields compared with Medusae Fossae-type wind erosion (yardangs are not dunes: partial relationship)",
+     "purposes": [
+      "MARS_ROVER_MOBILITY"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "label": "Wang et al. 2016 review, Qaidam Basin as a Mars analogue (Earth-Science Reviews, as surfaced by search)",
+     "url": "https://hub.hku.hk/bitstream/10722/244904/1/content.pdf",
+     "retrieval": "search_summary"
+    },
+    {
+     "label": "Meng et al. 2024, Deep learning selection of analogues for Mars landing sites in the Qaidam Basin",
+     "url": "https://arxiv.org/abs/2501.08584",
+     "retrieval": "primary_fetched"
+    }
+   ],
+   "evidence_category": "literature_supported_analog",
+   "support_strength": "strong",
+   "limitations": "Altitude 2.7-3 km makes air temperature low relative to latitude. Yardangs are an erosional, not depositional, aeolian landform; the AEOLIAN pair is weaker than the CHLORIDE pair.",
+   "validation_eligibility": "eligible",
+   "eligibility_reason": "",
+   "verification_status": "primary_fetched",
+   "role": "positive"
+  },
+  {
+   "site_id": "white_sands_nm",
+   "name": "White Sands gypsum dune field",
+   "country": "USA (New Mexico)",
+   "lat": 32.8,
+   "lon": -106.3,
+   "coordinate_source": "approximate centroid (general geographic knowledge, not from the cited paper)",
+   "approx_extent_km": 40,
+   "environmental_characteristics": "Gypsum dunes fed by seasonal evaporation of Lake Lucero; arid.",
+   "cohort": "C_frozen_independent",
+   "pairs": [
+    {
+     "target": "MARS_AEOLIAN",
+     "analog_types": [
+      "geological"
+     ],
+     "relationship": "Analog to sulfate-rich eolian outcrops at Meridiani Planum",
+     "purposes": [
+      "MARS_GEOLOGY_SAMPLING"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "label": "White Sands gypsum dunes as an analog to sulfate-rich eolian outcrops at Meridiani Planum (Geology 2006, as surfaced by search)",
+     "url": "https://npshistory.com/publications/whsa/brochures/mars-2016.pdf",
+     "retrieval": "search_summary"
+    }
+   ],
+   "evidence_category": "literature_supported_analog",
+   "support_strength": "strong",
+   "limitations": "Gypsum (sulfate) dunes, not basaltic dunes; Martian dark dunes are basaltic. Climate warmer than Mars.",
+   "validation_eligibility": "eligible",
+   "eligibility_reason": "",
+   "verification_status": "search_summary",
+   "role": "positive"
+  },
+  {
+   "site_id": "jingpo_lake",
+   "name": "Jingpo Lake volcanic field",
+   "country": "China",
+   "lat": 43.9,
+   "lon": 128.9,
+   "coordinate_source": "approximate centroid (general geographic knowledge, not from the cited paper)",
+   "approx_extent_km": 80,
+   "environmental_characteristics": "Basaltic lava field with tubes and pit craters; humid-continental forested climate.",
+   "cohort": "B_development",
+   "pairs": [
+    {
+     "target": "MOON_LAVATUBE",
+     "analog_types": [
+      "geological"
+     ],
+     "relationship": "Proposed in a review as terrestrial analog for the Marius Hills region",
+     "purposes": [
+      "MOON_HABITAT_OPS"
+     ]
+    },
+    {
+     "target": "MOON_MARE",
+     "analog_types": [
+      "geological"
+     ],
+     "relationship": "same proposal; mare relation indirect",
+     "purposes": [
+      "MOON_GEO_FIELDWORK"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "label": "Lunar lava tube base construction / terrestrial test-site reviews (as surfaced by search; specific attribution unverified)",
+     "url": "https://katalog.lib.cas.cz/KNAV/EdsRecord/edsdoj,edsdoj.208af1acf1ee4e34a7022ce5d94f84ec",
+     "retrieval": "search_summary"
+    }
+   ],
+   "evidence_category": "literature_supported_analog",
+   "support_strength": "weak",
+   "limitations": "Attribution of the proposal not verified by opening the paper; forested climate unlike the Moon. Kept as exploratory.",
+   "validation_eligibility": "exploratory",
+   "eligibility_reason": "support not verified by primary source; humid forested climate",
+   "verification_status": "search_summary",
+   "role": "positive"
+  },
+  {
+   "site_id": "jeju_manjanggul",
+   "name": "Manjanggul lava tube, Jeju",
+   "country": "South Korea",
+   "lat": 33.53,
+   "lon": 126.77,
+   "coordinate_source": "approximate centroid (general geographic knowledge, not from the cited paper)",
+   "approx_extent_km": 10,
+   "environmental_characteristics": "Basaltic island, well-known lava tube; humid subtropical climate.",
+   "cohort": "C_frozen_independent",
+   "pairs": [
+    {
+     "target": "MOON_LAVATUBE",
+     "analog_types": [
+      "geological"
+     ],
+     "relationship": "Cited as a well-known Asian lava-tube example; a review notes it lacks the full surface-to-subsurface sequence for rille formation",
+     "purposes": [
+      "MOON_HABITAT_OPS"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "label": "Lunar lava tube base construction / terrestrial test-site reviews (as surfaced by search; specific attribution unverified)",
+     "url": "https://katalog.lib.cas.cz/KNAV/EdsRecord/edsdoj,edsdoj.208af1acf1ee4e34a7022ce5d94f84ec",
+     "retrieval": "search_summary"
+    }
+   ],
+   "evidence_category": "literature_supported_analog",
+   "support_strength": "weak",
+   "limitations": "Source states a limitation; humid climate. Kept as exploratory.",
+   "validation_eligibility": "exploratory",
+   "eligibility_reason": "source notes the analogy is incomplete; not verified by primary source",
+   "verification_status": "search_summary",
+   "role": "positive"
+  },
+  {
+   "site_id": "black_point_flow",
+   "name": "Black Point lava flow, San Francisco Volcanic Field",
+   "country": "USA (Arizona)",
+   "lat": 35.6,
+   "lon": -111.5,
+   "coordinate_source": "approximate centroid (general geographic knowledge, not from the cited paper)",
+   "approx_extent_km": 20,
+   "environmental_characteristics": "Basaltic cinder/lava terrain, semi-arid high desert.",
+   "cohort": "B_development",
+   "pairs": [
+    {
+     "target": "MOON_MARE",
+     "analog_types": [
+      "terrain_rover_mobility"
+     ],
+     "relationship": "NASA page caption: used to test a lunar electric rover",
+     "purposes": [
+      "MOON_ROVER_MOBILITY"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "label": "NASA Science - Planetary Analogs",
+     "url": "https://science.nasa.gov/solar-system/planetary-analogs/",
+     "retrieval": "primary_fetched"
+    }
+   ],
+   "evidence_category": "literature_supported_analog",
+   "support_strength": "weak",
+   "limitations": "Support is an image caption, not a stated analog objective. Exploratory.",
+   "validation_eligibility": "exploratory",
+   "eligibility_reason": "image caption only",
+   "verification_status": "primary_fetched",
+   "role": "positive"
+  }
+ ],
+ "controls": [
+  {
+   "site_id": "amazon",
+   "name": "Amazon rainforest",
+   "lat": -3.0,
+   "lon": -60.0,
+   "targets": "all",
+   "hard": false,
+   "control_kind": "historical",
+   "rationale": "humid/vegetated lowland: easy negative",
+   "basis": "author reasoning (v1), not model output",
+   "cohort": "A_historical"
+  },
+  {
+   "site_id": "congo",
+   "name": "Congo Basin rainforest",
+   "lat": 0.0,
+   "lon": 22.0,
+   "targets": "all",
+   "hard": false,
+   "control_kind": "historical",
+   "rationale": "humid/vegetated lowland: easy negative",
+   "basis": "author reasoning (v1), not model output",
+   "cohort": "A_historical"
+  },
+  {
+   "site_id": "borneo",
+   "name": "Borneo rainforest",
+   "lat": 0.5,
+   "lon": 114.0,
+   "targets": "all",
+   "hard": false,
+   "control_kind": "historical",
+   "rationale": "humid/vegetated lowland: easy negative",
+   "basis": "author reasoning (v1), not model output",
+   "cohort": "A_historical"
+  },
+  {
+   "site_id": "ganges",
+   "name": "Ganges plain farmland",
+   "lat": 26.0,
+   "lon": 85.0,
+   "targets": "all",
+   "hard": false,
+   "control_kind": "historical",
+   "rationale": "humid/vegetated lowland: easy negative",
+   "basis": "author reasoning (v1), not model output",
+   "cohort": "A_historical"
+  },
+  {
+   "site_id": "w_europe",
+   "name": "Western European farmland",
+   "lat": 48.0,
+   "lon": 2.0,
+   "targets": "all",
+   "hard": false,
+   "control_kind": "historical",
+   "rationale": "humid/vegetated lowland: easy negative",
+   "basis": "author reasoning (v1), not model output",
+   "cohort": "A_historical"
+  },
+  {
+   "site_id": "us_midwest",
+   "name": "US Midwest cropland",
+   "lat": 41.0,
+   "lon": -93.0,
+   "targets": "all",
+   "hard": false,
+   "control_kind": "historical",
+   "rationale": "humid/vegetated lowland: easy negative",
+   "basis": "author reasoning (v1), not model output",
+   "cohort": "A_historical"
+  },
+  {
+   "site_id": "boreal_siberia",
+   "name": "Siberian taiga (cold but forested)",
+   "lat": 58.0,
+   "lon": 100.0,
+   "targets": "all",
+   "hard": true,
+   "control_kind": "historical",
+   "rationale": "cold like the polar analogs but vegetated and wet: should rank below tundra/polar desert for ice targets",
+   "basis": "author reasoning (v1), not model output",
+   "cohort": "A_historical"
+  },
+  {
+   "site_id": "boreal_canada",
+   "name": "Canadian boreal forest",
+   "lat": 55.0,
+   "lon": -100.0,
+   "targets": "all",
+   "hard": true,
+   "control_kind": "historical",
+   "rationale": "cold but forested and humid",
+   "basis": "author reasoning (v1), not model output",
+   "cohort": "A_historical"
+  },
+  {
+   "site_id": "great_plains",
+   "name": "US Great Plains grassland",
+   "lat": 41.0,
+   "lon": -100.0,
+   "targets": "all",
+   "hard": true,
+   "control_kind": "historical",
+   "rationale": "semi-arid but vegetated farmland: should rank below true deserts for dry-barren targets",
+   "basis": "author reasoning (v1), not model output",
+   "cohort": "A_historical"
+  },
+  {
+   "site_id": "sahel_savanna",
+   "name": "Sahel savanna",
+   "lat": 13.0,
+   "lon": 5.0,
+   "targets": "all",
+   "hard": true,
+   "control_kind": "historical",
+   "rationale": "hot and seasonally dry but vegetated: neighbours the Sahara without being a barren analog",
+   "basis": "author reasoning (v1), not model output",
+   "cohort": "A_historical"
+  },
+  {
+   "site_id": "mediterranean",
+   "name": "Mediterranean scrub (Spain)",
+   "lat": 39.0,
+   "lon": -4.0,
+   "targets": "all",
+   "hard": true,
+   "control_kind": "historical",
+   "rationale": "dry summers but vegetated and mild",
+   "basis": "author reasoning (v1), not model output",
+   "cohort": "A_historical"
+  },
+  {
+   "site_id": "greenland_ice_sheet",
+   "name": "Greenland ice sheet",
+   "lat": 72.0,
+   "lon": -40.0,
+   "targets": [
+    "MARS_JEZERO",
+    "MARS_CHLORIDE",
+    "MOON_MARE"
+   ],
+   "hard": true,
+   "control_kind": "historical",
+   "rationale": "cold and dry but ice-covered: fails the bare-ground criterion of dry geology/rover targets",
+   "basis": "author reasoning (v1), not model output",
+   "cohort": "A_historical"
+  },
+  {
+   "site_id": "antarctic_plateau",
+   "name": "East Antarctic plateau",
+   "lat": -80.0,
+   "lon": 100.0,
+   "targets": [
+    "MARS_JEZERO",
+    "MARS_CHLORIDE",
+    "MOON_MARE"
+   ],
+   "hard": true,
+   "control_kind": "historical",
+   "rationale": "cold and dry but ice-covered: no exposed ground",
+   "basis": "author reasoning (v1), not model output",
+   "cohort": "A_historical"
+  },
+  {
+   "site_id": "sahara_for_ice",
+   "name": "Central Sahara",
+   "lat": 23.0,
+   "lon": 13.0,
+   "targets": [
+    "MARS_ICE"
+   ],
+   "hard": true,
+   "control_kind": "historical",
+   "rationale": "matches aridity and bare ground but not temperature or ice: a regions-that-match-dryness-but-not-cold control",
+   "basis": "author reasoning (v1), not model output",
+   "cohort": "A_historical"
+  },
+  {
+   "site_id": "amazon_highlands_for_terrain",
+   "name": "Guiana Highlands (rugged but humid, forested)",
+   "lat": 5.0,
+   "lon": -61.0,
+   "targets": [
+    "MOON_LAVATUBE",
+    "MARS_JEZERO"
+   ],
+   "hard": true,
+   "control_kind": "historical",
+   "rationale": "rugged terrain but wet and forested: matches terrain, fails aridity and barrenness",
+   "basis": "author reasoning (v1), not model output",
+   "cohort": "A_historical"
+  },
+  {
+   "site_id": "deccan_traps",
+   "name": "Deccan Traps",
+   "lat": 19.0,
+   "lon": 75.0,
+   "targets": [
+    "MOON_LAVATUBE",
+    "MOON_MARE"
+   ],
+   "hard": true,
+   "control_kind": "basaltic terrain with incompatible climate",
+   "rationale": "Flood basalts, but monsoon climate, deep weathered regolith and agriculture: surface does not resemble fresh lunar basalt and tubes are not accessible.",
+   "basis": "physical reasoning written before scoring; not derived from model predictions",
+   "cohort": "B_development"
+  },
+  {
+   "site_id": "parana_basalts",
+   "name": "Parana basalts",
+   "lat": -25.5,
+   "lon": -52.0,
+   "targets": [
+    "MOON_LAVATUBE",
+    "MOON_MARE"
+   ],
+   "hard": true,
+   "control_kind": "basaltic terrain with incompatible climate",
+   "rationale": "Flood basalts under humid subtropical forest and farmland.",
+   "basis": "physical reasoning written before scoring; not derived from model predictions",
+   "cohort": "C_frozen_independent"
+  },
+  {
+   "site_id": "siberian_traps",
+   "name": "Siberian Traps",
+   "lat": 66.0,
+   "lon": 95.0,
+   "targets": [
+    "MOON_LAVATUBE",
+    "MOON_MARE"
+   ],
+   "hard": true,
+   "control_kind": "cold basaltic terrain with boreal forest",
+   "rationale": "Basalt province but covered by taiga and permafrost soils; vegetation and thick cover hide any fresh volcanic surface.",
+   "basis": "physical reasoning written before scoring; not derived from model predictions",
+   "cohort": "C_frozen_independent"
+  },
+  {
+   "site_id": "libyan_sand_sea",
+   "name": "Libyan Sand Sea",
+   "lat": 26.0,
+   "lon": 25.0,
+   "targets": [
+    "MOON_LAVATUBE"
+   ],
+   "hard": true,
+   "control_kind": "dry but geologically unsuitable",
+   "rationale": "Hyperarid, but a sand sea over sedimentary rock: no basalt and no lava tubes.",
+   "basis": "physical reasoning written before scoring; not derived from model predictions",
+   "cohort": "C_frozen_independent"
+  },
+  {
+   "site_id": "east_antarctic_plateau",
+   "name": "East Antarctic plateau interior",
+   "lat": -80.0,
+   "lon": 100.0,
+   "targets": [
+    "MARS_MUDVOLC",
+    "MARS_JEZERO",
+    "MARS_AEOLIAN"
+   ],
+   "hard": true,
+   "control_kind": "ice-covered, no exposed geology",
+   "rationale": "Kilometres of ice cover the bedrock: no exposed sediments, deltas or dunes to compare, and not a mobility surface comparable to bare ground.",
+   "basis": "physical reasoning written before scoring; not derived from model predictions",
+   "cohort": "C_frozen_independent"
+  },
+  {
+   "site_id": "fennoscandian_shield",
+   "name": "Fennoscandian shield",
+   "lat": 67.5,
+   "lon": 25.0,
+   "targets": [
+    "MARS_MUDVOLC",
+    "MARS_JEZERO"
+   ],
+   "hard": true,
+   "control_kind": "cold but vegetated crystalline basement",
+   "rationale": "Boreal forest on Precambrian crystalline rock: no sedimentary basin, no fluid-driven sedimentary volcanism, vegetated.",
+   "basis": "physical reasoning written before scoring; not derived from model predictions",
+   "cohort": "C_frozen_independent"
+  },
+  {
+   "site_id": "sahel_savanna",
+   "name": "Sahel savanna",
+   "lat": 14.0,
+   "lon": 5.0,
+   "targets": [
+    "MARS_AEOLIAN",
+    "MARS_CHLORIDE"
+   ],
+   "hard": true,
+   "control_kind": "dry season but vegetated",
+   "rationale": "Seasonally dry but grass/shrub covered with a summer rainy season; dunes are stabilised, no playa evaporites over most of the area.",
+   "basis": "physical reasoning written before scoring; not derived from model predictions",
+   "cohort": "C_frozen_independent"
+  },
+  {
+   "site_id": "mongolian_steppe",
+   "name": "Mongolian steppe",
+   "lat": 47.0,
+   "lon": 105.0,
+   "targets": [
+    "MARS_AEOLIAN",
+    "MARS_CHLORIDE"
+   ],
+   "hard": true,
+   "control_kind": "cold semi-arid grassland",
+   "rationale": "Continuous grass cover and soils; not an active dune or evaporite environment.",
+   "basis": "physical reasoning written before scoring; not derived from model predictions",
+   "cohort": "B_development"
+  },
+  {
+   "site_id": "greenland_interior",
+   "name": "Greenland ice sheet interior",
+   "lat": 72.0,
+   "lon": -40.0,
+   "targets": [
+    "MARS_ICE",
+    "MARS_MUDVOLC"
+   ],
+   "hard": true,
+   "control_kind": "ice sheet, not regolith-buried ground ice",
+   "rationale": "Glacier ice, not ice buried under regolith; drilling, mobility and ice-regolith mixing differ from the Arcadia style plains.",
+   "basis": "physical reasoning written before scoring; not derived from model predictions",
+   "cohort": "B_development"
+  },
+  {
+   "site_id": "canadian_shield_forest",
+   "name": "Canadian Shield boreal forest",
+   "lat": 52.0,
+   "lon": -85.0,
+   "targets": [
+    "MARS_MUDVOLC",
+    "MARS_JEZERO"
+   ],
+   "hard": true,
+   "control_kind": "cold vegetated crystalline terrain",
+   "rationale": "Boreal forest and wetlands over crystalline rock.",
+   "basis": "physical reasoning written before scoring; not derived from model predictions",
+   "cohort": "B_development"
+  }
+ ],
+ "rejected_candidates": [
+  {
+   "site_id": "namib_dunes",
+   "name": "Namib sand dunes",
+   "country": "Namibia",
+   "why_not_used": "NASA page links them to Titan dunes, not Moon/Mars.",
+   "reason_code": "no_moon_mars_target",
+   "validation_eligibility": "ineligible"
+  },
+  {
+   "site_id": "meteor_crater",
+   "name": "Meteor Crater",
+   "country": "USA (Arizona)",
+   "why_not_used": "Impact-crater morphology is not among the modelled targets.",
+   "reason_code": "no_matching_target",
+   "validation_eligibility": "ineligible"
+  },
+  {
+   "site_id": "ries_crater",
+   "name": "Nordlinger Ries",
+   "country": "Germany",
+   "why_not_used": "Impact crater used in ESA PANGAEA; no matching target.",
+   "reason_code": "no_matching_target",
+   "validation_eligibility": "ineligible"
+  },
+  {
+   "site_id": "bletterbach",
+   "name": "Bletterbach canyon (Dolomites)",
+   "country": "Italy",
+   "why_not_used": "Sedimentary geology training; no matching target.",
+   "reason_code": "no_matching_target",
+   "validation_eligibility": "ineligible"
+  },
+  {
+   "site_id": "nw_greenland",
+   "name": "Northwest Greenland",
+   "country": "Greenland",
+   "why_not_used": "Seismometer tests for icy worlds (Europa named), not Moon/Mars.",
+   "reason_code": "other_body",
+   "validation_eligibility": "ineligible"
+  },
+  {
+   "site_id": "axel_heiberg",
+   "name": "Axel Heiberg Island cold springs",
+   "country": "Canada",
+   "why_not_used": "Perennial saline springs in permafrost (spring-deposit and aquifer analog); no target models spring deposits.",
+   "reason_code": "no_matching_target",
+   "validation_eligibility": "ineligible"
+  },
+  {
+   "site_id": "dallol",
+   "name": "Dallol / Danakil Depression",
+   "country": "Ethiopia",
+   "why_not_used": "Only a non-peer-reviewed web article was found.",
+   "reason_code": "insufficient_support",
+   "validation_eligibility": "ineligible"
+  },
+  {
+   "site_id": "berca_romania",
+   "name": "Berca mud volcanoes",
+   "country": "Romania",
+   "why_not_used": "Only a tourism-oriented source found for the mud-volcano relation.",
+   "reason_code": "insufficient_support",
+   "validation_eligibility": "ineligible"
+  },
+  {
+   "site_id": "rio_tinto",
+   "name": "Rio Tinto",
+   "country": "Spain",
+   "why_not_used": "Acidic iron-rich analog; no source examined for a modelled target.",
+   "reason_code": "not_verified",
+   "validation_eligibility": "ineligible"
+  },
+  {
+   "site_id": "deception_island",
+   "name": "Deception Island",
+   "country": "Antarctica",
+   "why_not_used": "Astrobiology analog paper found; no clean match to a modelled target.",
+   "reason_code": "no_matching_target",
+   "validation_eligibility": "ineligible"
+  },
+  {
+   "site_id": "askja",
+   "name": "Askja",
+   "country": "Iceland",
+   "why_not_used": "Apollo-era geological training; same 2.5 degree region as the v1 Iceland site and the speaker (a trained geologist) cautions that no good lunar analogs exist.",
+   "reason_code": "duplicate_region",
+   "validation_eligibility": "ineligible"
+  },
+  {
+   "site_id": "mauna_ulu_kilauea_iki",
+   "name": "Mauna Ulu / Kilauea Iki (BASALT Hawaii)",
+   "country": "USA (Hawaii)",
+   "why_not_used": "Same 2.5 degree cell as v1 Kilauea; not counted as an independent sample.",
+   "reason_code": "duplicate_region",
+   "validation_eligibility": "ineligible"
+  },
+  {
+   "site_id": "lambahraun",
+   "name": "Lambahraun lava field",
+   "country": "Iceland",
+   "why_not_used": "NASA rover test site; same region as v1 Iceland.",
+   "reason_code": "duplicate_region",
+   "validation_eligibility": "ineligible"
+  },
+  {
+   "site_id": "hingol_makran",
+   "name": "Hingol / Makran coast",
+   "country": "Pakistan",
+   "why_not_used": "Mud volcanoes reported there by low-quality sources; no analog literature verified. Team hypothesis only.",
+   "reason_code": "hypothesis",
+   "validation_eligibility": "ineligible"
+  },
+  {
+   "site_id": "karakoram_baltoro",
+   "name": "Karakoram / Baltoro",
+   "country": "Pakistan",
+   "why_not_used": "Team hypothesis; no analog literature verified.",
+   "reason_code": "hypothesis",
+   "validation_eligibility": "ineligible"
+  },
+  {
+   "site_id": "khewra",
+   "name": "Khewra salt range",
+   "country": "Pakistan",
+   "why_not_used": "Team hypothesis (evaporites); no analog literature verified.",
+   "reason_code": "hypothesis",
+   "validation_eligibility": "ineligible"
+  },
+  {
+   "site_id": "katpana",
+   "name": "Katpana cold desert",
+   "country": "Pakistan",
+   "why_not_used": "Team hypothesis; no analog literature verified.",
+   "reason_code": "hypothesis",
+   "validation_eligibility": "ineligible"
+  }
+ ]
+}

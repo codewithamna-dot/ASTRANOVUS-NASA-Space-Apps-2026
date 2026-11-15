@@ -1,0 +1,102 @@
+{
+  "_purpose": "Per-target scientific readiness: which defining properties of the planetary reference site the Earth data can and cannot express. Authored from the evidence files (data/target_evidence.csv, data/planetary_measurements.csv) and the Earth data sources, NOT from model output. status vocabulary: measured | proxy | not_measured | not_reproducible_on_earth. screening_scope vocabulary: full_environmental_screen | partial_environmental_assessment | climate_terrain_similarity_only. No target currently qualifies for full_environmental_screen.",
+  "_rule_requires_exposed_surface": "Targets defined by exposed ground (regolith, bedrock, sediments, dunes, evaporites, buried ice under regolith) require a verified surface-exposure value (D3). A cell whose surface is snow/ice/water covered has no D3 value and therefore cannot be matched to them (an ice sheet is not exposed regolith). Written on 2026-11-16 from physical reasoning before looking at validation results; excluded cells are counted in n_cells_excluded_unverified and shown only in the provisional view.",
+  "_d4_note": "D4 is treated as a proxy: Earth cells give relief within about 280 km averaged at 1 km, whereas the planetary rules describe metre-scale slope on smooth plains. scripts/d4_analysis.py shows that for flat-terrain targets known analog sites have LOWER D4 similarity than their controls (scale mismatch, not a validation-score argument). Weight left unchanged pending a scale-appropriate terrain metric (for example flat-area fraction from the 1 km DEM).",
+  "_dimension_categories": {
+    "climate": ["D1_cold", "D2_aridity", "D7_polar_light", "D8_thermal_swing"],
+    "terrain": ["D4_terrain"],
+    "surface_exposure": ["D3_barren"],
+    "composition_proxy": ["D5_rock"],
+    "ice_proxy": ["D6_ice"]
+  },
+  "targets": {
+    "MOON_PSR": {
+      "screening_scope": "partial_environmental_assessment", "geology_defined": false, "requires_exposed_surface": false,
+      "defining_properties": [
+        {"property": "perpetual shadow and cryogenic floor temperature (as low as 25 K)", "status": "not_reproducible_on_earth", "dimension": "D1_cold", "note": "Earth air temperature (POWER T2M) is a cold-climate stand-in only; no Earth surface is this cold."},
+        {"property": "ice-bearing regolith", "status": "proxy", "dimension": "D6_ice", "note": "MODIS snow-cover climatology; not glacier, permafrost or subsurface ice."},
+        {"property": "low-relief crater floor", "status": "proxy", "dimension": "D4_terrain", "note": "relief at about 1 km, not floor slope at the metre scale"}
+      ],
+      "critical_missing": ["floor slope statistics", "annual mean floor temperature"],
+      "summary": "Cold, dry, ice-proxy regions only. The shadowed-floor environment cannot be reproduced; results indicate cold dry ground, not PSR analogs."
+    },
+    "MOON_SP_RIDGE": {
+      "screening_scope": "partial_environmental_assessment", "geology_defined": false, "requires_exposed_surface": true,
+      "defining_properties": [
+        {"property": "near-continuous illumination (about 240 sunlit days per year at the rim)", "status": "proxy", "dimension": "D7_polar_light", "note": "Earth seasonal insolation swing; strongly correlated with cold (rho 0.97), so it adds little independent information."},
+        {"property": "extreme cold nearby", "status": "proxy", "dimension": "D1_cold", "note": "air temperature, not surface temperature"},
+        {"property": "rugged regolith terrain", "status": "proxy", "dimension": "D4_terrain", "note": "relief at about 1 km"}
+      ],
+      "critical_missing": ["ridge coordinates", "LOLA slope statistics", "composition"],
+      "summary": "Polar exposed-ground regions with strong seasonal light and cold. Lunar illumination geometry is not reproduced."
+    },
+    "MOON_LAVATUBE": {
+      "screening_scope": "climate_terrain_similarity_only", "geology_defined": true, "requires_exposed_surface": true,
+      "defining_properties": [
+        {"property": "subsurface basaltic cavity (lava tube) behind a collapse pit", "status": "not_measured", "dimension": null, "note": "No dataset in the model sees subsurface voids; pits and tubes are 10-100 m scale on a 280 km grid."},
+        {"property": "basaltic composition", "status": "proxy", "dimension": "D5_rock", "note": "ASTER silicate-contrast proxy, defined in only about 13% of cells; not validated as a basalt indicator."},
+        {"property": "stable thermal environment inside the tube", "status": "proxy", "dimension": "D8_thermal_swing", "note": "surface swing, not inside-tube temperature"}
+      ],
+      "critical_missing": ["lava-tube / cavity presence", "basalt mapping"],
+      "summary": "Matches dry, barren, thermally varying ground only. A high score is NOT evidence of lava tubes or basalt."
+    },
+    "MOON_MARE": {
+      "screening_scope": "climate_terrain_similarity_only", "geology_defined": true, "requires_exposed_surface": true,
+      "defining_properties": [
+        {"property": "basaltic mare composition", "status": "proxy", "dimension": "D5_rock", "note": "ASTER silicate contrast is not an FeO/basalt measurement and shows a negative rank correlation with the target score in this grid."},
+        {"property": "smooth terrain (median mare slope about 3.5 degrees at 15 m baseline)", "status": "proxy", "dimension": "D4_terrain", "note": "1 km relief cannot represent a 15 m baseline slope"},
+        {"property": "large day-night swing (about 400 K / below 100 K at the equator)", "status": "proxy", "dimension": "D8_thermal_swing", "note": "Earth deserts reach a fraction of this swing"}
+      ],
+      "critical_missing": ["basalt/FeO mapping", "regolith properties"],
+      "summary": "Flat, dry, barren, large-swing ground. Basalt composition and regolith are not measured."
+    },
+    "MARS_ICE": {
+      "screening_scope": "partial_environmental_assessment", "geology_defined": false, "requires_exposed_surface": true,
+      "defining_properties": [
+        {"property": "ice buried within a few metres under regolith on flat plains", "status": "proxy", "dimension": "D6_ice", "note": "MODIS snow cover only; subsurface ice is not measured. Glacier/ice-sheet cells are excluded by the exposed-surface requirement."},
+        {"property": "cold, dry plains", "status": "proxy", "dimension": "D1_cold", "note": "air temperature"},
+        {"property": "flat terrain", "status": "proxy", "dimension": "D4_terrain", "note": "relief at about 1 km"}
+      ],
+      "critical_missing": ["ground-ice presence", "SWIM-style consistency score for Earth"],
+      "summary": "Cold, dry, exposed polar-desert ground with seasonal snow proxy; ground ice is not verified."
+    },
+    "MARS_JEZERO": {
+      "screening_scope": "climate_terrain_similarity_only", "geology_defined": true, "requires_exposed_surface": true,
+      "defining_properties": [
+        {"property": "ancient delta and lake sediments with clays and carbonates", "status": "not_measured", "dimension": null, "note": "No lithology or mineral map is integrated (GLiM not integrated)."},
+        {"property": "dry, barren ground", "status": "measured", "dimension": "D2_aridity", "note": "POWER precipitation and MODIS NDVI"},
+        {"property": "intermediate relief", "status": "proxy", "dimension": "D4_terrain", "note": "about 1 km"}
+      ],
+      "critical_missing": ["lithology", "mineralogy", "sedimentary delta morphology"],
+      "summary": "Dry barren exposed ground of intermediate relief. Delta and sediment geology are not evaluated."
+    },
+    "MARS_MUDVOLC": {
+      "screening_scope": "climate_terrain_similarity_only", "geology_defined": true, "requires_exposed_surface": true,
+      "defining_properties": [
+        {"property": "fluid-driven sedimentary mounds in a thick sedimentary basin (origin still debated)", "status": "not_measured", "dimension": null, "note": "All active rules are climate, surface cover and terrain. The only Earth reference named in the verified source is Azerbaijan, picked for geology, not climate."},
+        {"property": "flat plains", "status": "proxy", "dimension": "D4_terrain", "note": "about 1 km relief"},
+        {"property": "cold dry barren ground", "status": "measured", "dimension": "D2_aridity", "note": "POWER and MODIS"}
+      ],
+      "critical_missing": ["sedimentary basin / mud-volcano presence", "mound counts and sizes for the Mars reference"],
+      "summary": "Cold, dry, flat, barren ground only. Mud-volcano geology is not evaluated, so results are climate/terrain similarity, not geological confirmation."
+    },
+    "MARS_CHLORIDE": {
+      "screening_scope": "climate_terrain_similarity_only", "geology_defined": true, "requires_exposed_surface": true,
+      "defining_properties": [
+        {"property": "evaporite salt deposits, 1-25 km2 each, in the southern highlands", "status": "not_measured", "dimension": null, "note": "Deposits are about four orders of magnitude smaller than a 2.5 degree cell; no evaporite layer is integrated."},
+        {"property": "very dry climate", "status": "measured", "dimension": "D2_aridity", "note": "POWER precipitation"}
+      ],
+      "critical_missing": ["evaporite / salt-flat mapping"],
+      "summary": "Dry barren exposed ground only; salt deposits are below grid resolution and not mapped."
+    },
+    "MARS_AEOLIAN": {
+      "screening_scope": "climate_terrain_similarity_only", "geology_defined": true, "requires_exposed_surface": true,
+      "defining_properties": [
+        {"property": "active dune fields / sand cover", "status": "not_measured", "dimension": null, "note": "No sand or dune layer is integrated."},
+        {"property": "low relief, dry barren surface", "status": "proxy", "dimension": "D4_terrain", "note": "relief about 1 km; MODIS NDVI and POWER precipitation"}
+      ],
+      "critical_missing": ["dune/sand-cover mapping", "wind regime"],
+      "summary": "Dry, barren, low-relief ground; dune fields are not identified."
+    }
+  }
+}

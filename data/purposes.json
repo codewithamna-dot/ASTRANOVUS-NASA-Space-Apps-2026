@@ -1,0 +1,162 @@
+[
+  {
+    "id": "ISRU_WATER",
+    "name": "Water-ice extraction & processing (ISRU)",
+    "question": "We want to test digging up and processing water ice",
+    "bodies": [
+      "moon",
+      "mars"
+    ],
+    "targets": [
+      "MOON_PSR",
+      "MOON_SP_RIDGE",
+      "MARS_ICE"
+    ],
+    "nasa_basis": "Artemis / Moon-to-Mars objectives: in-situ resource utilisation (water ice) for propellant, life support",
+    "multipliers": {
+      "D6_ice": 2.0,
+      "D1_cold": 1.5,
+      "D4_terrain": 0.7
+    },
+    "gates": [
+      {
+        "dim": "D6_ice",
+        "op": ">=",
+        "value": 0.5,
+        "why": "needs real ice/frozen ground, not just a cold place"
+      }
+    ]
+  },
+  {
+    "id": "POWER_THERMAL",
+    "name": "Power & thermal-extreme hardware testing",
+    "question": "We want to test solar power, batteries and hardware against extreme light and temperature swings",
+    "bodies": [
+      "moon",
+      "mars"
+    ],
+    "targets": [
+      "MOON_SP_RIDGE",
+      "MOON_MARE",
+      "MARS_JEZERO",
+      "MARS_CHLORIDE"
+    ],
+    "nasa_basis": "Surface power & thermal control for Artemis base camp / Mars surface systems",
+    "multipliers": {
+      "D8_thermal_swing": 2.0,
+      "D7_polar_light": 1.5,
+      "D1_cold": 1.2
+    },
+    "gates": [
+      {
+        "dim": "D2_aridity",
+        "op": ">=",
+        "value": 0.4,
+        "why": "rain/humidity would invalidate dust and thermal tests"
+      }
+    ]
+  },
+  {
+    "id": "MOBILITY",
+    "name": "Rover mobility, landing & autonomy testing",
+    "question": "We want to drive rovers and test landing and navigation",
+    "bodies": [
+      "moon",
+      "mars"
+    ],
+    "targets": [
+      "MOON_MARE",
+      "MOON_SP_RIDGE",
+      "MARS_JEZERO",
+      "MARS_MUDVOLC",
+      "MARS_AEOLIAN"
+    ],
+    "nasa_basis": "Lunar Terrain Vehicle / Mars rover traverse and landing-site hazard needs",
+    "multipliers": {
+      "D4_terrain": 2.0,
+      "D3_barren": 1.5,
+      "D5_rock": 1.3
+    },
+    "gates": [
+      {
+        "dim": "D3_barren",
+        "op": ">=",
+        "value": 0.4,
+        "why": "vegetation changes wheel-soil behaviour and sensor tests"
+      }
+    ]
+  },
+  {
+    "id": "HABITAT",
+    "name": "Habitat, construction & radiation shelter",
+    "question": "We want to build and test habitats, regolith construction and underground shelters",
+    "bodies": [
+      "moon",
+      "mars"
+    ],
+    "targets": [
+      "MOON_LAVATUBE",
+      "MOON_MARE",
+      "MARS_JEZERO",
+      "MARS_CHLORIDE"
+    ],
+    "nasa_basis": "Surface habitat, construction and lava-tube shelter studies for long-duration stays",
+    "multipliers": {
+      "D5_rock": 2.0,
+      "D3_barren": 1.3,
+      "D8_thermal_swing": 1.3
+    },
+    "gates": []
+  },
+  {
+    "id": "SCIENCE",
+    "name": "Geology & astrobiology science",
+    "question": "We want to do geology, sample collection and search for signs of past life",
+    "bodies": [
+      "moon",
+      "mars"
+    ],
+    "targets": [
+      "MARS_JEZERO",
+      "MARS_CHLORIDE",
+      "MARS_MUDVOLC",
+      "MOON_MARE"
+    ],
+    "nasa_basis": "Mars 2020 / Artemis science objectives: geology, mineralogy, astrobiology",
+    "multipliers": {
+      "D5_rock": 2.0,
+      "D2_aridity": 1.3,
+      "D3_barren": 1.3
+    },
+    "gates": [
+      {
+        "dim": "D2_aridity",
+        "op": ">=",
+        "value": 0.4,
+        "why": "analog must be dry like Mars/Moon surface"
+      }
+    ]
+  },
+  {
+    "id": "CREW_OPS",
+    "name": "Crew operations & isolation analog missions",
+    "question": "We want to train crews: EVA, isolation and operations in a hostile environment",
+    "bodies": [
+      "moon",
+      "mars"
+    ],
+    "targets": [
+      "MOON_SP_RIDGE",
+      "MOON_PSR",
+      "MARS_ICE",
+      "MARS_JEZERO"
+    ],
+    "nasa_basis": "Analog missions (NEEMO, HI-SEAS, CHAPEA style) for crew and operations readiness",
+    "multipliers": {
+      "D1_cold": 1.3,
+      "D3_barren": 1.3,
+      "D2_aridity": 1.2
+    },
+    "gates": []
+  }
+]

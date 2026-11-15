@@ -1,86 +1,78 @@
-# Rewind the Murder — Field Training Edition
+# ASTRANOVUS — NASA Space Apps 2026 (Team Astravant)
 
-A playable 3D murder mystery with TIME, SHADOW and FIRE. Walk an original block-style office, collect evidence, and solve the case. The game lobby plays an eight-second MP4 loop rendered from the same 3D room. Includes a separate hands-on demo. Inspired by sandbox adventures; not affiliated with Roblox.
+**Challenge:** *Identify Earth Locations that Analog the Permanent Moon Base Locations and Mars.*
 
-## Play
-Open `dist/index.html` in a modern browser. No installation, external assets or build step is required. Alternatively run `python3 -m http.server 8080 --directory dist` from this directory and open http://localhost:8080.
+ASTRANOVUS is an independent research prototype (not an official NASA tool, rating or landing-site certification).
+You choose **Moon or Mars → an experiment you want to test → a compatible planetary reference site**, and an explainable
+Python engine ranks the Earth regions that best fit that purpose, showing the NASA data behind every number, what is
+missing, and what Earth cannot reproduce.
 
-Choose **Play guided demo** on the title screen, or **Guided demo** in the header. The practice run is separate from your saved investigation. Exit at any time to restore your original case.
+## Architecture
+```
+NASA POWER + MODIS (MOD11C3, MOD13C2, MOD10CM) + GPM IMERG  --scripts/build_earth_grid.py-->  data/processed/earth_grid.csv (+ features, metadata)
+data/targets.json (reference sites) + data/purposes.json (mission profiles) + data/experiments.json (12 scenarios)
+                         |
+        model/scoring_core.py + model/recommend.py   (explainable weighted similarity, gates, regions)
+                         |
+        backend/main.py (+ backend/mission_api.py)   FastAPI
+                         |
+        frontend/ (React + Vite + TypeScript + Tailwind + Leaflet + globe)
+```
+No scoring happens in the browser.
 
-## Playable field training
-Choose **Play demo** to enter a mission briefing, then begin the simulation.
+## Run locally
+```bash
+# one-time: isolated data/backend environment (Python 3.12)
+py -3.12 -m venv .venv-data
+.venv-data/Scripts/pip install -r requirements-data.txt -r backend/requirements.txt
 
-1. Calibrate your movement by walking two metres with WASD or touch controls.
-2. Inspect the locked door and collect its evidence.
-3. Set TIME to 10:06, inspect the key and collect the report.
-4. Set TIME to 10:09, inspect the clock and collect the contradiction.
-5. Toggle SHADOW and collect the footprint trail.
-6. Keep SHADOW active and collect the concealed passage.
-7. Set TIME to 10:12, toggle FIRE, and collect the burned note.
-8. Collect the damaged ledger with FIRE active.
-9. Connect the borrowed key and clock evidence to establish the critical minute.
+# backend (terminal 1)
+.venv-data/Scripts/python -m uvicorn backend.main:app --port 8000
 
-The field HUD tracks nine objectives, active practice time and staged mission phases. Tracking an objective marks it without teleporting, changing time or switching powers. Optional **Guide me to the object** position assists are counted in the field report; they never award clues or change time/vision. Movement is required before investigation stages advance. Briefing and paused time do not count toward active practice time. There is no countdown or time penalty.
+# frontend (terminal 2)
+cd frontend && npm install && npm run dev        # http://localhost:5173
+```
+The API refuses to start without `data/processed/earth_grid.csv` (no silent synthetic fallback). For UI-only work with the
+synthetic sample set `ASTRANOVUS_ALLOW_SAMPLE=1`; the UI then shows a red warning banner.
 
-A completion report shows objectives completed, active practice duration and assists used. Exit restores your previous case and difficulty; entering training from the lobby returns you there on exit. Training never overwrites saved progress. Closing the briefing starts movement practice; its Exit training button leaves the simulation.
+## Rebuild the Earth grid from the downloaded NASA files
+```bash
+.venv-data/Scripts/python scripts/build_earth_grid.py        # reads data/raw/*, never modifies it; backs up the old grid
+python scripts/validate_data.py
+python scripts/build_target_evidence.py
+python scripts/validate_known_analogs.py                     # writes docs/VALIDATION.md
+python scripts/sensitivity_analysis.py                        # writes data/sensitivity_summary.json
+python scripts/experiment_validation.py                       # writes docs/EXPERIMENT_VALIDATION.md
+python scripts/build_planetary_measurements.py                # writes data/planetary_measurements.csv/.json
+python scripts/build_analog_dataset_v3.py                     # writes data/analog_dataset_v3.json and the frozen cohort file
+python scripts/validate_v3.py                                 # development stage; add --final to score the frozen cohort once
+python scripts/diagnose_targets.py; python scripts/d4_analysis.py; python scripts/ranking_stability.py
+```
 
-## Controls
-- Click an object, select its single focused label, or use **Inspect room** to choose from illustrated object cards.
-- **Current objective** shows the next useful action. Its button focuses the relevant object or opens the evidence board.
-- WASD: walk. Drag: look. Arrow Up/Down: forward/back; Left/Right: turn. Shift: run. Space: jump.
-- Switch **Third person / First person** at any time. **Reset position** returns you to the entrance.
-- Touch: hold the on-screen movement buttons and drag the scene to look; Jump and Inspect nearby are on-screen buttons.
-- Walls and furniture block movement. Jumping does not bypass furniture collision.
-- T: toggle time console. Select a timestamp, use Earlier/Later, or Play scene (2.4 seconds per moment, stopping at 10:12).
-- Q: toggle SHADOW. F: toggle FIRE. These scanners are mutually exclusive.
-- E: inspect a nearby object you are facing. B: evidence board. Esc: close a panel or pause.
-- Opening a panel holds reconstruction playback and environmental animation.
-- Sound cues and reduced motion are optional in Settings; the system reduced-motion preference is respected.
+## Environment variables
+| Variable | Where | Purpose |
+|---|---|---|
+| `ASTRANOVUS_ENV=production` | API | refuses wildcard CORS |
+| `ASTRANOVUS_CORS_ORIGINS` | API | comma-separated frontend origins |
+| `ASTRANOVUS_ALLOW_SAMPLE=1` | API | local UI work only: allow the SYNTHETIC sample grid (red banner) |
+| `VITE_API_URL` | frontend build | API base URL (default `/api`, proxied to localhost:8000 in dev) |
 
-## Source files
-- `dist/index.html`: title, room, power dock, guided-demo and objective panels.
-- `dist/style.css`: responsive cinematic visual design and accessibility states.
-- `dist/scene3d.js`: perspective-projected 3D geometry, near-plane clipping, collision movement, third/first-person cameras, block characters and forensic effects.
-- `dist/art.js`: photographic scene crops for inspectable objects and clues.
-- `dist/engine.js`: canonical clues, suspects, gates, connections and accusation rules.
-- `dist/game.js`: interactions, isolated guided demo, objectives, saving, menus, audio and endings.
-- `test-engine.cjs`: game-state regression tests.
-- `test-interface.cjs`: production handler/renderer tests using a DOM/canvas adapter.
-- `MYSTERY_BIBLE.md`: complete solution and consistency notes; contains spoilers.
+## Tests
+```bash
+.venv-data/Scripts/python -m pytest -q tests    # engine + API (real grid)
+cd frontend && npm run lint && npm test && npm run build
+```
 
-## Verification
-Run `node test-engine.cjs` and `node test-interface.cjs` with Node.js.
+## Honest status
+* Real NASA-derived grid: 3,435 land cells at 2.5 degrees (about 280 km) incl. Antarctica. D1 cold, D2 aridity, D7 light (NASA POWER, annual); D3 barren (MODIS NDVI), D6 ice **proxy** (MODIS snow cover), D8 thermal swing (MODIS land-surface temperature), D5 rock-composition **proxy** (NASA ASTER emissivity, bare ground only, 13% of cells) - MODIS vegetation/temperature and GPM are calendar year 2024 (one year); MODIS snow is a 2015-2024 climatology.
+* D4 terrain: NASA SRTMGL30 (~1 km) plus the NSIDC Antarctic 1 km DEM, whole-cell relief only; a separate 30 m SRTM check exists for top candidate regions.
+* Moon/Mars reference-site rules are team drafts; `docs/TARGET_EVIDENCE.md` shows which rules have retrieved sources (32 of 49 rows) and which were retired. Real Moon Trek / Mars Trek values still needed: `docs/MANUAL_EVIDENCE_NEEDED.md`.
+* Results are candidate **areas** (2.5 degree cells), not verified ground-test sites. See `docs/PROJECT_STATUS.md` for everything blocked or pending.
 
-Seven engine groups and nineteen interface/renderer groups passed. Additional checks cover keyboard/touch movement, desk/wall collision, jump/landing, clearing held inputs on pause, and menu-video playback controls. These cover timeline/mode gates, reachability of all evidence, duplicate prevention, incomplete/incorrect/valid connections, all accusation outcomes, reset, persistence, menus, camera handlers, inspection clicks versus dragging, finite drawing coordinates, and the nine-objective field demo. Demo tests verify real collection requirements, invalid deduction rejection, successful completion, repeat launch, early exit and restoration of the original save.
+## Docs
+`docs/METHODOLOGY.md` · `docs/DATA_CONTRACT.md` · `docs/DATA_SOURCES.md` · `docs/TARGET_EVIDENCE.md` · `docs/VALIDATION.md` · `docs/SCIENTIFIC_VALIDATION_REPORT.md` · `docs/PLANETARY_EVIDENCE_REPORT.md` · `docs/EXPERIMENT_VALIDATION.md` · `docs/SCIENTIFIC_VALIDATION_REPORT_V3.md` · `docs/ANALOG_DATASET_V3.md` ·
+`docs/PROJECT_STATUS.md` · `docs/SOLUTION.md` · `docs/MANUAL_EVIDENCE_NEEDED.md` · `docs/PRE_DEPLOYMENT_CHECKLIST.md` · `docs/DEPLOYMENT.md` · `docs/SUBMISSION.md` · `docs/PROJECT_HANDOFF.md` (history)
 
-JavaScript syntax checks passed. The supported browser QA tool was unavailable. These tests do not verify rendered pixels, actual device input, native focus behavior or audio output. No claim of live browser testing is made.
-
-## Save behavior and limitations
-Normal case progress is stored in this browser's localStorage. The guided demo runs in memory and does not overwrite that save. Exit restores the original in-memory case; refreshing during the demo reloads the original saved case. Restart clears normal case progress.
-
-One authored chapter. The room is real-time 3D cuboid geometry projected through Canvas 2D, with collision-based walking and basic jump/gravity. It is not WebGL or a Roblox Studio project. No shooting, multiplayer, voiceover or general rigid-body physics. Timeline changes are discrete reconstructed moments. The 30 fps rendering target depends on device performance. The Site's existing audience is preserved.
-
-## Visual assets
-All required visuals are bundled under `dist/assets`. See ASSET_NOTES.md for provenance. The room and menu video use the original 3D scene. Photographic crops remain in the evidence inspection panels.
-
-To regenerate the bundled menu footage, install Node package `@napi-rs/canvas` and ffmpeg, then run `node scripts/render-menu.cjs`. These are build-time tools only; playing the game requires no installation. The MP4 uses H.264 at 960×540, 24 fps, eight seconds, with muted inline autoplay and a poster fallback. Reduce motion pauses the video.
-
-## Difficulty selection
-The lobby Play button opens a full-screen difficulty selector before entering the office. All three modes investigate the same case; they are not separate maps or chapters.
-
-- Easy: step-by-step objectives, guided travel to clues, exact time/power prompts, evidence-availability labels.
-- Medium: broad hints on request; no guided travel or time/power shortcut buttons.
-- Hard: no hints, guided objectives, time/power shortcuts, or evidence-availability labels. Observe and connect evidence yourself.
-
-Each difficulty stores progress separately. Existing saves remain in Easy. Selecting a card does not change your active game until Enter is pressed. Returning to the lobby keeps progress. Training remains an isolated guided practice run and restores your current difficulty's case when exited.
-
-The new original lobby key art is `dist/assets/lobby-keyart.png`. A subtle video layer retains motion, with reduced-motion and pause controls. Automated checks cover selection, back navigation, independent saves and difficulty-specific guidance. Browser visual QA remains unavailable.
-
-## Lobby display fix
-Removed legacy direct-child positioning rules that collapsed the decorative artwork layer and placed the video in normal document flow. Background layers now use explicit absolute positioning, and the key art is preloaded. Stylesheet version changed to invalidate stale browser caches.
-
-## Homepage typography
-The top label is Gaming Hub; the Solo Adventure label is removed. Nimbus Sans is bundled locally as Hub Sans in regular and bold WOFF files. Restrained tracking, upright titles, a consistent type hierarchy and lighter menu weights replace the earlier Impact/skewed display treatment. No external font service is needed. License information is included in `dist/assets/fonts/LICENSE.txt`.
-
-### Office graphics update
-The main office uses WebGL with cast shadows, procedural materials and mixed warm/cool lighting. WebGL-disabled devices fall back to the Canvas renderer. GPU shader compilation and an offline OpenGL ES render were checked; browser visual QA remains unverified. Homepage Gaming Hub label is proportionate to the menu typography.
+## Rules
+Never change a column/field name without telling everyone. `scripts/validate_data.py` must pass before every push.
+All data are attributed to NASA/NSIDC/LP DAAC/GES DISC products listed in `docs/METHODOLOGY.md`.

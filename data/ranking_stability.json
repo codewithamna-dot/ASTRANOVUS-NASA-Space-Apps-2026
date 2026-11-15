@@ -1,0 +1,370 @@
+{
+ "pairs": {
+  "MOON_WATER_ICE/MOON_PSR": {
+   "weights": {
+    "mean_jaccard_top5": 0.713,
+    "top1_stays_within_5deg": 1.0
+   },
+   "proxies_off": {
+    "jaccard_top5": 1.0,
+    "top1_within_5deg": true
+   },
+   "missing_20pct": {
+    "mean_jaccard_top5": 0.204,
+    "top1_stays_within_5deg": 0.45
+   }
+  },
+  "MOON_WATER_ICE/MOON_SP_RIDGE": {
+   "weights": {
+    "mean_jaccard_top5": 0.807,
+    "top1_stays_within_5deg": 0.95
+   },
+   "proxies_off": {
+    "jaccard_top5": 1.0,
+    "top1_within_5deg": false
+   },
+   "missing_20pct": {
+    "mean_jaccard_top5": 0.2,
+    "top1_stays_within_5deg": 0.85
+   }
+  },
+  "MOON_ROVER_MOBILITY/MOON_MARE": {
+   "weights": {
+    "mean_jaccard_top5": 0.355,
+    "top1_stays_within_5deg": 0.91
+   },
+   "proxies_off": {
+    "jaccard_top5": 0.25,
+    "top1_within_5deg": false
+   },
+   "missing_20pct": {
+    "mean_jaccard_top5": 0.141,
+    "top1_stays_within_5deg": 0.15
+   }
+  },
+  "MOON_ROVER_MOBILITY/MOON_SP_RIDGE": {
+   "weights": {
+    "mean_jaccard_top5": 0.668,
+    "top1_stays_within_5deg": 0.67
+   },
+   "proxies_off": {
+    "jaccard_top5": 0.429,
+    "top1_within_5deg": true
+   },
+   "missing_20pct": {
+    "mean_jaccard_top5": 0.147,
+    "top1_stays_within_5deg": 0.45
+   }
+  },
+  "MOON_REGOLITH_DUST/MOON_MARE": {
+   "weights": {
+    "mean_jaccard_top5": 0.493,
+    "top1_stays_within_5deg": 0.8
+   },
+   "proxies_off": {
+    "jaccard_top5": 0.429,
+    "top1_within_5deg": false
+   },
+   "missing_20pct": {
+    "mean_jaccard_top5": 0.164,
+    "top1_stays_within_5deg": 0.2
+   }
+  },
+  "MOON_REGOLITH_DUST/MOON_SP_RIDGE": {
+   "weights": {
+    "mean_jaccard_top5": 0.783,
+    "top1_stays_within_5deg": 0.73
+   },
+   "proxies_off": {
+    "jaccard_top5": 0.667,
+    "top1_within_5deg": false
+   },
+   "missing_20pct": {
+    "mean_jaccard_top5": 0.247,
+    "top1_stays_within_5deg": 0.6
+   }
+  },
+  "MOON_POWER_THERMAL/MOON_SP_RIDGE": {
+   "weights": {
+    "mean_jaccard_top5": 0.681,
+    "top1_stays_within_5deg": 0.58
+   },
+   "proxies_off": {
+    "jaccard_top5": 0.667,
+    "top1_within_5deg": true
+   },
+   "missing_20pct": {
+    "mean_jaccard_top5": 0.076,
+    "top1_stays_within_5deg": 0.25
+   }
+  },
+  "MOON_POWER_THERMAL/MOON_MARE": {
+   "weights": {
+    "mean_jaccard_top5": 0.276,
+    "top1_stays_within_5deg": 0.92
+   },
+   "proxies_off": {
+    "jaccard_top5": 0.429,
+    "top1_within_5deg": false
+   },
+   "missing_20pct": {
+    "mean_jaccard_top5": 0.148,
+    "top1_stays_within_5deg": 0.15
+   }
+  },
+  "MOON_HABITAT_OPS/MOON_LAVATUBE": {
+   "weights": {
+    "mean_jaccard_top5": 0.596,
+    "top1_stays_within_5deg": 0.35
+   },
+   "proxies_off": {
+    "jaccard_top5": 0.111,
+    "top1_within_5deg": false
+   },
+   "missing_20pct": {
+    "mean_jaccard_top5": 0.261,
+    "top1_stays_within_5deg": 0.2
+   }
+  },
+  "MOON_HABITAT_OPS/MOON_MARE": {
+   "weights": {
+    "mean_jaccard_top5": 0.552,
+    "top1_stays_within_5deg": 0.74
+   },
+   "proxies_off": {
+    "jaccard_top5": 0.0,
+    "top1_within_5deg": false
+   },
+   "missing_20pct": {
+    "mean_jaccard_top5": 0.113,
+    "top1_stays_within_5deg": 0.5
+   }
+  },
+  "MOON_GEO_FIELDWORK/MOON_MARE": {
+   "weights": {
+    "mean_jaccard_top5": 0.506,
+    "top1_stays_within_5deg": 0.66
+   },
+   "proxies_off": {
+    "jaccard_top5": 0.0,
+    "top1_within_5deg": false
+   },
+   "missing_20pct": {
+    "mean_jaccard_top5": 0.107,
+    "top1_stays_within_5deg": 0.3
+   }
+  },
+  "MARS_ROVER_MOBILITY/MARS_JEZERO": {
+   "weights": {
+    "mean_jaccard_top5": 0.778,
+    "top1_stays_within_5deg": 0.54
+   },
+   "proxies_off": {
+    "jaccard_top5": 0.429,
+    "top1_within_5deg": false
+   },
+   "missing_20pct": {
+    "mean_jaccard_top5": 0.111,
+    "top1_stays_within_5deg": 0.2
+   }
+  },
+  "MARS_ROVER_MOBILITY/MARS_MUDVOLC": {
+   "weights": {
+    "mean_jaccard_top5": 0.688,
+    "top1_stays_within_5deg": 0.7
+   },
+   "proxies_off": {
+    "jaccard_top5": 1.0,
+    "top1_within_5deg": true
+   },
+   "missing_20pct": {
+    "mean_jaccard_top5": 0.186,
+    "top1_stays_within_5deg": 0.0
+   }
+  },
+  "MARS_ROVER_MOBILITY/MARS_AEOLIAN": {
+   "weights": {
+    "mean_jaccard_top5": 0.582,
+    "top1_stays_within_5deg": 0.48
+   },
+   "proxies_off": {
+    "jaccard_top5": 1.0,
+    "top1_within_5deg": true
+   },
+   "missing_20pct": {
+    "mean_jaccard_top5": 0.32,
+    "top1_stays_within_5deg": 0.6
+   }
+  },
+  "MARS_GEOLOGY_SAMPLING/MARS_JEZERO": {
+   "weights": {
+    "mean_jaccard_top5": 0.724,
+    "top1_stays_within_5deg": 0.32
+   },
+   "proxies_off": {
+    "jaccard_top5": 0.111,
+    "top1_within_5deg": false
+   },
+   "missing_20pct": {
+    "mean_jaccard_top5": 0.166,
+    "top1_stays_within_5deg": 0.35
+   }
+  },
+  "MARS_GEOLOGY_SAMPLING/MARS_CHLORIDE": {
+   "weights": {
+    "mean_jaccard_top5": 0.745,
+    "top1_stays_within_5deg": 0.82
+   },
+   "proxies_off": {
+    "jaccard_top5": 1.0,
+    "top1_within_5deg": true
+   },
+   "missing_20pct": {
+    "mean_jaccard_top5": 0.266,
+    "top1_stays_within_5deg": 0.65
+   }
+  },
+  "MARS_GEOLOGY_SAMPLING/MARS_MUDVOLC": {
+   "weights": {
+    "mean_jaccard_top5": 0.541,
+    "top1_stays_within_5deg": 0.25
+   },
+   "proxies_off": {
+    "jaccard_top5": 1.0,
+    "top1_within_5deg": true
+   },
+   "missing_20pct": {
+    "mean_jaccard_top5": 0.114,
+    "top1_stays_within_5deg": 0.05
+   }
+  },
+  "MARS_ASTROBIOLOGY/MARS_JEZERO": {
+   "weights": {
+    "mean_jaccard_top5": 0.692,
+    "top1_stays_within_5deg": 0.31
+   },
+   "proxies_off": {
+    "jaccard_top5": 0.111,
+    "top1_within_5deg": false
+   },
+   "missing_20pct": {
+    "mean_jaccard_top5": 0.218,
+    "top1_stays_within_5deg": 0.2
+   }
+  },
+  "MARS_ASTROBIOLOGY/MARS_CHLORIDE": {
+   "weights": {
+    "mean_jaccard_top5": 0.708,
+    "top1_stays_within_5deg": 0.78
+   },
+   "proxies_off": {
+    "jaccard_top5": 1.0,
+    "top1_within_5deg": true
+   },
+   "missing_20pct": {
+    "mean_jaccard_top5": 0.257,
+    "top1_stays_within_5deg": 0.65
+   }
+  },
+  "MARS_ASTROBIOLOGY/MARS_MUDVOLC": {
+   "weights": {
+    "mean_jaccard_top5": 0.579,
+    "top1_stays_within_5deg": 0.3
+   },
+   "proxies_off": {
+    "jaccard_top5": 1.0,
+    "top1_within_5deg": true
+   },
+   "missing_20pct": {
+    "mean_jaccard_top5": 0.148,
+    "top1_stays_within_5deg": 0.05
+   }
+  },
+  "MARS_SUBSURFACE_ICE/MARS_ICE": {
+   "weights": {
+    "mean_jaccard_top5": 0.567,
+    "top1_stays_within_5deg": 0.96
+   },
+   "proxies_off": {
+    "jaccard_top5": 0.667,
+    "top1_within_5deg": true
+   },
+   "missing_20pct": {
+    "mean_jaccard_top5": 0.113,
+    "top1_stays_within_5deg": 0.7
+   }
+  },
+  "MARS_DUST_THERMAL/MARS_JEZERO": {
+   "weights": {
+    "mean_jaccard_top5": 0.515,
+    "top1_stays_within_5deg": 0.49
+   },
+   "proxies_off": {
+    "jaccard_top5": 0.0,
+    "top1_within_5deg": false
+   },
+   "missing_20pct": {
+    "mean_jaccard_top5": 0.051,
+    "top1_stays_within_5deg": 0.05
+   }
+  },
+  "MARS_DUST_THERMAL/MARS_CHLORIDE": {
+   "weights": {
+    "mean_jaccard_top5": 0.808,
+    "top1_stays_within_5deg": 0.76
+   },
+   "proxies_off": {
+    "jaccard_top5": 1.0,
+    "top1_within_5deg": true
+   },
+   "missing_20pct": {
+    "mean_jaccard_top5": 0.287,
+    "top1_stays_within_5deg": 0.4
+   }
+  },
+  "MARS_CREW_OPS/MARS_ICE": {
+   "weights": {
+    "mean_jaccard_top5": 0.747,
+    "top1_stays_within_5deg": 0.96
+   },
+   "proxies_off": {
+    "jaccard_top5": 0.25,
+    "top1_within_5deg": true
+   },
+   "missing_20pct": {
+    "mean_jaccard_top5": 0.1,
+    "top1_stays_within_5deg": 0.25
+   }
+  },
+  "MARS_CREW_OPS/MARS_JEZERO": {
+   "weights": {
+    "mean_jaccard_top5": 0.618,
+    "top1_stays_within_5deg": 0.3
+   },
+   "proxies_off": {
+    "jaccard_top5": 0.111,
+    "top1_within_5deg": true
+   },
+   "missing_20pct": {
+    "mean_jaccard_top5": 0.091,
+    "top1_stays_within_5deg": 0.05
+   }
+  }
+ },
+ "summary": {
+  "weights": {
+   "mean_jaccard_top5": 0.629,
+   "top1_stays_within_5deg": 0.651,
+   "worst_top1_stability": 0.25
+  },
+  "missing_20pct": {
+   "mean_jaccard_top5": 0.169,
+   "top1_stays_within_5deg": 0.332,
+   "worst_top1_stability": 0.0
+  },
+  "proxies_off": {
+   "mean_jaccard_top5": 0.546,
+   "top1_unchanged_share": 0.52
+  }
+ }
+}

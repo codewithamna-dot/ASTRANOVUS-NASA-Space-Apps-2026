@@ -1,0 +1,78 @@
+{
+ "git_commit": "3031204912dfcf49ae28bde9b44ae8d51eb76528",
+ "grid_cells": 3435,
+ "dimension_coverage": {
+  "D1_cold": 1.0,
+  "D2_aridity": 1.0,
+  "D3_barren": 0.689,
+  "D4_terrain": 1.0,
+  "D5_rock": 0.126,
+  "D6_ice": 0.999,
+  "D7_polar_light": 1.0,
+  "D8_thermal_swing": 0.999
+ },
+ "measurements": 29,
+ "retrieval": {
+  "primary_fetched": 17,
+  "search_summary": 12
+ },
+ "evidence_class": {
+  "derived": 14,
+  "observed": 8,
+  "inferred": 7
+ },
+ "target_rules": {
+  "supported": 32,
+  "unverified": 13,
+  "retired": 4
+ },
+ "positive_sites": 11,
+ "control_sites": 15,
+ "validation": {
+  "heldout": {
+   "n_pairs": 6,
+   "n_sites": 4,
+   "median_percentile": 0.811,
+   "median_ci95": [
+    0.439,
+    0.948
+   ],
+   "top25_hit_rate": 0.667,
+   "top10pct_hit_rate": 0.333,
+   "auc_vs_all_controls": 0.867,
+   "auc_vs_hard_controls": 0.775
+  },
+  "heldout_v2": {
+   "n_pairs": 3,
+   "n_sites": 2,
+   "median_percentile": 0.755,
+   "median_ci95": null,
+   "top25_hit_rate": 0.667,
+   "top10pct_hit_rate": 0.0,
+   "auc_vs_all_controls": 0.795,
+   "auc_vs_hard_controls": 0.635
+  },
+  "all": {
+   "n_pairs": 14,
+   "n_sites": 10,
+   "median_percentile": 0.788,
+   "median_ci95": [
+    0.559,
+    0.861
+   ],
+   "top25_hit_rate": 0.643,
+   "top10pct_hit_rate": 0.214,
+   "auc_vs_all_controls": 0.842,
+   "auc_vs_hard_controls": 0.722
+  }
+ },
+ "adjusted_basis": {
+  "median_percentile_raw": 0.788,
+  "median_percentile_adjusted": 0.837,
+  "mean_auc_hard_by_target_raw": 0.755,
+  "mean_auc_hard_by_target_adjusted": 0.777,
+  "note": "The adjusted score was adopted because of a documented coverage bias (score vs coverage rank correlation down to -0.7 for polar targets), not because of these numbers."
+ },
+ "backend_tests": 39,
+ "frontend_tests": 6
+}

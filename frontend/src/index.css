@@ -1,0 +1,211 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Montserrat", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  :root {
+    --bg-canvas: #F4F8FF;
+    --bg-surface: #FFFFFF;
+    --bg-muted: #EDF3FA;
+    --color-primary: #0B5ED7;
+    --color-sky: #54B9F5;
+    --color-mars: #F28B45;
+    --color-moon: #C7D2E0;
+    --text-primary: #142B50;
+    --text-secondary: #68788F;
+    --border-card: #E1E8F0;
+    --border-divider: #E6ECF3;
+    --color-disabled: #AAB7C7;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-image:
+      radial-gradient(circle at 12% 8%, rgba(84, 185, 245, 0.14) 0%, transparent 42%),
+      radial-gradient(circle at 88% 22%, rgba(11, 94, 215, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 50% 85%, rgba(84, 185, 245, 0.10) 0%, transparent 50%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background-color: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    box-shadow:
+      0 8px 28px rgba(20, 43, 80, 0.055),
+      inset 0 1px 0 rgba(255, 255, 255, 0.85);
+    outline: 1px solid rgba(225, 232, 240, 0.85);
+  }
+
+  .glass-interactive {
+    transition:
+      transform 200ms cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 200ms cubic-bezier(0.22, 1, 0.36, 1),
+      background-color 200ms ease,
+      outline-color 200ms ease;
+  }
+
+  .glass-interactive:hover {
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.92);
+    outline-color: rgba(11, 94, 215, 0.35);
+    box-shadow:
+      0 14px 34px rgba(11, 94, 215, 0.10),
+      inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  }
+
+  .glass-dark-hud {
+    background-color: rgba(11, 27, 54, 0.74);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(84, 185, 245, 0.32);
+    box-shadow: 0 8px 24px rgba(6, 15, 32, 0.25);
+  }
+
+  .glass-light-hud {
+    background-color: rgba(255, 255, 255, 0.84);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    outline: 1px solid rgba(225, 232, 240, 0.85);
+    box-shadow: 0 8px 24px rgba(20, 43, 80, 0.11);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Leaflet overrides for Light Space / NASA Science theme */
+.leaflet-container {
+  font-family: var(--font-sans);
+  background: #D4E6F2;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  border: 1px solid #E1E8F0;
+  box-shadow: 0 8px 24px rgba(20, 43, 80, 0.12);
+  padding: 0;
+}
+
+.leaflet-popup-content {
+  margin: 0;
+}
+
+.an-popup .leaflet-popup-content-wrapper { overflow: hidden; }
+
+.leaflet-popup-tip {
+  background: #FFFFFF;
+  border: 1px solid #E1E8F0;
+}
+
+.leaflet-tooltip {
+  background: #142B50;
+  color: #FFFFFF;
+  border: 1px solid rgba(84, 185, 245, 0.35);
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 8px;
+  box-shadow: 0 4px 12px rgba(20, 43, 80, 0.18);
+}
+
+.leaflet-tooltip-top:before {
+  border-top-color: #142B50;
+}
+
+.leaflet-control-attribution {
+  background: rgba(255, 255, 255, 0.88) !important;
+  color: #68788F !important;
+  font-size: 10px !important;
+  padding: 2px 6px !important;
+  border-top-left-radius: 6px;
+}
+
+.leaflet-control-scale-line {
+  background: rgba(255, 255, 255, 0.88) !important;
+  border-color: #142B50 !important;
+  color: #142B50 !important;
+  font-family: var(--font-mono);
+  font-size: 10px !important;
+  font-weight: 600;
+}
+
+/* Custom range slider styling matching #0B5ED7 */
+input[type="range"].astranovus-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: #E1E8F0;
+  border-radius: 999px;
+  outline: none;
+}
+
+input[type="range"].astranovus-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #0B5ED7;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 1px 4px rgba(11, 94, 215, 0.35);
+  cursor: pointer;
+}
+
+input[type="range"].astranovus-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #0B5ED7;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 1px 4px rgba(11, 94, 215, 0.35);
+  cursor: pointer;
+}
+
+
+/* ---- Motion: subtle, purposeful, and fully disabled for users who prefer reduced motion ---- */
+@keyframes an-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes an-orbit {
+  to { transform: rotate(360deg); }
+}
+@keyframes an-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(84, 185, 245, 0.35); }
+  50% { box-shadow: 0 0 0 7px rgba(84, 185, 245, 0); }
+}
+.an-rise { animation: an-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.an-rise-1 { animation-delay: 0.08s; }
+.an-rise-2 { animation-delay: 0.16s; }
+.an-rise-3 { animation-delay: 0.24s; }
+.an-orbit-slow { animation: an-orbit 150s linear infinite; }
+.an-orbit-rev { animation: an-orbit 220s linear infinite reverse; }
+.an-pulse { animation: an-pulse 2.6s ease-out infinite; }
+.an-card { transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.2s ease, border-color 0.2s ease; }
+.an-card:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(11, 94, 215, 0.12); }
+@media (prefers-reduced-motion: reduce) {
+  .an-rise, .an-orbit-slow, .an-orbit-rev, .an-pulse { animation: none !important; }
+  .an-card, .an-card:hover { transition: none; transform: none; }
+  html { scroll-behavior: auto; }
+}

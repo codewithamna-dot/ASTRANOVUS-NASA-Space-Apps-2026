@@ -1,0 +1,11 @@
+# Offline NASA data pipeline (scripts/build_earth_grid.py, scripts/fetch_power_grid.py, scripts/download_earthdata_monthly.py)
+# Use an isolated Python 3.12 virtualenv:  py -3.12 -m venv .venv-data && .venv-data/Scripts/pip install -r requirements-data.txt -r backend/requirements.txt
+numpy
+pandas
+pyhdf        # classic HDF4 (MODIS MOD11C3 / MOD13C2 / MOD10CM)
+h5py         # HDF5 (GPM IMERG)
+requests
+global-land-mask
+earthaccess
+pytest
+httpx

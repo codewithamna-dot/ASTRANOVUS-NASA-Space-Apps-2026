@@ -1,0 +1,391 @@
+{
+  "built_utc": "2026-11-15T03:41:37+00:00",
+  "script": "scripts/build_earth_grid.py",
+  "grid": {
+    "cells": 3435,
+    "step_deg": 2.5,
+    "lat_range": [
+      -88.75,
+      81.25
+    ],
+    "cell_definition": "2.5-degree boxes centred on the land cells of the NASA POWER grid"
+  },
+  "values_are": "percentile ranks (0-1) among the valid cells of this grid; empty = no data",
+  "temporal_coverage": {
+    "MODIS_GPM_months": [
+      "2024-01",
+      "2024-02",
+      "2024-03",
+      "2024-04",
+      "2024-05",
+      "2024-06",
+      "2024-07",
+      "2024-08",
+      "2024-09",
+      "2024-10",
+      "2024-11",
+      "2024-12"
+    ],
+    "complete_year": true,
+    "span": "calendar year 2024, all 12 monthly granules (a single year, not a multi-year climatology)",
+    "note": "All 12 monthly granules of 2024 were processed. This is one year, not a multi-year climatology."
+  },
+  "quality_rules": {
+    "min_valid_fraction_of_land_pixels": 0.3,
+    "LST": "valid_range + fill removed, 150-380 K plausibility; QC bit flags NOT applied (legend not present in file metadata)",
+    "NDVI": "valid_range, fill and pixel_reliability in {0 good, 1 marginal}; value = raw/scale_factor(10000)",
+    "snow": "only 0-100 percent kept; 211 night, 250 cloud, 253 no decision, 254 water, 255 fill excluded",
+    "GPM": "fill -9999.9 removed; mm/hr monthly mean rate x 24 = mm/day"
+  },
+  "products": {
+    "SRTMGL30": {
+      "version": "002",
+      "doi": "10.5067/MEaSUREs/SRTM/SRTMGL30.002",
+      "files": [
+        "e020n40.SRTMGL30.dem.zip",
+        "e020n90.SRTMGL30.dem.zip",
+        "e020s10.SRTMGL30.dem.zip",
+        "e060n40.SRTMGL30.dem.zip",
+        "e060n90.SRTMGL30.dem.zip",
+        "e060s10.SRTMGL30.dem.zip",
+        "e100n40.SRTMGL30.dem.zip",
+        "e100n90.SRTMGL30.dem.zip",
+        "e100s10.SRTMGL30.dem.zip",
+        "e140n40.SRTMGL30.dem.zip",
+        "e140n90.SRTMGL30.dem.zip",
+        "e140s10.SRTMGL30.dem.zip",
+        "krigged_dem_nsidc.bin",
+        "w020n40.SRTMGL30.dem.zip",
+        "w020n90.SRTMGL30.dem.zip",
+        "w020s10.SRTMGL30.dem.zip",
+        "w060n40.SRTMGL30.dem.zip",
+        "w060n90.SRTMGL30.dem.zip",
+        "w060s10.SRTMGL30.dem.zip",
+        "w100n40.SRTMGL30.dem.zip",
+        "w100n90.SRTMGL30.dem.zip",
+        "w100s10.SRTMGL30.dem.zip",
+        "w140n40.SRTMGL30.dem.zip",
+        "w140n90.SRTMGL30.dem.zip",
+        "w140s10.SRTMGL30.dem.zip",
+        "w180n90.SRTMGL30.dem.zip",
+        "w180s10.SRTMGL30.dem.zip"
+      ],
+      "variables": [
+        "elevation (int16, m)"
+      ],
+      "note": "~1 km; GTOPO30-filled outside 60N-56S"
+    },
+    "MOD11C3": {
+      "version": "061",
+      "doi": "10.5067/MODIS/MOD11C3.061",
+      "files": [
+        {
+          "file": "MOD11C3.A2024001.061.2024034041307.hdf",
+          "month": 1
+        },
+        {
+          "file": "MOD11C3.A2024032.061.2024066085830.hdf",
+          "month": 2
+        },
+        {
+          "file": "MOD11C3.A2024061.061.2024094071904.hdf",
+          "month": 3
+        },
+        {
+          "file": "MOD11C3.A2024092.061.2024124224158.hdf",
+          "month": 4
+        },
+        {
+          "file": "MOD11C3.A2024122.061.2024162162404.hdf",
+          "month": 5
+        },
+        {
+          "file": "MOD11C3.A2024153.061.2024187024328.hdf",
+          "month": 6
+        },
+        {
+          "file": "MOD11C3.A2024183.061.2024226150454.hdf",
+          "month": 7
+        },
+        {
+          "file": "MOD11C3.A2024214.061.2024267190123.hdf",
+          "month": 8
+        },
+        {
+          "file": "MOD11C3.A2024245.061.2024275162200.hdf",
+          "month": 9
+        },
+        {
+          "file": "MOD11C3.A2024275.061.2024310164017.hdf",
+          "month": 10
+        },
+        {
+          "file": "MOD11C3.A2024306.061.2024337182831.hdf",
+          "month": 11
+        },
+        {
+          "file": "MOD11C3.A2024336.061.2025003202020.hdf",
+          "month": 12
+        }
+      ],
+      "variables": [
+        "LST_Day_CMG",
+        "LST_Night_CMG",
+        "Percent_land_in_grid"
+      ],
+      "scale": "0.02 K"
+    },
+    "MOD13C2": {
+      "version": "061",
+      "doi": "10.5067/MODIS/MOD13C2.061",
+      "files": [
+        {
+          "file": "MOD13C2.A2024001.061.2024038052740.hdf",
+          "month": 1
+        },
+        {
+          "file": "MOD13C2.A2024032.061.2024066075101.hdf",
+          "month": 2
+        },
+        {
+          "file": "MOD13C2.A2024061.061.2024099222643.hdf",
+          "month": 3
+        },
+        {
+          "file": "MOD13C2.A2024092.061.2024133223503.hdf",
+          "month": 4
+        },
+        {
+          "file": "MOD13C2.A2024122.061.2024162181836.hdf",
+          "month": 5
+        },
+        {
+          "file": "MOD13C2.A2024153.061.2024198104950.hdf",
+          "month": 6
+        },
+        {
+          "file": "MOD13C2.A2024183.061.2024228034735.hdf",
+          "month": 7
+        },
+        {
+          "file": "MOD13C2.A2024214.061.2024267164812.hdf",
+          "month": 8
+        },
+        {
+          "file": "MOD13C2.A2024245.061.2024291123221.hdf",
+          "month": 9
+        },
+        {
+          "file": "MOD13C2.A2024275.061.2024337120446.hdf",
+          "month": 10
+        },
+        {
+          "file": "MOD13C2.A2024306.061.2024338122222.hdf",
+          "month": 11
+        },
+        {
+          "file": "MOD13C2.A2024336.061.2025007011400.hdf",
+          "month": 12
+        }
+      ],
+      "variables": [
+        "CMG 0.05 Deg Monthly NDVI",
+        "CMG 0.05 Deg Monthly pixel reliability"
+      ],
+      "scale": "1/10000"
+    },
+    "MOD10CM": {
+      "version": "061",
+      "doi": "10.5067/MODIS/MOD10CM.061",
+      "files": [
+        {
+          "file": "MOD10CM.A2024001.061.2024034084646.hdf",
+          "month": 1
+        },
+        {
+          "file": "MOD10CM.A2024032.061.2024066092140.hdf",
+          "month": 2
+        },
+        {
+          "file": "MOD10CM.A2024061.061.2024095000412.hdf",
+          "month": 3
+        },
+        {
+          "file": "MOD10CM.A2024092.061.2024125052116.hdf",
+          "month": 4
+        },
+        {
+          "file": "MOD10CM.A2024122.061.2024162161900.hdf",
+          "month": 5
+        },
+        {
+          "file": "MOD10CM.A2024153.061.2024187024104.hdf",
+          "month": 6
+        },
+        {
+          "file": "MOD10CM.A2024183.061.2024226150129.hdf",
+          "month": 7
+        },
+        {
+          "file": "MOD10CM.A2024214.061.2024267185811.hdf",
+          "month": 8
+        },
+        {
+          "file": "MOD10CM.A2024245.061.2024276044440.hdf",
+          "month": 9
+        },
+        {
+          "file": "MOD10CM.A2024275.061.2024310163333.hdf",
+          "month": 10
+        },
+        {
+          "file": "MOD10CM.A2024306.061.2024337182832.hdf",
+          "month": 11
+        },
+        {
+          "file": "MOD10CM.A2024336.061.2025003201547.hdf",
+          "month": 12
+        }
+      ],
+      "variables": [
+        "Snow_Cover_Monthly_CMG"
+      ],
+      "scale": "percent"
+    },
+    "GPM_3IMERGM": {
+      "version": "V07B",
+      "doi": "10.5067/GPM/IMERG/3B-MONTH/07",
+      "files": [
+        {
+          "file": "3B-MO.MS.MRG.3IMERG.20240101-S000000-E235959.01.V07B.HDF5",
+          "month": 1
+        },
+        {
+          "file": "3B-MO.MS.MRG.3IMERG.20240201-S000000-E235959.02.V07B.HDF5",
+          "month": 2
+        },
+        {
+          "file": "3B-MO.MS.MRG.3IMERG.20240301-S000000-E235959.03.V07B.HDF5",
+          "month": 3
+        },
+        {
+          "file": "3B-MO.MS.MRG.3IMERG.20240401-S000000-E235959.04.V07B.HDF5",
+          "month": 4
+        },
+        {
+          "file": "3B-MO.MS.MRG.3IMERG.20240501-S000000-E235959.05.V07B.HDF5",
+          "month": 5
+        },
+        {
+          "file": "3B-MO.MS.MRG.3IMERG.20240601-S000000-E235959.06.V07B.HDF5",
+          "month": 6
+        },
+        {
+          "file": "3B-MO.MS.MRG.3IMERG.20240701-S000000-E235959.07.V07B.HDF5",
+          "month": 7
+        },
+        {
+          "file": "3B-MO.MS.MRG.3IMERG.20240801-S000000-E235959.08.V07B.HDF5",
+          "month": 8
+        },
+        {
+          "file": "3B-MO.MS.MRG.3IMERG.20240901-S000000-E235959.09.V07B.HDF5",
+          "month": 9
+        },
+        {
+          "file": "3B-MO.MS.MRG.3IMERG.20241001-S000000-E235959.10.V07B.HDF5",
+          "month": 10
+        },
+        {
+          "file": "3B-MO.MS.MRG.3IMERG.20241101-S000000-E235959.11.V07B.HDF5",
+          "month": 11
+        },
+        {
+          "file": "3B-MO.MS.MRG.3IMERG.20241201-S000000-E235959.12.V07B.HDF5",
+          "month": 12
+        }
+      ],
+      "variables": [
+        "Grid/precipitation"
+      ],
+      "scale": "mm/hr"
+    },
+    "NASA_POWER": {
+      "source": "climatology point API cache data/raw/power_cache.json",
+      "parameters": "T2M, T2M_MAX, T2M_MIN, PRECTOTCORR, ALLSKY_SFC_SW_DWN"
+    }
+  },
+  "dimensions": {
+    "D1_cold": {
+      "status": "derived",
+      "temporal": "annual climatology",
+      "source": "NASA POWER T2M (2 m AIR temperature, not land-surface temperature), inverted percentile"
+    },
+    "D2_aridity": {
+      "status": "derived",
+      "temporal": "annual climatology",
+      "source": "NASA POWER PRECTOTCORR, inverted percentile"
+    },
+    "D3_barren": {
+      "status": "derived",
+      "temporal": "full year 2024 (12 months)",
+      "source": "MODIS MOD13C2 v061 NDVI, peak monthly NDVI (inverted percentile). Low NDVI also occurs over bare soil, sand and rock alike. Snow/ice-covered cells are left empty (MODIS flags those pixels), with the reason stored per cell."
+    },
+    "D4_terrain": {
+      "status": "derived",
+      "temporal": "static (SRTM 2000; Antarctic DEM 1994-2008)",
+      "source": "Relief = P95 minus P5 of ~1 km elevation inside the cell, percentile. North of 60S: NASA SRTMGL30 v002 (LP DAAC documentation is inconsistent about its northern extent, so values north of 60N are of unconfirmed provenance and lower confidence). South of 60S: NSIDC-0422 Antarctic 1 km DEM (ERS-1 radar + ICESat laser, kriged; smoother than SRTM, coverage ends near 86S). Landscape-scale relief only, not rover-scale slope; 30 m SRTM check exists only for top regions."
+    },
+    "D5_rock": {
+      "status": "proxy",
+      "temporal": "full year 2024 (12 months)",
+      "source": "MODIS MOD11C3 v061 thermal emissivity (bands 29, 31, 32), mean over valid months: delta = mean(E31,E32) minus E29 is larger for silica-rich bare ground; D5 = inverted percentile, so high = silica-poor (mafic, basalt-like). Bare-ground cells only (peak NDVI <= 0.2 and snow <= 20 %). A coarse thermal-infrared composition proxy: NOT rock exposure, NOT mineral identification, NOT lithology (GLiM/EMIT/ASTER GED not integrated)."
+    },
+    "D6_ice": {
+      "status": "proxy",
+      "temporal": "full year 2024 (12 months)",
+      "source": "MODIS MOD10CM v061 snow cover extent, peak of monthly cell means. A snow-cover proxy; NOT glacier presence, permafrost, ground ice or subsurface water ice. A separate perennial_snow_ice flag (snow >= 50 % in every observed month, >= 6 months) is stored in earth_grid_features.csv and is not part of the score."
+    },
+    "D7_polar_light": {
+      "status": "derived",
+      "temporal": "annual climatology",
+      "source": "NASA POWER ALLSKY_SFC_SW_DWN seasonal swing. A terrestrial seasonal-insolation proxy; does not reproduce lunar illumination."
+    },
+    "D8_thermal_swing": {
+      "status": "derived",
+      "temporal": "full year 2024 (12 months)",
+      "source": "MODIS MOD11C3 v061 land-surface-temperature day minus night, mean over valid months, requiring at least 9 of 12 valid months."
+    }
+  },
+  "coverage_by_dimension": {
+    "D1_cold": 1.0,
+    "D2_aridity": 1.0,
+    "D3_barren": 0.689,
+    "D4_terrain": 1.0,
+    "D5_rock": 0.071,
+    "D6_ice": 0.999,
+    "D7_polar_light": 1.0,
+    "D8_thermal_swing": 0.999
+  },
+  "cross_checks": {
+    "D1_cold (POWER air temp) vs MODIS mean LST over available months (inverted)": {
+      "n": 3435,
+      "spearman": 0.991
+    },
+    "D2_aridity (POWER annual precip) vs GPM IMERG mean precip over available months (inverted)": {
+      "n": 3435,
+      "spearman": 0.905
+    },
+    "D8 MODIS LST day-night range vs POWER air-temperature range (v1 D8)": {
+      "n": 3432,
+      "spearman": -0.159
+    },
+    "D4 1-km cell relief (SRTMGL30) vs 30-m 1-degree-tile relief (SRTM 1 arc-sec, top regions only)": {
+      "n": 13,
+      "spearman": 0.868
+    }
+  },
+  "preserved": {
+    "previous_grid_backup": "data/processed/archive/earth_grid_power_only_2.5deg.csv"
+  }
+}

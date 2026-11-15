@@ -1,0 +1,277 @@
+{
+ "cells": 3435,
+ "cells_with_fewer_than_12_observed_months": 521,
+ "cells_with_fewer_than_6": 5,
+ "candidates": {
+  "peak": {
+   "coverage": 0.999,
+   "share_tied_at_maximum": 0.376,
+   "distinct_values": 766,
+   "share_of_cells_at_zero": 0.165,
+   "spearman_vs_peak": 1.0,
+   "missing_month_bound_spearman": 0.972,
+   "reference_order_violations": 1,
+   "reference_percentiles": {
+    "Antarctic plateau": 0.8115160349854227,
+    "Greenland interior": 0.8115160349854227,
+    "Canadian polar desert (Devon area)": 0.8115160349854227,
+    "Siberian taiga": 0.5432944606413994,
+    "Tibetan plateau": 0.34300291545189504,
+    "Alps": 0.3858600583090379,
+    "Sahara": 0.08279883381924198
+   },
+   "exposed_ground_cells": {
+    "n": 2365,
+    "distinct_values": 766,
+    "share_at_zero": 0.24,
+    "share_at_maximum": 0.118,
+    "interquartile_range_of_percentile": 0.347
+   }
+  },
+  "mean": {
+   "coverage": 0.999,
+   "share_tied_at_maximum": 0.281,
+   "distinct_values": 1317,
+   "share_of_cells_at_zero": 0.165,
+   "spearman_vs_peak": 0.968,
+   "missing_month_bound_spearman": 0.988,
+   "reference_order_violations": 1,
+   "reference_percentiles": {
+    "Antarctic plateau": 0.8591836734693877,
+    "Greenland interior": 0.7088921282798833,
+    "Canadian polar desert (Devon area)": 0.6753644314868804,
+    "Siberian taiga": 0.5587463556851312,
+    "Tibetan plateau": 0.37448979591836734,
+    "Alps": 0.41472303206997085,
+    "Sahara": 0.08279883381924198
+   },
+   "exposed_ground_cells": {
+    "n": 2365,
+    "distinct_values": 1267,
+    "share_at_zero": 0.24,
+    "share_at_maximum": 0.0,
+    "interquartile_range_of_percentile": 0.345
+   }
+  },
+  "persistence": {
+   "coverage": 0.999,
+   "share_tied_at_maximum": 0.314,
+   "distinct_values": 23,
+   "share_of_cells_at_zero": 0.383,
+   "spearman_vs_peak": 0.933,
+   "missing_month_bound_spearman": 0.986,
+   "reference_order_violations": 1,
+   "reference_percentiles": {
+    "Antarctic plateau": 0.8427113702623906,
+    "Greenland interior": 0.8427113702623906,
+    "Canadian polar desert (Devon area)": 0.6794460641399417,
+    "Siberian taiga": 0.5784256559766764,
+    "Tibetan plateau": 0.1915451895043732,
+    "Alps": 0.3879008746355685,
+    "Sahara": 0.1915451895043732
+   },
+   "exposed_ground_cells": {
+    "n": 2365,
+    "distinct_values": 23,
+    "share_at_zero": 0.556,
+    "share_at_maximum": 0.006,
+    "interquartile_range_of_percentile": 0.323
+   }
+  },
+  "minimum": {
+   "coverage": 0.999,
+   "share_tied_at_maximum": 0.281,
+   "distinct_values": 364,
+   "share_of_cells_at_zero": 0.219,
+   "spearman_vs_peak": 0.915,
+   "missing_month_bound_spearman": 0.787,
+   "reference_order_violations": 2,
+   "reference_percentiles": {
+    "Antarctic plateau": 0.8591836734693877,
+    "Greenland interior": 0.7100583090379009,
+    "Canadian polar desert (Devon area)": 0.6645772594752186,
+    "Siberian taiga": 0.38644314868804663,
+    "Tibetan plateau": 0.6482507288629737,
+    "Alps": 0.6438775510204081,
+    "Sahara": 0.10947521865889213
+   },
+   "exposed_ground_cells": {
+    "n": 2365,
+    "distinct_values": 309,
+    "share_at_zero": 0.318,
+    "share_at_maximum": 0.0,
+    "interquartile_range_of_percentile": 0.408
+   }
+  }
+ },
+ "pairs_using_D6": [
+  "MOON_WATER_ICE/MOON_PSR",
+  "MOON_WATER_ICE/MOON_SP_RIDGE",
+  "MARS_SUBSURFACE_ICE/MARS_ICE",
+  "MARS_CREW_OPS/MARS_ICE"
+ ],
+ "recommendation_change": {
+  "mean": {
+   "MOON_WATER_ICE/MOON_PSR": {
+    "jaccard_top5": 0.67,
+    "current_top3": [
+     "Antarctica (78.8\u00b0S, 43.8\u00b0E)",
+     "Antarctica (76.2\u00b0S, 123.8\u00b0E)",
+     "Canadian Arctic, Canada (76.2\u00b0N, 121.2\u00b0W)"
+    ],
+    "alternative_top3": [
+     "Antarctica (78.8\u00b0S, 43.8\u00b0E)",
+     "Antarctica (76.2\u00b0S, 123.8\u00b0E)",
+     "Antarctica (81.2\u00b0S, 101.2\u00b0W)"
+    ]
+   },
+   "MOON_WATER_ICE/MOON_SP_RIDGE": {
+    "jaccard_top5": 0.43,
+    "current_top3": [
+     "Canadian Arctic, Canada (81.2\u00b0N, 71.2\u00b0W)",
+     "Canadian Arctic, Canada (66.2\u00b0N, 63.8\u00b0W)",
+     "Russia (78.8\u00b0N, 101.2\u00b0E)"
+    ],
+    "alternative_top3": [
+     "Canadian Arctic, Canada (81.2\u00b0N, 71.2\u00b0W)",
+     "Karakoram / western Himalaya, China (36.2\u00b0N, 76.2\u00b0E)",
+     "Mongolia (48.8\u00b0N, 88.8\u00b0E)"
+    ]
+   },
+   "MARS_SUBSURFACE_ICE/MARS_ICE": {
+    "jaccard_top5": 0.43,
+    "current_top3": [
+     "Canadian Arctic, Canada (76.2\u00b0N, 121.2\u00b0W)",
+     "Russia (73.8\u00b0N, 141.2\u00b0E)",
+     "Northern Canada, Canada (63.8\u00b0N, 86.2\u00b0W)"
+    ],
+    "alternative_top3": [
+     "Canadian Arctic, Canada (76.2\u00b0N, 121.2\u00b0W)",
+     "Greenland (81.2\u00b0N, 33.8\u00b0W)",
+     "Russia (73.8\u00b0N, 141.2\u00b0E)"
+    ]
+   },
+   "MARS_CREW_OPS/MARS_ICE": {
+    "jaccard_top5": 0.43,
+    "current_top3": [
+     "Canadian Arctic, Canada (76.2\u00b0N, 121.2\u00b0W)",
+     "Russia (73.8\u00b0N, 141.2\u00b0E)",
+     "Northern Canada, Canada (63.8\u00b0N, 86.2\u00b0W)"
+    ],
+    "alternative_top3": [
+     "Canadian Arctic, Canada (76.2\u00b0N, 121.2\u00b0W)",
+     "near Greenland (76.2\u00b0N, 18.8\u00b0W)",
+     "Russia (73.8\u00b0N, 141.2\u00b0E)"
+    ]
+   }
+  },
+  "persistence": {
+   "MOON_WATER_ICE/MOON_PSR": {
+    "jaccard_top5": 0.67,
+    "current_top3": [
+     "Antarctica (78.8\u00b0S, 43.8\u00b0E)",
+     "Antarctica (76.2\u00b0S, 123.8\u00b0E)",
+     "Canadian Arctic, Canada (76.2\u00b0N, 121.2\u00b0W)"
+    ],
+    "alternative_top3": [
+     "Antarctica (78.8\u00b0S, 43.8\u00b0E)",
+     "Antarctica (76.2\u00b0S, 123.8\u00b0E)",
+     "Greenland (81.2\u00b0N, 33.8\u00b0W)"
+    ]
+   },
+   "MOON_WATER_ICE/MOON_SP_RIDGE": {
+    "jaccard_top5": 0.67,
+    "current_top3": [
+     "Canadian Arctic, Canada (81.2\u00b0N, 71.2\u00b0W)",
+     "Canadian Arctic, Canada (66.2\u00b0N, 63.8\u00b0W)",
+     "Russia (78.8\u00b0N, 101.2\u00b0E)"
+    ],
+    "alternative_top3": [
+     "Canadian Arctic, Canada (81.2\u00b0N, 71.2\u00b0W)",
+     "Tajikistan (38.8\u00b0N, 73.8\u00b0E)",
+     "Canadian Arctic, Canada (66.2\u00b0N, 63.8\u00b0W)"
+    ]
+   },
+   "MARS_SUBSURFACE_ICE/MARS_ICE": {
+    "jaccard_top5": 0.25,
+    "current_top3": [
+     "Canadian Arctic, Canada (76.2\u00b0N, 121.2\u00b0W)",
+     "Russia (73.8\u00b0N, 141.2\u00b0E)",
+     "Northern Canada, Canada (63.8\u00b0N, 86.2\u00b0W)"
+    ],
+    "alternative_top3": [
+     "Greenland (81.2\u00b0N, 33.8\u00b0W)",
+     "Canadian Arctic, Canada (76.2\u00b0N, 121.2\u00b0W)",
+     "Northern Canada, Canada (63.8\u00b0N, 86.2\u00b0W)"
+    ]
+   },
+   "MARS_CREW_OPS/MARS_ICE": {
+    "jaccard_top5": 0.43,
+    "current_top3": [
+     "Canadian Arctic, Canada (76.2\u00b0N, 121.2\u00b0W)",
+     "Russia (73.8\u00b0N, 141.2\u00b0E)",
+     "Northern Canada, Canada (63.8\u00b0N, 86.2\u00b0W)"
+    ],
+    "alternative_top3": [
+     "Canadian Arctic, Canada (76.2\u00b0N, 121.2\u00b0W)",
+     "Greenland (81.2\u00b0N, 33.8\u00b0W)",
+     "Northern Canada, Canada (63.8\u00b0N, 86.2\u00b0W)"
+    ]
+   }
+  },
+  "minimum": {
+   "MOON_WATER_ICE/MOON_PSR": {
+    "jaccard_top5": 0.67,
+    "current_top3": [
+     "Antarctica (78.8\u00b0S, 43.8\u00b0E)",
+     "Antarctica (76.2\u00b0S, 123.8\u00b0E)",
+     "Canadian Arctic, Canada (76.2\u00b0N, 121.2\u00b0W)"
+    ],
+    "alternative_top3": [
+     "Antarctica (78.8\u00b0S, 43.8\u00b0E)",
+     "Antarctica (76.2\u00b0S, 123.8\u00b0E)",
+     "Antarctica (81.2\u00b0S, 101.2\u00b0W)"
+    ]
+   },
+   "MOON_WATER_ICE/MOON_SP_RIDGE": {
+    "jaccard_top5": 0.25,
+    "current_top3": [
+     "Canadian Arctic, Canada (81.2\u00b0N, 71.2\u00b0W)",
+     "Canadian Arctic, Canada (66.2\u00b0N, 63.8\u00b0W)",
+     "Russia (78.8\u00b0N, 101.2\u00b0E)"
+    ],
+    "alternative_top3": [
+     "Canadian Arctic, Canada (81.2\u00b0N, 71.2\u00b0W)",
+     "Gobi Desert, China (38.8\u00b0N, 93.8\u00b0E)",
+     "Tajikistan (38.8\u00b0N, 73.8\u00b0E)"
+    ]
+   },
+   "MARS_SUBSURFACE_ICE/MARS_ICE": {
+    "jaccard_top5": 0.25,
+    "current_top3": [
+     "Canadian Arctic, Canada (76.2\u00b0N, 121.2\u00b0W)",
+     "Russia (73.8\u00b0N, 141.2\u00b0E)",
+     "Northern Canada, Canada (63.8\u00b0N, 86.2\u00b0W)"
+    ],
+    "alternative_top3": [
+     "Canadian Arctic, Canada (76.2\u00b0N, 121.2\u00b0W)",
+     "Taklamakan Desert, China (36.2\u00b0N, 86.2\u00b0E)",
+     "Greenland (81.2\u00b0N, 33.8\u00b0W)"
+    ]
+   },
+   "MARS_CREW_OPS/MARS_ICE": {
+    "jaccard_top5": 0.25,
+    "current_top3": [
+     "Canadian Arctic, Canada (76.2\u00b0N, 121.2\u00b0W)",
+     "Russia (73.8\u00b0N, 141.2\u00b0E)",
+     "Northern Canada, Canada (63.8\u00b0N, 86.2\u00b0W)"
+    ],
+    "alternative_top3": [
+     "Canadian Arctic, Canada (76.2\u00b0N, 121.2\u00b0W)",
+     "Taklamakan Desert, China (36.2\u00b0N, 86.2\u00b0E)",
+     "near Greenland (76.2\u00b0N, 18.8\u00b0W)"
+    ]
+   }
+  }
+ }
+}

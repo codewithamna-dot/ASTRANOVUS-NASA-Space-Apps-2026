@@ -1,0 +1,146 @@
+{
+ "baseline": {
+  "median_percentile": 0.788,
+  "mean_auc_vs_hard_by_target": 0.755,
+  "n_pairs": 14
+ },
+ "ablations": {
+  "drop D1 cold": {
+   "median_percentile": 0.799,
+   "mean_auc_vs_hard_by_target": 0.684,
+   "n_pairs": 14
+  },
+  "drop D2 aridity": {
+   "median_percentile": 0.843,
+   "mean_auc_vs_hard_by_target": 0.695,
+   "n_pairs": 14
+  },
+  "drop D3 barren": {
+   "median_percentile": 0.705,
+   "mean_auc_vs_hard_by_target": 0.637,
+   "n_pairs": 14
+  },
+  "drop D4 terrain": {
+   "median_percentile": 0.891,
+   "mean_auc_vs_hard_by_target": 0.908,
+   "n_pairs": 14
+  },
+  "drop D5 composition proxy": {
+   "median_percentile": 0.785,
+   "mean_auc_vs_hard_by_target": 0.755,
+   "n_pairs": 14
+  },
+  "drop D6 snow proxy": {
+   "median_percentile": 0.777,
+   "mean_auc_vs_hard_by_target": 0.672,
+   "n_pairs": 14
+  },
+  "drop D7 light proxy": {
+   "median_percentile": 0.788,
+   "mean_auc_vs_hard_by_target": 0.755,
+   "n_pairs": 14
+  },
+  "drop D8 thermal swing": {
+   "median_percentile": 0.598,
+   "mean_auc_vs_hard_by_target": 0.67,
+   "n_pairs": 14
+  },
+  "drop all proxies (D5, D6, D7)": {
+   "median_percentile": 0.776,
+   "mean_auc_vs_hard_by_target": 0.672,
+   "n_pairs": 14
+  },
+  "equal weights (all active rules = 1)": {
+   "median_percentile": 0.79,
+   "mean_auc_vs_hard_by_target": 0.714,
+   "n_pairs": 14
+  }
+ },
+ "weight_noise": {
+  "draws": 300,
+  "log_normal_sigma": 0.3,
+  "median_percentile_95pct_range": [
+   0.676,
+   0.83
+  ],
+  "auc_hard_95pct_range": [
+   0.661,
+   0.819
+  ],
+  "cell_score_rank_correlation_with_baseline_95pct_range": [
+   0.962,
+   0.99
+  ],
+  "reading": "ranges are over plausible weight uncertainty; a rank correlation near 1 means the cell ranking is stable"
+ },
+ "coverage_bias": {
+  "MOON_SP_RIDGE": {
+   "spearman_score_vs_coverage": -0.734,
+   "mean_coverage_all": 0.933,
+   "mean_coverage_top10pct": 0.793
+  },
+  "MOON_PSR": {
+   "spearman_score_vs_coverage": -0.736,
+   "mean_coverage_all": 0.928,
+   "mean_coverage_top10pct": 0.767
+  },
+  "MOON_LAVATUBE": {
+   "spearman_score_vs_coverage": 0.166,
+   "mean_coverage_all": 0.704,
+   "mean_coverage_top10pct": 0.919
+  },
+  "MARS_ICE": {
+   "spearman_score_vs_coverage": -0.706,
+   "mean_coverage_all": 0.952,
+   "mean_coverage_top10pct": 0.846
+  },
+  "MARS_JEZERO": {
+   "spearman_score_vs_coverage": -0.031,
+   "mean_coverage_all": 0.794,
+   "mean_coverage_top10pct": 0.916
+  },
+  "MARS_MUDVOLC": {
+   "spearman_score_vs_coverage": -0.523,
+   "mean_coverage_all": 0.931,
+   "mean_coverage_top10pct": 0.779
+  },
+  "MARS_CHLORIDE": {
+   "spearman_score_vs_coverage": -0.086,
+   "mean_coverage_all": 0.906,
+   "mean_coverage_top10pct": 0.977
+  },
+  "MARS_AEOLIAN": {
+   "spearman_score_vs_coverage": -0.086,
+   "mean_coverage_all": 0.906,
+   "mean_coverage_top10pct": 0.977
+  },
+  "MOON_MARE": {
+   "spearman_score_vs_coverage": 0.256,
+   "mean_coverage_all": 0.776,
+   "mean_coverage_top10pct": 0.892
+  }
+ },
+ "profile_effects": {
+  "gates_removed_jaccard": {
+   "mean_jaccard_of_top5_regions_vs_default": 0.964,
+   "min": 0.429,
+   "pairs": 25
+  },
+  "min_cov_0.2_jaccard": {
+   "mean_jaccard_of_top5_regions_vs_default": 1.0,
+   "min": 1.0,
+   "pairs": 25
+  },
+  "min_cov_0.6_jaccard": {
+   "mean_jaccard_of_top5_regions_vs_default": 1.0,
+   "min": 1.0,
+   "pairs": 25
+  },
+  "no_multipliers_jaccard": {
+   "mean_jaccard_of_top5_regions_vs_default": 0.547,
+   "min": 0.111,
+   "pairs": 25
+  },
+  "reading": "Jaccard 1.0 = identical top-5 regions; low values mean the ingredient (gates, minimum coverage, mission multipliers) materially changes what is recommended. 'no_multipliers' compares the experiment profile against the bare reference-site rules."
+ }
+}

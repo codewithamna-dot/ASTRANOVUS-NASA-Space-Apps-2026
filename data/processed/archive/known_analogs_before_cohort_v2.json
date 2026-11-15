@@ -1,0 +1,283 @@
+{
+  "_meta": {
+    "retrieved_on": "2026-11-15",
+    "purpose": "Validation set for ASTRANOVUS. Positives are Earth sites NASA publishes as planetary-analog field sites. Controls are lowland, vegetated or humid regions chosen BY CONSTRUCTION to be poor analogs (no citation: this is a sanity check, not evidence). The target mapping (which Moon/Mars reference each site should resemble) is an ASTRANOVUS judgement and is flagged as such.",
+    "coordinates": "Approximate site centres in decimal degrees. The Earth grid has 2.5 degree cells, so each site is evaluated at its nearest grid cell, which is far coarser than the site itself.",
+    "excluded_unverified": []
+  },
+  "positives": [
+    {
+      "id": "atacama",
+      "name": "Atacama Desert, Chile",
+      "lat": -24.0,
+      "lon": -69.5,
+      "targets": [
+        "MARS_JEZERO",
+        "MARS_CHLORIDE"
+      ],
+      "citation": {
+        "text": "NASA Science: researchers collect soil samples in Chile's Atacama Desert to study conditions relevant to Mars; NASA lists Atacama among analog field sites.",
+        "urls": [
+          "https://science.nasa.gov/solar-system/planetary-analogs/",
+          "https://www.nasa.gov/analog-missions/"
+        ]
+      }
+    },
+    {
+      "id": "devon_haughton",
+      "name": "Devon Island / Haughton crater, Canada",
+      "lat": 75.4,
+      "lon": -89.8,
+      "targets": [
+        "MARS_ICE"
+      ],
+      "citation": {
+        "text": "NASA-led Haughton-Mars Project: barren, freezing, isolated polar-desert terrain used to simulate Mars (and Moon) exploration.",
+        "urls": [
+          "https://ntrs.nasa.gov/citations/20130012984",
+          "https://science.nasa.gov/solar-system/planetary-analogs/10-things-to-know-about-planetary-analogs/"
+        ]
+      }
+    },
+    {
+      "id": "lava_beds",
+      "name": "Lava Beds National Monument, USA",
+      "lat": 41.7,
+      "lon": -121.5,
+      "targets": [
+        "MOON_LAVATUBE"
+      ],
+      "citation": {
+        "text": "NASA Science: researchers map lava tubes at Lava Beds National Monument with GPR, magnetometers and seismometers, linked to Moon and Mars.",
+        "urls": [
+          "https://science.nasa.gov/solar-system/planetary-analogs/"
+        ]
+      }
+    },
+    {
+      "id": "kilauea",
+      "name": "Kilauea volcano, Hawaii, USA",
+      "lat": 19.4,
+      "lon": -155.3,
+      "targets": [
+        "MOON_LAVATUBE"
+      ],
+      "citation": {
+        "text": "NASA analog missions page: Hawaii's Kilauea Volcano is a planetary analog site used to simulate Moon and Mars conditions.",
+        "urls": [
+          "https://www.nasa.gov/analog-missions/"
+        ]
+      }
+    },
+    {
+      "id": "iceland",
+      "name": "Icelandic volcanic fields",
+      "lat": 64.9,
+      "lon": -17.5,
+      "targets": [
+        "MOON_LAVATUBE"
+      ],
+      "citation": {
+        "text": "NASA Science lists volcanic fields in Iceland among mission-analog sites.",
+        "urls": [
+          "https://science.nasa.gov/solar-system/planetary-analogs/"
+        ]
+      }
+    },
+    {
+      "id": "death_valley",
+      "name": "Death Valley, USA",
+      "lat": 36.5,
+      "lon": -117.1,
+      "targets": [
+        "MARS_CHLORIDE",
+        "MARS_JEZERO"
+      ],
+      "citation": {
+        "text": "NASA Science highlights drone and field tests in Death Valley as planetary-analog testing.",
+        "urls": [
+          "https://science.nasa.gov/solar-system/planetary-analogs/"
+        ]
+      }
+    },
+    {
+      "id": "colorado_desert",
+      "name": "Colorado Desert, California, USA",
+      "lat": 33.0,
+      "lon": -115.8,
+      "targets": [
+        "MOON_MARE",
+        "MARS_JEZERO"
+      ],
+      "citation": {
+        "text": "NASA/JPL field-tested the ERNEST prototype rover in the Colorado Desert (March 2026) for future Moon (and possibly Mars) rovers.",
+        "urls": [
+          "https://www.nasa.gov/solar-system/moon/nasa-testing-advanced-capabilities-for-moon-mars-rovers/"
+        ]
+      }
+    },
+    {
+      "id": "mcmurdo_dry_valleys",
+      "name": "McMurdo Dry Valleys, Antarctica",
+      "lat": -77.5,
+      "lon": 162.5,
+      "targets": [
+        "MARS_ICE"
+      ],
+      "citation": {
+        "text": "NASA NTRS: the McMurdo Dry Valleys are the best-known Earth analog of the Martian high-northern plains where Phoenix landed (ground ice, permafrost, instrument testing); NASA Astrobiology describes Beacon and University Valley ice-cemented ground as Mars analogs.",
+        "urls": [
+          "https://ntrs.nasa.gov/citations/20100003844",
+          "https://astrobiology.nasa.gov/news/cryostructures-in-antarctic-permafrost/"
+        ]
+      }
+    },
+    {
+      "id": "svalbard",
+      "name": "Svalbard, Norway (AMASE)",
+      "lat": 78.2,
+      "lon": 15.6,
+      "targets": [
+        "MARS_JEZERO"
+      ],
+      "citation": {
+        "text": "NASA Goddard: the Arctic Mars Analogue Svalbard Expedition (AMASE) has tested flight-like Mars instruments and studied basaltic carbonates (ALH84001-like) at Svalbard sites since 2003.",
+        "urls": [
+          "https://science.gsfc.nasa.gov/solarsystem/projects/247",
+          "https://ntrs.nasa.gov/citations/20110007828"
+        ]
+      }
+    }
+  ],
+  "controls": [
+    {
+      "id": "amazon",
+      "name": "Amazon rainforest",
+      "lat": -3.0,
+      "lon": -60.0,
+      "hard": false,
+      "why": "humid/vegetated lowland: easy negative"
+    },
+    {
+      "id": "congo",
+      "name": "Congo Basin rainforest",
+      "lat": 0.0,
+      "lon": 22.0,
+      "hard": false,
+      "why": "humid/vegetated lowland: easy negative"
+    },
+    {
+      "id": "borneo",
+      "name": "Borneo rainforest",
+      "lat": 0.5,
+      "lon": 114.0,
+      "hard": false,
+      "why": "humid/vegetated lowland: easy negative"
+    },
+    {
+      "id": "ganges",
+      "name": "Ganges plain farmland",
+      "lat": 26.0,
+      "lon": 85.0,
+      "hard": false,
+      "why": "humid/vegetated lowland: easy negative"
+    },
+    {
+      "id": "w_europe",
+      "name": "Western European farmland",
+      "lat": 48.0,
+      "lon": 2.0,
+      "hard": false,
+      "why": "humid/vegetated lowland: easy negative"
+    },
+    {
+      "id": "us_midwest",
+      "name": "US Midwest cropland",
+      "lat": 41.0,
+      "lon": -93.0,
+      "hard": false,
+      "why": "humid/vegetated lowland: easy negative"
+    },
+    {
+      "id": "boreal_siberia",
+      "name": "Siberian taiga (cold but forested)",
+      "lat": 58.0,
+      "lon": 100.0,
+      "hard": true,
+      "why": "cold like the polar analogs but vegetated and wet: should rank below tundra/polar desert for ice targets"
+    },
+    {
+      "id": "boreal_canada",
+      "name": "Canadian boreal forest",
+      "lat": 55.0,
+      "lon": -100.0,
+      "hard": true,
+      "why": "cold but forested and humid"
+    },
+    {
+      "id": "great_plains",
+      "name": "US Great Plains grassland",
+      "lat": 41.0,
+      "lon": -100.0,
+      "hard": true,
+      "why": "semi-arid but vegetated farmland: should rank below true deserts for dry-barren targets"
+    },
+    {
+      "id": "sahel_savanna",
+      "name": "Sahel savanna",
+      "lat": 13.0,
+      "lon": 5.0,
+      "hard": true,
+      "why": "hot and seasonally dry but vegetated: neighbours the Sahara without being a barren analog"
+    },
+    {
+      "id": "mediterranean",
+      "name": "Mediterranean scrub (Spain)",
+      "lat": 39.0,
+      "lon": -4.0,
+      "hard": true,
+      "why": "dry summers but vegetated and mild"
+    }
+  ],
+  "hypotheses_pakistan": {
+    "_note": "From the original TerraTwin proposal. HYPOTHESES only: coordinates approximate, no NASA analog citation retrieved, 2.5-degree cells far too coarse to resolve these sites. Reported but never counted as validation.",
+    "sites": [
+      {
+        "id": "karakoram_baltoro",
+        "name": "Karakoram / Baltoro glacier region",
+        "lat": 35.7,
+        "lon": 76.4,
+        "targets": [
+          "MARS_ICE"
+        ]
+      },
+      {
+        "id": "hingol",
+        "name": "Hingol mud volcanoes",
+        "lat": 25.5,
+        "lon": 65.5,
+        "targets": [
+          "MARS_MUDVOLC"
+        ]
+      },
+      {
+        "id": "khewra_salt_range",
+        "name": "Khewra / Salt Range",
+        "lat": 32.65,
+        "lon": 73.0,
+        "targets": [
+          "MARS_CHLORIDE"
+        ]
+      },
+      {
+        "id": "katpana",
+        "name": "Katpana cold desert (Skardu)",
+        "lat": 35.3,
+        "lon": 75.4,
+        "targets": [
+          "MARS_ICE"
+        ]
+      }
+    ]
+  }
+}

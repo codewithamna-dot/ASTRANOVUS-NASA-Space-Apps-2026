@@ -1,0 +1,156 @@
+[
+ {
+  "lat": 77.5,
+  "lon": -42.5,
+  "covered": false,
+  "tile": null
+ },
+ {
+  "lat": 67.5,
+  "lon": -102.5,
+  "covered": false,
+  "tile": null
+ },
+ {
+  "lat": 67.5,
+  "lon": 132.5,
+  "covered": false,
+  "tile": null
+ },
+ {
+  "lat": 37.5,
+  "lon": 87.5,
+  "covered": true,
+  "tile": "N37E087",
+  "elevation_mean_m": 4387.6,
+  "slope_mean_deg": 14.04,
+  "slope_p95_deg": 35.37,
+  "relief_m": 1749.0,
+  "roughness_std_m": 510.3,
+  "terrain_class": "moderate",
+  "note": "statistics over the whole 1x1 degree SRTM tile containing the cell centre (not the 5 degree cell)"
+ },
+ {
+  "lat": 22.5,
+  "lon": 17.5,
+  "covered": true,
+  "tile": "N22E017",
+  "elevation_mean_m": 726.1,
+  "slope_mean_deg": 5.73,
+  "slope_p95_deg": 15.98,
+  "relief_m": 353.0,
+  "roughness_std_m": 111.7,
+  "terrain_class": "moderate",
+  "note": "statistics over the whole 1x1 degree SRTM tile containing the cell centre (not the 5 degree cell)"
+ },
+ {
+  "lat": 42.5,
+  "lon": 92.5,
+  "covered": true,
+  "tile": "N42E092",
+  "elevation_mean_m": 469.6,
+  "slope_mean_deg": 2.48,
+  "slope_p95_deg": 5.92,
+  "relief_m": 745.0,
+  "roughness_std_m": 236.2,
+  "terrain_class": "flat",
+  "note": "statistics over the whole 1x1 degree SRTM tile containing the cell centre (not the 5 degree cell)"
+ },
+ {
+  "lat": -22.5,
+  "lon": -67.5,
+  "covered": true,
+  "tile": "S23W068",
+  "elevation_mean_m": 4688.4,
+  "slope_mean_deg": 8.55,
+  "slope_p95_deg": 24.29,
+  "relief_m": 1026.0,
+  "roughness_std_m": 335.4,
+  "terrain_class": "moderate",
+  "note": "statistics over the whole 1x1 degree SRTM tile containing the cell centre (not the 5 degree cell)"
+ },
+ {
+  "lat": 42.5,
+  "lon": 57.5,
+  "covered": true,
+  "tile": "N42E057",
+  "elevation_mean_m": 110.3,
+  "slope_mean_deg": 1.33,
+  "slope_p95_deg": 2.93,
+  "relief_m": 212.0,
+  "roughness_std_m": 74.4,
+  "terrain_class": "flat",
+  "note": "statistics over the whole 1x1 degree SRTM tile containing the cell centre (not the 5 degree cell)"
+ },
+ {
+  "lat": 37.5,
+  "lon": 72.5,
+  "covered": true,
+  "tile": "N37E072",
+  "elevation_mean_m": 4375.7,
+  "slope_mean_deg": 21.23,
+  "slope_p95_deg": 42.37,
+  "relief_m": 1706.0,
+  "roughness_std_m": 521.6,
+  "terrain_class": "rugged",
+  "note": "statistics over the whole 1x1 degree SRTM tile containing the cell centre (not the 5 degree cell)"
+ },
+ {
+  "lat": 37.5,
+  "lon": 82.5,
+  "covered": true,
+  "tile": "N37E082",
+  "elevation_mean_m": 1350.2,
+  "slope_mean_deg": 3.77,
+  "slope_p95_deg": 9.24,
+  "relief_m": 215.0,
+  "roughness_std_m": 61.9,
+  "terrain_class": "flat",
+  "note": "statistics over the whole 1x1 degree SRTM tile containing the cell centre (not the 5 degree cell)"
+ },
+ {
+  "lat": -27.5,
+  "lon": 17.5,
+  "covered": true,
+  "tile": "S28E017",
+  "elevation_mean_m": 844.1,
+  "slope_mean_deg": 7.74,
+  "slope_p95_deg": 27.66,
+  "relief_m": 744.0,
+  "roughness_std_m": 216.2,
+  "terrain_class": "moderate",
+  "note": "statistics over the whole 1x1 degree SRTM tile containing the cell centre (not the 5 degree cell)"
+ },
+ {
+  "lat": 42.5,
+  "lon": 97.5,
+  "covered": true,
+  "tile": "N42E097",
+  "elevation_mean_m": 1395.4,
+  "slope_mean_deg": 2.47,
+  "slope_p95_deg": 5.92,
+  "relief_m": 631.0,
+  "roughness_std_m": 187.4,
+  "terrain_class": "flat",
+  "note": "statistics over the whole 1x1 degree SRTM tile containing the cell centre (not the 5 degree cell)"
+ },
+ {
+  "lat": 32.5,
+  "lon": 57.5,
+  "covered": true,
+  "tile": "N32E057",
+  "elevation_mean_m": 914.1,
+  "slope_mean_deg": 4.03,
+  "slope_p95_deg": 13.53,
+  "relief_m": 704.0,
+  "roughness_std_m": 230.7,
+  "terrain_class": "flat",
+  "note": "statistics over the whole 1x1 degree SRTM tile containing the cell centre (not the 5 degree cell)"
+ },
+ {
+  "lat": 82.5,
+  "lon": -32.5,
+  "covered": false,
+  "tile": null
+ }
+]

@@ -1,0 +1,1770 @@
+{
+ "rows": [
+  {
+   "experiment": "MOON_WATER_ICE",
+   "target": "MOON_PSR",
+   "grounding": "related",
+   "gates": [
+    "D6_ice>=0.5"
+   ],
+   "status": "partial",
+   "n_regions": 5,
+   "excluded_unverified": 5,
+   "ranking_basis": "evidence-adjusted score",
+   "snow_dominated_regions_top5": 0,
+   "top": [
+    {
+     "label": "Antarctica (78.8\u00b0S, 43.8\u00b0E)",
+     "adjusted": 84.06,
+     "raw": 91.42,
+     "coverage": 0.822,
+     "confidence": "medium"
+    },
+    {
+     "label": "Antarctica (76.2\u00b0S, 123.8\u00b0E)",
+     "adjusted": 82.3,
+     "raw": 89.28,
+     "coverage": 0.822,
+     "confidence": "medium"
+    },
+    {
+     "label": "Canadian Arctic, Canada (76.2\u00b0N, 121.2\u00b0W)",
+     "adjusted": 77.38,
+     "raw": 77.38,
+     "coverage": 1.0,
+     "confidence": "high"
+    }
+   ],
+   "jaccard_vs_neutral": 0.67,
+   "limits": [
+    "Lunar permanently shadowed regions are far colder than any Earth surface",
+    "Vacuum and 1/6 g (Moon surface gravity)",
+    "Lunar ice origin, age and chemistry"
+   ],
+   "experiment_description_present": true,
+   "target_body_matches_experiment": true,
+   "n_candidate_regions": 5,
+   "data_sufficiency": "partial",
+   "gate_status": {
+    "gates": [
+     "D6_ice>=0.5"
+    ],
+    "cells_excluded_unverified": 5,
+    "regions_pass_gates": true
+   },
+   "mean_region_coverage": 0.858,
+   "suitability_statuses": [
+    "Partial environmental match"
+   ],
+   "screening_scope": "partial_environmental_assessment",
+   "ranking_stability": {
+    "weights_top1_within_5deg": 0.97,
+    "weights_mean_jaccard_top5": 0.599,
+    "missing_20pct_top1_within_5deg": 0.45,
+    "missing_20pct_mean_jaccard_top5": 0.273,
+    "note": "Precomputed (scripts/ranking_stability.py) for the default weights: how often the #1 region stays within 5 degrees when dimension weights are perturbed (sigma 0.3) or 20% of cells lose a dimension."
+   },
+   "scientific_warnings": [
+    "data state is 'partial': D6_ice",
+    "#1 region unstable when data are missing (45%)",
+    "at least one recommended region has coverage < 90%"
+   ],
+   "validation_result": "pass_with_warnings"
+  },
+  {
+   "experiment": "MOON_WATER_ICE",
+   "target": "MOON_SP_RIDGE",
+   "grounding": "related",
+   "gates": [
+    "D6_ice>=0.5"
+   ],
+   "status": "ready",
+   "n_regions": 5,
+   "excluded_unverified": 1070,
+   "ranking_basis": "evidence-adjusted score",
+   "snow_dominated_regions_top5": 0,
+   "top": [
+    {
+     "label": "Canadian Arctic, Canada (81.2\u00b0N, 71.2\u00b0W)",
+     "adjusted": 73.7,
+     "raw": 73.7,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Canadian Arctic, Canada (66.2\u00b0N, 63.8\u00b0W)",
+     "adjusted": 64.23,
+     "raw": 64.23,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Russia (78.8\u00b0N, 101.2\u00b0E)",
+     "adjusted": 63.23,
+     "raw": 63.23,
+     "coverage": 1.0,
+     "confidence": "high"
+    }
+   ],
+   "jaccard_vs_neutral": 0.11,
+   "limits": [
+    "Lunar permanently shadowed regions are far colder than any Earth surface",
+    "Vacuum and 1/6 g (Moon surface gravity)",
+    "Lunar ice origin, age and chemistry"
+   ],
+   "experiment_description_present": true,
+   "target_body_matches_experiment": true,
+   "n_candidate_regions": 5,
+   "data_sufficiency": "ready",
+   "gate_status": {
+    "gates": [
+     "D6_ice>=0.5"
+    ],
+    "cells_excluded_unverified": 1070,
+    "regions_pass_gates": true
+   },
+   "mean_region_coverage": 1.0,
+   "suitability_statuses": [
+    "Partial environmental match"
+   ],
+   "screening_scope": "partial_environmental_assessment",
+   "ranking_stability": {
+    "weights_top1_within_5deg": 0.98,
+    "weights_mean_jaccard_top5": 0.624,
+    "missing_20pct_top1_within_5deg": 0.85,
+    "missing_20pct_mean_jaccard_top5": 0.134,
+    "note": "Precomputed (scripts/ranking_stability.py) for the default weights: how often the #1 region stays within 5 degrees when dimension weights are perturbed (sigma 0.3) or 20% of cells lose a dimension."
+   },
+   "scientific_warnings": [],
+   "validation_result": "pass"
+  },
+  {
+   "experiment": "MOON_ROVER_MOBILITY",
+   "target": "MOON_MARE",
+   "grounding": "direct",
+   "gates": [
+    "D3_barren>=0.4"
+   ],
+   "status": "partial",
+   "n_regions": 5,
+   "excluded_unverified": 1068,
+   "ranking_basis": "evidence-adjusted score",
+   "snow_dominated_regions_top5": 0,
+   "top": [
+    {
+     "label": "Karakum / Kyzylkum Desert, Uzbekistan (43.8\u00b0N, 61.2\u00b0E)",
+     "adjusted": 85.82,
+     "raw": 85.82,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Sahara Desert, Mali (21.2\u00b0N, 1.2\u00b0W)",
+     "adjusted": 82.89,
+     "raw": 82.89,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Iraq (31.2\u00b0N, 46.2\u00b0E)",
+     "adjusted": 82.06,
+     "raw": 82.06,
+     "coverage": 1.0,
+     "confidence": "high"
+    }
+   ],
+   "jaccard_vs_neutral": 0.43,
+   "limits": [
+    "1/6 g changes wheel-soil loads and slip",
+    "Lunar regolith is sharper and more electrostatic than Earth sand",
+    "No atmosphere (dust and thermal behaviour differ)"
+   ],
+   "experiment_description_present": true,
+   "target_body_matches_experiment": true,
+   "n_candidate_regions": 5,
+   "data_sufficiency": "partial",
+   "gate_status": {
+    "gates": [
+     "D3_barren>=0.4"
+    ],
+    "cells_excluded_unverified": 1068,
+    "regions_pass_gates": true
+   },
+   "mean_region_coverage": 1.0,
+   "suitability_statuses": [
+    "Geological suitability unverified"
+   ],
+   "screening_scope": "climate_terrain_similarity_only",
+   "ranking_stability": {
+    "weights_top1_within_5deg": 0.91,
+    "weights_mean_jaccard_top5": 0.355,
+    "missing_20pct_top1_within_5deg": 0.15,
+    "missing_20pct_mean_jaccard_top5": 0.141,
+    "note": "Precomputed (scripts/ranking_stability.py) for the default weights: how often the #1 region stays within 5 degrees when dimension weights are perturbed (sigma 0.3) or 20% of cells lose a dimension."
+   },
+   "scientific_warnings": [
+    "climate/terrain similarity only: the geology that defines this target is not measured",
+    "every recommended region is labelled 'Geological suitability unverified'",
+    "data state is 'partial': D5_rock, D5_rock",
+    "#1 region unstable when data are missing (15%)"
+   ],
+   "validation_result": "pass_with_warnings"
+  },
+  {
+   "experiment": "MOON_ROVER_MOBILITY",
+   "target": "MOON_SP_RIDGE",
+   "grounding": "direct",
+   "gates": [
+    "D3_barren>=0.4"
+   ],
+   "status": "ready",
+   "n_regions": 5,
+   "excluded_unverified": 1068,
+   "ranking_basis": "evidence-adjusted score",
+   "snow_dominated_regions_top5": 0,
+   "top": [
+    {
+     "label": "Gobi Desert, China (38.8\u00b0N, 93.8\u00b0E)",
+     "adjusted": 79.84,
+     "raw": 79.84,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Atacama Desert, Chile (23.8\u00b0S, 68.8\u00b0W)",
+     "adjusted": 78.33,
+     "raw": 78.33,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Canadian Arctic, Canada (81.2\u00b0N, 71.2\u00b0W)",
+     "adjusted": 77.73,
+     "raw": 77.73,
+     "coverage": 1.0,
+     "confidence": "high"
+    }
+   ],
+   "jaccard_vs_neutral": 0.67,
+   "limits": [
+    "1/6 g changes wheel-soil loads and slip",
+    "Lunar regolith is sharper and more electrostatic than Earth sand",
+    "No atmosphere (dust and thermal behaviour differ)"
+   ],
+   "experiment_description_present": true,
+   "target_body_matches_experiment": true,
+   "n_candidate_regions": 5,
+   "data_sufficiency": "ready",
+   "gate_status": {
+    "gates": [
+     "D3_barren>=0.4"
+    ],
+    "cells_excluded_unverified": 1068,
+    "regions_pass_gates": true
+   },
+   "mean_region_coverage": 1.0,
+   "suitability_statuses": [
+    "Partial environmental match"
+   ],
+   "screening_scope": "partial_environmental_assessment",
+   "ranking_stability": {
+    "weights_top1_within_5deg": 0.67,
+    "weights_mean_jaccard_top5": 0.668,
+    "missing_20pct_top1_within_5deg": 0.45,
+    "missing_20pct_mean_jaccard_top5": 0.147,
+    "note": "Precomputed (scripts/ranking_stability.py) for the default weights: how often the #1 region stays within 5 degrees when dimension weights are perturbed (sigma 0.3) or 20% of cells lose a dimension."
+   },
+   "scientific_warnings": [
+    "#1 region unstable when data are missing (45%)"
+   ],
+   "validation_result": "pass_with_warnings"
+  },
+  {
+   "experiment": "MOON_REGOLITH_DUST",
+   "target": "MOON_MARE",
+   "grounding": "related",
+   "gates": [
+    "D3_barren>=0.4",
+    "D2_aridity>=0.4"
+   ],
+   "status": "partial",
+   "n_regions": 5,
+   "excluded_unverified": 1068,
+   "ranking_basis": "evidence-adjusted score",
+   "snow_dominated_regions_top5": 0,
+   "top": [
+    {
+     "label": "Karakum / Kyzylkum Desert, Uzbekistan (43.8\u00b0N, 61.2\u00b0E)",
+     "adjusted": 85.36,
+     "raw": 85.36,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Sahara Desert, Mali (21.2\u00b0N, 1.2\u00b0W)",
+     "adjusted": 83.62,
+     "raw": 83.62,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Arabian Peninsula, Saudi Arabia (21.2\u00b0N, 53.8\u00b0E)",
+     "adjusted": 81.76,
+     "raw": 81.76,
+     "coverage": 1.0,
+     "confidence": "high"
+    }
+   ],
+   "jaccard_vs_neutral": 0.43,
+   "limits": [
+    "Lunar dust is electrostatically charged and extremely abrasive",
+    "Vacuum changes dust transport",
+    "Earth air and humidity alter adhesion"
+   ],
+   "experiment_description_present": true,
+   "target_body_matches_experiment": true,
+   "n_candidate_regions": 5,
+   "data_sufficiency": "partial",
+   "gate_status": {
+    "gates": [
+     "D3_barren>=0.4",
+     "D2_aridity>=0.4"
+    ],
+    "cells_excluded_unverified": 1068,
+    "regions_pass_gates": true
+   },
+   "mean_region_coverage": 1.0,
+   "suitability_statuses": [
+    "Geological suitability unverified"
+   ],
+   "screening_scope": "climate_terrain_similarity_only",
+   "ranking_stability": {
+    "weights_top1_within_5deg": 0.8,
+    "weights_mean_jaccard_top5": 0.493,
+    "missing_20pct_top1_within_5deg": 0.2,
+    "missing_20pct_mean_jaccard_top5": 0.164,
+    "note": "Precomputed (scripts/ranking_stability.py) for the default weights: how often the #1 region stays within 5 degrees when dimension weights are perturbed (sigma 0.3) or 20% of cells lose a dimension."
+   },
+   "scientific_warnings": [
+    "climate/terrain similarity only: the geology that defines this target is not measured",
+    "every recommended region is labelled 'Geological suitability unverified'",
+    "data state is 'partial': D5_rock, D5_rock",
+    "#1 region unstable when data are missing (20%)"
+   ],
+   "validation_result": "pass_with_warnings"
+  },
+  {
+   "experiment": "MOON_REGOLITH_DUST",
+   "target": "MOON_SP_RIDGE",
+   "grounding": "related",
+   "gates": [
+    "D3_barren>=0.4",
+    "D2_aridity>=0.4"
+   ],
+   "status": "ready",
+   "n_regions": 5,
+   "excluded_unverified": 1068,
+   "ranking_basis": "evidence-adjusted score",
+   "snow_dominated_regions_top5": 0,
+   "top": [
+    {
+     "label": "Gobi Desert, China (38.8\u00b0N, 93.8\u00b0E)",
+     "adjusted": 80.89,
+     "raw": 80.89,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Atacama Desert, Chile (23.8\u00b0S, 68.8\u00b0W)",
+     "adjusted": 79.95,
+     "raw": 79.95,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Canadian Arctic, Canada (81.2\u00b0N, 71.2\u00b0W)",
+     "adjusted": 77.51,
+     "raw": 77.51,
+     "coverage": 1.0,
+     "confidence": "high"
+    }
+   ],
+   "jaccard_vs_neutral": 0.67,
+   "limits": [
+    "Lunar dust is electrostatically charged and extremely abrasive",
+    "Vacuum changes dust transport",
+    "Earth air and humidity alter adhesion"
+   ],
+   "experiment_description_present": true,
+   "target_body_matches_experiment": true,
+   "n_candidate_regions": 5,
+   "data_sufficiency": "ready",
+   "gate_status": {
+    "gates": [
+     "D3_barren>=0.4",
+     "D2_aridity>=0.4"
+    ],
+    "cells_excluded_unverified": 1068,
+    "regions_pass_gates": true
+   },
+   "mean_region_coverage": 1.0,
+   "suitability_statuses": [
+    "Partial environmental match"
+   ],
+   "screening_scope": "partial_environmental_assessment",
+   "ranking_stability": {
+    "weights_top1_within_5deg": 0.73,
+    "weights_mean_jaccard_top5": 0.783,
+    "missing_20pct_top1_within_5deg": 0.6,
+    "missing_20pct_mean_jaccard_top5": 0.247,
+    "note": "Precomputed (scripts/ranking_stability.py) for the default weights: how often the #1 region stays within 5 degrees when dimension weights are perturbed (sigma 0.3) or 20% of cells lose a dimension."
+   },
+   "scientific_warnings": [],
+   "validation_result": "pass"
+  },
+  {
+   "experiment": "MOON_POWER_THERMAL",
+   "target": "MOON_SP_RIDGE",
+   "grounding": "indirect",
+   "gates": [
+    "D2_aridity>=0.4"
+   ],
+   "status": "ready",
+   "n_regions": 5,
+   "excluded_unverified": 1068,
+   "ranking_basis": "evidence-adjusted score",
+   "snow_dominated_regions_top5": 0,
+   "top": [
+    {
+     "label": "Gobi Desert, China (38.8\u00b0N, 93.8\u00b0E)",
+     "adjusted": 72.16,
+     "raw": 72.16,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Canadian Arctic, Canada (81.2\u00b0N, 71.2\u00b0W)",
+     "adjusted": 70.72,
+     "raw": 70.72,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Tajikistan (38.8\u00b0N, 73.8\u00b0E)",
+     "adjusted": 69.84,
+     "raw": 69.84,
+     "coverage": 1.0,
+     "confidence": "high"
+    }
+   ],
+   "jaccard_vs_neutral": 0.67,
+   "limits": [
+    "Lunar day/night cycle lasts about two Earth weeks",
+    "Vacuum: no convective cooling",
+    "Lunar polar permanent shadow / near-permanent sunlight geometry"
+   ],
+   "experiment_description_present": true,
+   "target_body_matches_experiment": true,
+   "n_candidate_regions": 5,
+   "data_sufficiency": "ready",
+   "gate_status": {
+    "gates": [
+     "D2_aridity>=0.4"
+    ],
+    "cells_excluded_unverified": 1068,
+    "regions_pass_gates": true
+   },
+   "mean_region_coverage": 1.0,
+   "suitability_statuses": [
+    "Partial environmental match"
+   ],
+   "screening_scope": "partial_environmental_assessment",
+   "ranking_stability": {
+    "weights_top1_within_5deg": 0.58,
+    "weights_mean_jaccard_top5": 0.681,
+    "missing_20pct_top1_within_5deg": 0.25,
+    "missing_20pct_mean_jaccard_top5": 0.076,
+    "note": "Precomputed (scripts/ranking_stability.py) for the default weights: how often the #1 region stays within 5 degrees when dimension weights are perturbed (sigma 0.3) or 20% of cells lose a dimension."
+   },
+   "scientific_warnings": [
+    "#1 region unstable when data are missing (25%)"
+   ],
+   "validation_result": "pass_with_warnings"
+  },
+  {
+   "experiment": "MOON_POWER_THERMAL",
+   "target": "MOON_MARE",
+   "grounding": "indirect",
+   "gates": [
+    "D2_aridity>=0.4"
+   ],
+   "status": "partial",
+   "n_regions": 5,
+   "excluded_unverified": 1068,
+   "ranking_basis": "evidence-adjusted score",
+   "snow_dominated_regions_top5": 0,
+   "top": [
+    {
+     "label": "Karakum / Kyzylkum Desert, Uzbekistan (43.8\u00b0N, 61.2\u00b0E)",
+     "adjusted": 85.91,
+     "raw": 85.91,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Iraq (31.2\u00b0N, 46.2\u00b0E)",
+     "adjusted": 84.0,
+     "raw": 84.0,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Sahara Desert, Mali (21.2\u00b0N, 1.2\u00b0W)",
+     "adjusted": 83.02,
+     "raw": 83.02,
+     "coverage": 1.0,
+     "confidence": "high"
+    }
+   ],
+   "jaccard_vs_neutral": 0.25,
+   "limits": [
+    "Lunar day/night cycle lasts about two Earth weeks",
+    "Vacuum: no convective cooling",
+    "Lunar polar permanent shadow / near-permanent sunlight geometry"
+   ],
+   "experiment_description_present": true,
+   "target_body_matches_experiment": true,
+   "n_candidate_regions": 5,
+   "data_sufficiency": "partial",
+   "gate_status": {
+    "gates": [
+     "D2_aridity>=0.4"
+    ],
+    "cells_excluded_unverified": 1068,
+    "regions_pass_gates": true
+   },
+   "mean_region_coverage": 1.0,
+   "suitability_statuses": [
+    "Geological suitability unverified"
+   ],
+   "screening_scope": "climate_terrain_similarity_only",
+   "ranking_stability": {
+    "weights_top1_within_5deg": 0.92,
+    "weights_mean_jaccard_top5": 0.276,
+    "missing_20pct_top1_within_5deg": 0.15,
+    "missing_20pct_mean_jaccard_top5": 0.148,
+    "note": "Precomputed (scripts/ranking_stability.py) for the default weights: how often the #1 region stays within 5 degrees when dimension weights are perturbed (sigma 0.3) or 20% of cells lose a dimension."
+   },
+   "scientific_warnings": [
+    "climate/terrain similarity only: the geology that defines this target is not measured",
+    "every recommended region is labelled 'Geological suitability unverified'",
+    "data state is 'partial': D5_rock, D5_rock",
+    "#1 region unstable when data are missing (15%)"
+   ],
+   "validation_result": "pass_with_warnings"
+  },
+  {
+   "experiment": "MOON_HABITAT_OPS",
+   "target": "MOON_LAVATUBE",
+   "grounding": "related",
+   "gates": [],
+   "status": "partial",
+   "n_regions": 5,
+   "excluded_unverified": 1068,
+   "ranking_basis": "evidence-adjusted score",
+   "snow_dominated_regions_top5": 0,
+   "top": [
+    {
+     "label": "Patagonia, Argentina (41.2\u00b0S, 68.8\u00b0W)",
+     "adjusted": 90.04,
+     "raw": 90.04,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Arabian Peninsula, Yemen (16.2\u00b0N, 51.2\u00b0E)",
+     "adjusted": 89.96,
+     "raw": 89.96,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Mexico (28.8\u00b0N, 103.8\u00b0W)",
+     "adjusted": 89.32,
+     "raw": 89.32,
+     "coverage": 1.0,
+     "confidence": "high"
+    }
+   ],
+   "jaccard_vs_neutral": 0.43,
+   "limits": [
+    "Radiation exposure is far higher on the Moon",
+    "1/6 g and vacuum",
+    "Micrometeoroid environment"
+   ],
+   "experiment_description_present": true,
+   "target_body_matches_experiment": true,
+   "n_candidate_regions": 5,
+   "data_sufficiency": "partial",
+   "gate_status": {
+    "gates": [],
+    "cells_excluded_unverified": 1068,
+    "regions_pass_gates": true
+   },
+   "mean_region_coverage": 1.0,
+   "suitability_statuses": [
+    "Geological suitability unverified"
+   ],
+   "screening_scope": "climate_terrain_similarity_only",
+   "ranking_stability": {
+    "weights_top1_within_5deg": 0.35,
+    "weights_mean_jaccard_top5": 0.596,
+    "missing_20pct_top1_within_5deg": 0.2,
+    "missing_20pct_mean_jaccard_top5": 0.261,
+    "note": "Precomputed (scripts/ranking_stability.py) for the default weights: how often the #1 region stays within 5 degrees when dimension weights are perturbed (sigma 0.3) or 20% of cells lose a dimension."
+   },
+   "scientific_warnings": [
+    "climate/terrain similarity only: the geology that defines this target is not measured",
+    "every recommended region is labelled 'Geological suitability unverified'",
+    "data state is 'partial': D5_rock, D5_rock",
+    "#1 region unstable under weight noise (35% within 5 degrees)",
+    "#1 region unstable when data are missing (20%)"
+   ],
+   "validation_result": "pass_with_warnings"
+  },
+  {
+   "experiment": "MOON_HABITAT_OPS",
+   "target": "MOON_MARE",
+   "grounding": "related",
+   "gates": [],
+   "status": "partial",
+   "n_regions": 5,
+   "excluded_unverified": 1068,
+   "ranking_basis": "evidence-adjusted score",
+   "snow_dominated_regions_top5": 0,
+   "top": [
+    {
+     "label": "Karakum / Kyzylkum Desert, Uzbekistan (43.8\u00b0N, 56.2\u00b0E)",
+     "adjusted": 84.3,
+     "raw": 84.3,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Arabian Peninsula, Oman (18.8\u00b0N, 56.2\u00b0E)",
+     "adjusted": 83.59,
+     "raw": 83.59,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "East African Rift region, Sudan (13.8\u00b0N, 33.8\u00b0E)",
+     "adjusted": 79.82,
+     "raw": 79.82,
+     "coverage": 1.0,
+     "confidence": "high"
+    }
+   ],
+   "jaccard_vs_neutral": 0.43,
+   "limits": [
+    "Radiation exposure is far higher on the Moon",
+    "1/6 g and vacuum",
+    "Micrometeoroid environment"
+   ],
+   "experiment_description_present": true,
+   "target_body_matches_experiment": true,
+   "n_candidate_regions": 5,
+   "data_sufficiency": "partial",
+   "gate_status": {
+    "gates": [],
+    "cells_excluded_unverified": 1068,
+    "regions_pass_gates": true
+   },
+   "mean_region_coverage": 1.0,
+   "suitability_statuses": [
+    "Geological suitability unverified"
+   ],
+   "screening_scope": "climate_terrain_similarity_only",
+   "ranking_stability": {
+    "weights_top1_within_5deg": 0.74,
+    "weights_mean_jaccard_top5": 0.552,
+    "missing_20pct_top1_within_5deg": 0.5,
+    "missing_20pct_mean_jaccard_top5": 0.113,
+    "note": "Precomputed (scripts/ranking_stability.py) for the default weights: how often the #1 region stays within 5 degrees when dimension weights are perturbed (sigma 0.3) or 20% of cells lose a dimension."
+   },
+   "scientific_warnings": [
+    "climate/terrain similarity only: the geology that defines this target is not measured",
+    "every recommended region is labelled 'Geological suitability unverified'",
+    "data state is 'partial': D5_rock, D5_rock"
+   ],
+   "validation_result": "pass_with_warnings"
+  },
+  {
+   "experiment": "MOON_GEO_FIELDWORK",
+   "target": "MOON_MARE",
+   "grounding": "related",
+   "gates": [
+    "D2_aridity>=0.4"
+   ],
+   "status": "partial",
+   "n_regions": 5,
+   "excluded_unverified": 1068,
+   "ranking_basis": "evidence-adjusted score",
+   "snow_dominated_regions_top5": 0,
+   "top": [
+    {
+     "label": "Karakum / Kyzylkum Desert, Uzbekistan (43.8\u00b0N, 56.2\u00b0E)",
+     "adjusted": 83.39,
+     "raw": 83.39,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Arabian Peninsula, Oman (18.8\u00b0N, 56.2\u00b0E)",
+     "adjusted": 83.02,
+     "raw": 83.02,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "East African Rift region, Sudan (13.8\u00b0N, 33.8\u00b0E)",
+     "adjusted": 78.29,
+     "raw": 78.29,
+     "coverage": 1.0,
+     "confidence": "high"
+    }
+   ],
+   "jaccard_vs_neutral": 0.43,
+   "limits": [
+    "Lunar rock types and ages differ from most Earth rock",
+    "No weathering or biology on the Moon",
+    "Suited operations in vacuum and 1/6 g"
+   ],
+   "experiment_description_present": true,
+   "target_body_matches_experiment": true,
+   "n_candidate_regions": 5,
+   "data_sufficiency": "partial",
+   "gate_status": {
+    "gates": [
+     "D2_aridity>=0.4"
+    ],
+    "cells_excluded_unverified": 1068,
+    "regions_pass_gates": true
+   },
+   "mean_region_coverage": 1.0,
+   "suitability_statuses": [
+    "Geological suitability unverified"
+   ],
+   "screening_scope": "climate_terrain_similarity_only",
+   "ranking_stability": {
+    "weights_top1_within_5deg": 0.66,
+    "weights_mean_jaccard_top5": 0.506,
+    "missing_20pct_top1_within_5deg": 0.3,
+    "missing_20pct_mean_jaccard_top5": 0.107,
+    "note": "Precomputed (scripts/ranking_stability.py) for the default weights: how often the #1 region stays within 5 degrees when dimension weights are perturbed (sigma 0.3) or 20% of cells lose a dimension."
+   },
+   "scientific_warnings": [
+    "climate/terrain similarity only: the geology that defines this target is not measured",
+    "every recommended region is labelled 'Geological suitability unverified'",
+    "data state is 'partial': D5_rock, D5_rock",
+    "#1 region unstable when data are missing (30%)"
+   ],
+   "validation_result": "pass_with_warnings"
+  },
+  {
+   "experiment": "MARS_ROVER_MOBILITY",
+   "target": "MARS_JEZERO",
+   "grounding": "direct",
+   "gates": [
+    "D3_barren>=0.4"
+   ],
+   "status": "partial",
+   "n_regions": 5,
+   "excluded_unverified": 1068,
+   "ranking_basis": "evidence-adjusted score",
+   "snow_dominated_regions_top5": 0,
+   "top": [
+    {
+     "label": "Iranian Plateau, Iran (33.8\u00b0N, 56.2\u00b0E)",
+     "adjusted": 89.49,
+     "raw": 89.49,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Sahara Desert, Egypt (26.2\u00b0N, 33.8\u00b0E)",
+     "adjusted": 88.85,
+     "raw": 88.85,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Arabian Peninsula, Yemen (16.2\u00b0N, 48.8\u00b0E)",
+     "adjusted": 88.15,
+     "raw": 88.15,
+     "coverage": 1.0,
+     "confidence": "high"
+    }
+   ],
+   "jaccard_vs_neutral": 1.0,
+   "limits": [
+    "Mars gravity is about 0.38 g",
+    "Thin CO2 atmosphere (about 6 mbar)",
+    "Martian soil mechanics and dust differ from Earth sand"
+   ],
+   "experiment_description_present": true,
+   "target_body_matches_experiment": true,
+   "n_candidate_regions": 5,
+   "data_sufficiency": "partial",
+   "gate_status": {
+    "gates": [
+     "D3_barren>=0.4"
+    ],
+    "cells_excluded_unverified": 1068,
+    "regions_pass_gates": true
+   },
+   "mean_region_coverage": 1.0,
+   "suitability_statuses": [
+    "Geological suitability unverified"
+   ],
+   "screening_scope": "climate_terrain_similarity_only",
+   "ranking_stability": {
+    "weights_top1_within_5deg": 0.54,
+    "weights_mean_jaccard_top5": 0.778,
+    "missing_20pct_top1_within_5deg": 0.2,
+    "missing_20pct_mean_jaccard_top5": 0.111,
+    "note": "Precomputed (scripts/ranking_stability.py) for the default weights: how often the #1 region stays within 5 degrees when dimension weights are perturbed (sigma 0.3) or 20% of cells lose a dimension."
+   },
+   "scientific_warnings": [
+    "climate/terrain similarity only: the geology that defines this target is not measured",
+    "every recommended region is labelled 'Geological suitability unverified'",
+    "data state is 'partial': D5_rock, D5_rock",
+    "#1 region unstable when data are missing (20%)"
+   ],
+   "validation_result": "pass_with_warnings"
+  },
+  {
+   "experiment": "MARS_ROVER_MOBILITY",
+   "target": "MARS_MUDVOLC",
+   "grounding": "direct",
+   "gates": [
+    "D3_barren>=0.4"
+   ],
+   "status": "ready",
+   "n_regions": 5,
+   "excluded_unverified": 1068,
+   "ranking_basis": "evidence-adjusted score",
+   "snow_dominated_regions_top5": 0,
+   "top": [
+    {
+     "label": "Canadian Arctic, Canada (76.2\u00b0N, 121.2\u00b0W)",
+     "adjusted": 84.09,
+     "raw": 84.09,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Karakum / Kyzylkum Desert, Uzbekistan (43.8\u00b0N, 61.2\u00b0E)",
+     "adjusted": 83.15,
+     "raw": 83.15,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Sahara Desert, Niger (18.8\u00b0N, 13.8\u00b0E)",
+     "adjusted": 81.98,
+     "raw": 81.98,
+     "coverage": 1.0,
+     "confidence": "high"
+    }
+   ],
+   "jaccard_vs_neutral": 0.25,
+   "limits": [
+    "Mars gravity is about 0.38 g",
+    "Thin CO2 atmosphere (about 6 mbar)",
+    "Martian soil mechanics and dust differ from Earth sand"
+   ],
+   "experiment_description_present": true,
+   "target_body_matches_experiment": true,
+   "n_candidate_regions": 5,
+   "data_sufficiency": "ready",
+   "gate_status": {
+    "gates": [
+     "D3_barren>=0.4"
+    ],
+    "cells_excluded_unverified": 1068,
+    "regions_pass_gates": true
+   },
+   "mean_region_coverage": 1.0,
+   "suitability_statuses": [
+    "Geological suitability unverified"
+   ],
+   "screening_scope": "climate_terrain_similarity_only",
+   "ranking_stability": {
+    "weights_top1_within_5deg": 0.7,
+    "weights_mean_jaccard_top5": 0.688,
+    "missing_20pct_top1_within_5deg": 0.0,
+    "missing_20pct_mean_jaccard_top5": 0.186,
+    "note": "Precomputed (scripts/ranking_stability.py) for the default weights: how often the #1 region stays within 5 degrees when dimension weights are perturbed (sigma 0.3) or 20% of cells lose a dimension."
+   },
+   "scientific_warnings": [
+    "climate/terrain similarity only: the geology that defines this target is not measured",
+    "every recommended region is labelled 'Geological suitability unverified'",
+    "#1 region unstable when data are missing (0%)",
+    "polar regions in the top five for a non-ice Mars target: Canadian Arctic, Canada (76.2\u00b0N, 121.2\u00b0W), Russia (73.8\u00b0N, 141.2\u00b0E)"
+   ],
+   "validation_result": "pass_with_warnings"
+  },
+  {
+   "experiment": "MARS_ROVER_MOBILITY",
+   "target": "MARS_AEOLIAN",
+   "grounding": "direct",
+   "gates": [
+    "D3_barren>=0.4"
+   ],
+   "status": "ready",
+   "n_regions": 5,
+   "excluded_unverified": 1068,
+   "ranking_basis": "evidence-adjusted score",
+   "snow_dominated_regions_top5": 0,
+   "top": [
+    {
+     "label": "Sahara Desert, Niger (18.8\u00b0N, 13.8\u00b0E)",
+     "adjusted": 95.37,
+     "raw": 95.37,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Arabian Peninsula, Saudi Arabia (21.2\u00b0N, 53.8\u00b0E)",
+     "adjusted": 94.78,
+     "raw": 94.78,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Sahara Desert, Mauritania (21.2\u00b0N, 6.2\u00b0W)",
+     "adjusted": 93.92,
+     "raw": 93.92,
+     "coverage": 1.0,
+     "confidence": "high"
+    }
+   ],
+   "jaccard_vs_neutral": 0.67,
+   "limits": [
+    "Mars gravity is about 0.38 g",
+    "Thin CO2 atmosphere (about 6 mbar)",
+    "Martian soil mechanics and dust differ from Earth sand"
+   ],
+   "experiment_description_present": true,
+   "target_body_matches_experiment": true,
+   "n_candidate_regions": 5,
+   "data_sufficiency": "ready",
+   "gate_status": {
+    "gates": [
+     "D3_barren>=0.4"
+    ],
+    "cells_excluded_unverified": 1068,
+    "regions_pass_gates": true
+   },
+   "mean_region_coverage": 1.0,
+   "suitability_statuses": [
+    "Geological suitability unverified"
+   ],
+   "screening_scope": "climate_terrain_similarity_only",
+   "ranking_stability": {
+    "weights_top1_within_5deg": 0.48,
+    "weights_mean_jaccard_top5": 0.582,
+    "missing_20pct_top1_within_5deg": 0.6,
+    "missing_20pct_mean_jaccard_top5": 0.32,
+    "note": "Precomputed (scripts/ranking_stability.py) for the default weights: how often the #1 region stays within 5 degrees when dimension weights are perturbed (sigma 0.3) or 20% of cells lose a dimension."
+   },
+   "scientific_warnings": [
+    "climate/terrain similarity only: the geology that defines this target is not measured",
+    "every recommended region is labelled 'Geological suitability unverified'",
+    "#1 region unstable under weight noise (48% within 5 degrees)"
+   ],
+   "validation_result": "pass_with_warnings"
+  },
+  {
+   "experiment": "MARS_GEOLOGY_SAMPLING",
+   "target": "MARS_JEZERO",
+   "grounding": "direct",
+   "gates": [
+    "D2_aridity>=0.4"
+   ],
+   "status": "partial",
+   "n_regions": 5,
+   "excluded_unverified": 1068,
+   "ranking_basis": "evidence-adjusted score",
+   "snow_dominated_regions_top5": 0,
+   "top": [
+    {
+     "label": "Arabian Peninsula, Yemen (16.2\u00b0N, 48.8\u00b0E)",
+     "adjusted": 86.48,
+     "raw": 86.48,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Iranian Plateau, Iran (33.8\u00b0N, 56.2\u00b0E)",
+     "adjusted": 86.22,
+     "raw": 86.22,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Tibetan Plateau, China (33.8\u00b0N, 81.2\u00b0E)",
+     "adjusted": 85.81,
+     "raw": 85.81,
+     "coverage": 1.0,
+     "confidence": "high"
+    }
+   ],
+   "jaccard_vs_neutral": 0.67,
+   "limits": [
+    "Martian rocks formed under different conditions and ages",
+    "No Earth-like biology or weathering history",
+    "Atmosphere and gravity differ"
+   ],
+   "experiment_description_present": true,
+   "target_body_matches_experiment": true,
+   "n_candidate_regions": 5,
+   "data_sufficiency": "partial",
+   "gate_status": {
+    "gates": [
+     "D2_aridity>=0.4"
+    ],
+    "cells_excluded_unverified": 1068,
+    "regions_pass_gates": true
+   },
+   "mean_region_coverage": 1.0,
+   "suitability_statuses": [
+    "Geological suitability unverified"
+   ],
+   "screening_scope": "climate_terrain_similarity_only",
+   "ranking_stability": {
+    "weights_top1_within_5deg": 0.32,
+    "weights_mean_jaccard_top5": 0.724,
+    "missing_20pct_top1_within_5deg": 0.35,
+    "missing_20pct_mean_jaccard_top5": 0.166,
+    "note": "Precomputed (scripts/ranking_stability.py) for the default weights: how often the #1 region stays within 5 degrees when dimension weights are perturbed (sigma 0.3) or 20% of cells lose a dimension."
+   },
+   "scientific_warnings": [
+    "climate/terrain similarity only: the geology that defines this target is not measured",
+    "every recommended region is labelled 'Geological suitability unverified'",
+    "data state is 'partial': D5_rock, D5_rock",
+    "#1 region unstable under weight noise (32% within 5 degrees)",
+    "#1 region unstable when data are missing (35%)"
+   ],
+   "validation_result": "pass_with_warnings"
+  },
+  {
+   "experiment": "MARS_GEOLOGY_SAMPLING",
+   "target": "MARS_CHLORIDE",
+   "grounding": "direct",
+   "gates": [
+    "D2_aridity>=0.4"
+   ],
+   "status": "ready",
+   "n_regions": 5,
+   "excluded_unverified": 1068,
+   "ranking_basis": "evidence-adjusted score",
+   "snow_dominated_regions_top5": 0,
+   "top": [
+    {
+     "label": "Sahara Desert, Niger (18.8\u00b0N, 13.8\u00b0E)",
+     "adjusted": 95.85,
+     "raw": 95.85,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Arabian Peninsula, Saudi Arabia (21.2\u00b0N, 53.8\u00b0E)",
+     "adjusted": 95.12,
+     "raw": 95.12,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Sahara Desert, Sudan (18.8\u00b0N, 31.2\u00b0E)",
+     "adjusted": 94.65,
+     "raw": 94.65,
+     "coverage": 1.0,
+     "confidence": "high"
+    }
+   ],
+   "jaccard_vs_neutral": 0.67,
+   "limits": [
+    "Martian rocks formed under different conditions and ages",
+    "No Earth-like biology or weathering history",
+    "Atmosphere and gravity differ"
+   ],
+   "experiment_description_present": true,
+   "target_body_matches_experiment": true,
+   "n_candidate_regions": 5,
+   "data_sufficiency": "ready",
+   "gate_status": {
+    "gates": [
+     "D2_aridity>=0.4"
+    ],
+    "cells_excluded_unverified": 1068,
+    "regions_pass_gates": true
+   },
+   "mean_region_coverage": 1.0,
+   "suitability_statuses": [
+    "Geological suitability unverified"
+   ],
+   "screening_scope": "climate_terrain_similarity_only",
+   "ranking_stability": {
+    "weights_top1_within_5deg": 0.82,
+    "weights_mean_jaccard_top5": 0.745,
+    "missing_20pct_top1_within_5deg": 0.65,
+    "missing_20pct_mean_jaccard_top5": 0.266,
+    "note": "Precomputed (scripts/ranking_stability.py) for the default weights: how often the #1 region stays within 5 degrees when dimension weights are perturbed (sigma 0.3) or 20% of cells lose a dimension."
+   },
+   "scientific_warnings": [
+    "climate/terrain similarity only: the geology that defines this target is not measured",
+    "every recommended region is labelled 'Geological suitability unverified'"
+   ],
+   "validation_result": "pass_with_warnings"
+  },
+  {
+   "experiment": "MARS_GEOLOGY_SAMPLING",
+   "target": "MARS_MUDVOLC",
+   "grounding": "direct",
+   "gates": [
+    "D2_aridity>=0.4"
+   ],
+   "status": "ready",
+   "n_regions": 5,
+   "excluded_unverified": 1068,
+   "ranking_basis": "evidence-adjusted score",
+   "snow_dominated_regions_top5": 0,
+   "top": [
+    {
+     "label": "Sahara Desert, Libya (28.8\u00b0N, 23.8\u00b0E)",
+     "adjusted": 79.46,
+     "raw": 79.46,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Canadian Arctic, Canada (76.2\u00b0N, 121.2\u00b0W)",
+     "adjusted": 78.95,
+     "raw": 78.95,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Karakum / Kyzylkum Desert, Uzbekistan (43.8\u00b0N, 61.2\u00b0E)",
+     "adjusted": 78.45,
+     "raw": 78.45,
+     "coverage": 1.0,
+     "confidence": "high"
+    }
+   ],
+   "jaccard_vs_neutral": 0.43,
+   "limits": [
+    "Martian rocks formed under different conditions and ages",
+    "No Earth-like biology or weathering history",
+    "Atmosphere and gravity differ"
+   ],
+   "experiment_description_present": true,
+   "target_body_matches_experiment": true,
+   "n_candidate_regions": 5,
+   "data_sufficiency": "ready",
+   "gate_status": {
+    "gates": [
+     "D2_aridity>=0.4"
+    ],
+    "cells_excluded_unverified": 1068,
+    "regions_pass_gates": true
+   },
+   "mean_region_coverage": 1.0,
+   "suitability_statuses": [
+    "Geological suitability unverified"
+   ],
+   "screening_scope": "climate_terrain_similarity_only",
+   "ranking_stability": {
+    "weights_top1_within_5deg": 0.25,
+    "weights_mean_jaccard_top5": 0.541,
+    "missing_20pct_top1_within_5deg": 0.05,
+    "missing_20pct_mean_jaccard_top5": 0.114,
+    "note": "Precomputed (scripts/ranking_stability.py) for the default weights: how often the #1 region stays within 5 degrees when dimension weights are perturbed (sigma 0.3) or 20% of cells lose a dimension."
+   },
+   "scientific_warnings": [
+    "climate/terrain similarity only: the geology that defines this target is not measured",
+    "every recommended region is labelled 'Geological suitability unverified'",
+    "#1 region unstable under weight noise (25% within 5 degrees)",
+    "#1 region unstable when data are missing (5%)",
+    "polar regions in the top five for a non-ice Mars target: Canadian Arctic, Canada (76.2\u00b0N, 121.2\u00b0W)"
+   ],
+   "validation_result": "pass_with_warnings"
+  },
+  {
+   "experiment": "MARS_ASTROBIOLOGY",
+   "target": "MARS_JEZERO",
+   "grounding": "direct",
+   "gates": [
+    "D2_aridity>=0.4"
+   ],
+   "status": "partial",
+   "n_regions": 5,
+   "excluded_unverified": 1068,
+   "ranking_basis": "evidence-adjusted score",
+   "snow_dominated_regions_top5": 0,
+   "top": [
+    {
+     "label": "Arabian Peninsula, Yemen (16.2\u00b0N, 48.8\u00b0E)",
+     "adjusted": 86.48,
+     "raw": 86.48,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Iranian Plateau, Iran (33.8\u00b0N, 56.2\u00b0E)",
+     "adjusted": 86.22,
+     "raw": 86.22,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Tibetan Plateau, China (33.8\u00b0N, 81.2\u00b0E)",
+     "adjusted": 85.81,
+     "raw": 85.81,
+     "coverage": 1.0,
+     "confidence": "high"
+    }
+   ],
+   "jaccard_vs_neutral": 0.67,
+   "limits": [
+    "Earth life contaminates Earth samples in ways not present on Mars",
+    "Martian radiation and perchlorate chemistry",
+    "Different atmosphere and gravity"
+   ],
+   "experiment_description_present": true,
+   "target_body_matches_experiment": true,
+   "n_candidate_regions": 5,
+   "data_sufficiency": "partial",
+   "gate_status": {
+    "gates": [
+     "D2_aridity>=0.4"
+    ],
+    "cells_excluded_unverified": 1068,
+    "regions_pass_gates": true
+   },
+   "mean_region_coverage": 1.0,
+   "suitability_statuses": [
+    "Geological suitability unverified"
+   ],
+   "screening_scope": "climate_terrain_similarity_only",
+   "ranking_stability": {
+    "weights_top1_within_5deg": 0.31,
+    "weights_mean_jaccard_top5": 0.692,
+    "missing_20pct_top1_within_5deg": 0.2,
+    "missing_20pct_mean_jaccard_top5": 0.218,
+    "note": "Precomputed (scripts/ranking_stability.py) for the default weights: how often the #1 region stays within 5 degrees when dimension weights are perturbed (sigma 0.3) or 20% of cells lose a dimension."
+   },
+   "scientific_warnings": [
+    "climate/terrain similarity only: the geology that defines this target is not measured",
+    "every recommended region is labelled 'Geological suitability unverified'",
+    "data state is 'partial': D5_rock, D5_rock",
+    "#1 region unstable under weight noise (31% within 5 degrees)",
+    "#1 region unstable when data are missing (20%)"
+   ],
+   "validation_result": "pass_with_warnings"
+  },
+  {
+   "experiment": "MARS_ASTROBIOLOGY",
+   "target": "MARS_CHLORIDE",
+   "grounding": "direct",
+   "gates": [
+    "D2_aridity>=0.4"
+   ],
+   "status": "ready",
+   "n_regions": 5,
+   "excluded_unverified": 1068,
+   "ranking_basis": "evidence-adjusted score",
+   "snow_dominated_regions_top5": 0,
+   "top": [
+    {
+     "label": "Sahara Desert, Niger (18.8\u00b0N, 13.8\u00b0E)",
+     "adjusted": 95.85,
+     "raw": 95.85,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Arabian Peninsula, Saudi Arabia (21.2\u00b0N, 53.8\u00b0E)",
+     "adjusted": 95.12,
+     "raw": 95.12,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Sahara Desert, Sudan (18.8\u00b0N, 31.2\u00b0E)",
+     "adjusted": 94.65,
+     "raw": 94.65,
+     "coverage": 1.0,
+     "confidence": "high"
+    }
+   ],
+   "jaccard_vs_neutral": 0.67,
+   "limits": [
+    "Earth life contaminates Earth samples in ways not present on Mars",
+    "Martian radiation and perchlorate chemistry",
+    "Different atmosphere and gravity"
+   ],
+   "experiment_description_present": true,
+   "target_body_matches_experiment": true,
+   "n_candidate_regions": 5,
+   "data_sufficiency": "ready",
+   "gate_status": {
+    "gates": [
+     "D2_aridity>=0.4"
+    ],
+    "cells_excluded_unverified": 1068,
+    "regions_pass_gates": true
+   },
+   "mean_region_coverage": 1.0,
+   "suitability_statuses": [
+    "Geological suitability unverified"
+   ],
+   "screening_scope": "climate_terrain_similarity_only",
+   "ranking_stability": {
+    "weights_top1_within_5deg": 0.78,
+    "weights_mean_jaccard_top5": 0.708,
+    "missing_20pct_top1_within_5deg": 0.65,
+    "missing_20pct_mean_jaccard_top5": 0.257,
+    "note": "Precomputed (scripts/ranking_stability.py) for the default weights: how often the #1 region stays within 5 degrees when dimension weights are perturbed (sigma 0.3) or 20% of cells lose a dimension."
+   },
+   "scientific_warnings": [
+    "climate/terrain similarity only: the geology that defines this target is not measured",
+    "every recommended region is labelled 'Geological suitability unverified'"
+   ],
+   "validation_result": "pass_with_warnings"
+  },
+  {
+   "experiment": "MARS_ASTROBIOLOGY",
+   "target": "MARS_MUDVOLC",
+   "grounding": "direct",
+   "gates": [
+    "D2_aridity>=0.4"
+   ],
+   "status": "ready",
+   "n_regions": 5,
+   "excluded_unverified": 1068,
+   "ranking_basis": "evidence-adjusted score",
+   "snow_dominated_regions_top5": 0,
+   "top": [
+    {
+     "label": "Sahara Desert, Libya (28.8\u00b0N, 23.8\u00b0E)",
+     "adjusted": 79.46,
+     "raw": 79.46,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Canadian Arctic, Canada (76.2\u00b0N, 121.2\u00b0W)",
+     "adjusted": 78.95,
+     "raw": 78.95,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Karakum / Kyzylkum Desert, Uzbekistan (43.8\u00b0N, 61.2\u00b0E)",
+     "adjusted": 78.45,
+     "raw": 78.45,
+     "coverage": 1.0,
+     "confidence": "high"
+    }
+   ],
+   "jaccard_vs_neutral": 0.43,
+   "limits": [
+    "Earth life contaminates Earth samples in ways not present on Mars",
+    "Martian radiation and perchlorate chemistry",
+    "Different atmosphere and gravity"
+   ],
+   "experiment_description_present": true,
+   "target_body_matches_experiment": true,
+   "n_candidate_regions": 5,
+   "data_sufficiency": "ready",
+   "gate_status": {
+    "gates": [
+     "D2_aridity>=0.4"
+    ],
+    "cells_excluded_unverified": 1068,
+    "regions_pass_gates": true
+   },
+   "mean_region_coverage": 1.0,
+   "suitability_statuses": [
+    "Geological suitability unverified"
+   ],
+   "screening_scope": "climate_terrain_similarity_only",
+   "ranking_stability": {
+    "weights_top1_within_5deg": 0.3,
+    "weights_mean_jaccard_top5": 0.579,
+    "missing_20pct_top1_within_5deg": 0.05,
+    "missing_20pct_mean_jaccard_top5": 0.148,
+    "note": "Precomputed (scripts/ranking_stability.py) for the default weights: how often the #1 region stays within 5 degrees when dimension weights are perturbed (sigma 0.3) or 20% of cells lose a dimension."
+   },
+   "scientific_warnings": [
+    "climate/terrain similarity only: the geology that defines this target is not measured",
+    "every recommended region is labelled 'Geological suitability unverified'",
+    "#1 region unstable under weight noise (30% within 5 degrees)",
+    "#1 region unstable when data are missing (5%)",
+    "polar regions in the top five for a non-ice Mars target: Canadian Arctic, Canada (76.2\u00b0N, 121.2\u00b0W)"
+   ],
+   "validation_result": "pass_with_warnings"
+  },
+  {
+   "experiment": "MARS_SUBSURFACE_ICE",
+   "target": "MARS_ICE",
+   "grounding": "related",
+   "gates": [
+    "D6_ice>=0.5"
+   ],
+   "status": "partial",
+   "n_regions": 5,
+   "excluded_unverified": 1070,
+   "ranking_basis": "evidence-adjusted score",
+   "snow_dominated_regions_top5": 0,
+   "top": [
+    {
+     "label": "Canadian Arctic, Canada (76.2\u00b0N, 121.2\u00b0W)",
+     "adjusted": 73.73,
+     "raw": 73.73,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Russia (73.8\u00b0N, 141.2\u00b0E)",
+     "adjusted": 70.68,
+     "raw": 70.68,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Northern Canada, Canada (63.8\u00b0N, 86.2\u00b0W)",
+     "adjusted": 69.92,
+     "raw": 69.92,
+     "coverage": 1.0,
+     "confidence": "high"
+    }
+   ],
+   "jaccard_vs_neutral": 0.25,
+   "limits": [
+    "Mars surface pressure (about 6 mbar) and CO2 atmosphere cause rapid ice sublimation",
+    "Ice depth, age and purity differ",
+    "Mars gravity about 0.38 g"
+   ],
+   "experiment_description_present": true,
+   "target_body_matches_experiment": true,
+   "n_candidate_regions": 5,
+   "data_sufficiency": "partial",
+   "gate_status": {
+    "gates": [
+     "D6_ice>=0.5"
+    ],
+    "cells_excluded_unverified": 1070,
+    "regions_pass_gates": true
+   },
+   "mean_region_coverage": 1.0,
+   "suitability_statuses": [
+    "Partial environmental match"
+   ],
+   "screening_scope": "partial_environmental_assessment",
+   "ranking_stability": {
+    "weights_top1_within_5deg": 1.0,
+    "weights_mean_jaccard_top5": 0.758,
+    "missing_20pct_top1_within_5deg": 0.85,
+    "missing_20pct_mean_jaccard_top5": 0.148,
+    "note": "Precomputed (scripts/ranking_stability.py) for the default weights: how often the #1 region stays within 5 degrees when dimension weights are perturbed (sigma 0.3) or 20% of cells lose a dimension."
+   },
+   "scientific_warnings": [
+    "data state is 'partial': D6_ice"
+   ],
+   "validation_result": "pass_with_warnings"
+  },
+  {
+   "experiment": "MARS_DUST_THERMAL",
+   "target": "MARS_JEZERO",
+   "grounding": "related",
+   "gates": [
+    "D2_aridity>=0.4"
+   ],
+   "status": "partial",
+   "n_regions": 5,
+   "excluded_unverified": 1068,
+   "ranking_basis": "evidence-adjusted score",
+   "snow_dominated_regions_top5": 0,
+   "top": [
+    {
+     "label": "Tibetan Plateau, China (33.8\u00b0N, 81.2\u00b0E)",
+     "adjusted": 88.48,
+     "raw": 88.48,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Iranian Plateau, Iran (33.8\u00b0N, 56.2\u00b0E)",
+     "adjusted": 88.4,
+     "raw": 88.4,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Sahara Desert, Egypt (26.2\u00b0N, 33.8\u00b0E)",
+     "adjusted": 87.5,
+     "raw": 87.5,
+     "coverage": 1.0,
+     "confidence": "high"
+    }
+   ],
+   "jaccard_vs_neutral": 0.43,
+   "limits": [
+    "Martian dust is fine, electrostatic and wind-lofted in a 6 mbar atmosphere",
+    "Much higher UV and radiation at the surface",
+    "Different atmospheric heat transfer"
+   ],
+   "experiment_description_present": true,
+   "target_body_matches_experiment": true,
+   "n_candidate_regions": 5,
+   "data_sufficiency": "partial",
+   "gate_status": {
+    "gates": [
+     "D2_aridity>=0.4"
+    ],
+    "cells_excluded_unverified": 1068,
+    "regions_pass_gates": true
+   },
+   "mean_region_coverage": 1.0,
+   "suitability_statuses": [
+    "Geological suitability unverified"
+   ],
+   "screening_scope": "climate_terrain_similarity_only",
+   "ranking_stability": {
+    "weights_top1_within_5deg": 0.49,
+    "weights_mean_jaccard_top5": 0.515,
+    "missing_20pct_top1_within_5deg": 0.05,
+    "missing_20pct_mean_jaccard_top5": 0.051,
+    "note": "Precomputed (scripts/ranking_stability.py) for the default weights: how often the #1 region stays within 5 degrees when dimension weights are perturbed (sigma 0.3) or 20% of cells lose a dimension."
+   },
+   "scientific_warnings": [
+    "climate/terrain similarity only: the geology that defines this target is not measured",
+    "every recommended region is labelled 'Geological suitability unverified'",
+    "data state is 'partial': D5_rock, D5_rock",
+    "#1 region unstable under weight noise (49% within 5 degrees)",
+    "#1 region unstable when data are missing (5%)"
+   ],
+   "validation_result": "pass_with_warnings"
+  },
+  {
+   "experiment": "MARS_DUST_THERMAL",
+   "target": "MARS_CHLORIDE",
+   "grounding": "related",
+   "gates": [
+    "D2_aridity>=0.4"
+   ],
+   "status": "ready",
+   "n_regions": 5,
+   "excluded_unverified": 1068,
+   "ranking_basis": "evidence-adjusted score",
+   "snow_dominated_regions_top5": 0,
+   "top": [
+    {
+     "label": "Arabian Peninsula, Saudi Arabia (21.2\u00b0N, 53.8\u00b0E)",
+     "adjusted": 95.39,
+     "raw": 95.39,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Sahara Desert, Algeria (23.8\u00b0N, 1.2\u00b0E)",
+     "adjusted": 94.94,
+     "raw": 94.94,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Sahara Desert, Sudan (18.8\u00b0N, 31.2\u00b0E)",
+     "adjusted": 93.74,
+     "raw": 93.74,
+     "coverage": 1.0,
+     "confidence": "high"
+    }
+   ],
+   "jaccard_vs_neutral": 0.43,
+   "limits": [
+    "Martian dust is fine, electrostatic and wind-lofted in a 6 mbar atmosphere",
+    "Much higher UV and radiation at the surface",
+    "Different atmospheric heat transfer"
+   ],
+   "experiment_description_present": true,
+   "target_body_matches_experiment": true,
+   "n_candidate_regions": 5,
+   "data_sufficiency": "ready",
+   "gate_status": {
+    "gates": [
+     "D2_aridity>=0.4"
+    ],
+    "cells_excluded_unverified": 1068,
+    "regions_pass_gates": true
+   },
+   "mean_region_coverage": 1.0,
+   "suitability_statuses": [
+    "Geological suitability unverified"
+   ],
+   "screening_scope": "climate_terrain_similarity_only",
+   "ranking_stability": {
+    "weights_top1_within_5deg": 0.76,
+    "weights_mean_jaccard_top5": 0.808,
+    "missing_20pct_top1_within_5deg": 0.4,
+    "missing_20pct_mean_jaccard_top5": 0.287,
+    "note": "Precomputed (scripts/ranking_stability.py) for the default weights: how often the #1 region stays within 5 degrees when dimension weights are perturbed (sigma 0.3) or 20% of cells lose a dimension."
+   },
+   "scientific_warnings": [
+    "climate/terrain similarity only: the geology that defines this target is not measured",
+    "every recommended region is labelled 'Geological suitability unverified'",
+    "#1 region unstable when data are missing (40%)"
+   ],
+   "validation_result": "pass_with_warnings"
+  },
+  {
+   "experiment": "MARS_CREW_OPS",
+   "target": "MARS_ICE",
+   "grounding": "direct",
+   "gates": [],
+   "status": "partial",
+   "n_regions": 5,
+   "excluded_unverified": 1068,
+   "ranking_basis": "evidence-adjusted score",
+   "snow_dominated_regions_top5": 0,
+   "top": [
+    {
+     "label": "Canadian Arctic, Canada (76.2\u00b0N, 121.2\u00b0W)",
+     "adjusted": 73.43,
+     "raw": 73.43,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Russia (73.8\u00b0N, 141.2\u00b0E)",
+     "adjusted": 69.55,
+     "raw": 69.55,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Northern Canada, Canada (63.8\u00b0N, 86.2\u00b0W)",
+     "adjusted": 68.71,
+     "raw": 68.71,
+     "coverage": 1.0,
+     "confidence": "high"
+    }
+   ],
+   "jaccard_vs_neutral": 0.25,
+   "limits": [
+    "Real communication delay and true isolation from Earth",
+    "Mars gravity, pressure and radiation",
+    "Actual suit and habitat pressure loads"
+   ],
+   "experiment_description_present": true,
+   "target_body_matches_experiment": true,
+   "n_candidate_regions": 5,
+   "data_sufficiency": "partial",
+   "gate_status": {
+    "gates": [],
+    "cells_excluded_unverified": 1068,
+    "regions_pass_gates": true
+   },
+   "mean_region_coverage": 1.0,
+   "suitability_statuses": [
+    "Partial environmental match"
+   ],
+   "screening_scope": "partial_environmental_assessment",
+   "ranking_stability": {
+    "weights_top1_within_5deg": 1.0,
+    "weights_mean_jaccard_top5": 0.667,
+    "missing_20pct_top1_within_5deg": 0.7,
+    "missing_20pct_mean_jaccard_top5": 0.128,
+    "note": "Precomputed (scripts/ranking_stability.py) for the default weights: how often the #1 region stays within 5 degrees when dimension weights are perturbed (sigma 0.3) or 20% of cells lose a dimension."
+   },
+   "scientific_warnings": [
+    "data state is 'partial': D6_ice"
+   ],
+   "validation_result": "pass_with_warnings"
+  },
+  {
+   "experiment": "MARS_CREW_OPS",
+   "target": "MARS_JEZERO",
+   "grounding": "direct",
+   "gates": [],
+   "status": "partial",
+   "n_regions": 5,
+   "excluded_unverified": 1068,
+   "ranking_basis": "evidence-adjusted score",
+   "snow_dominated_regions_top5": 0,
+   "top": [
+    {
+     "label": "Gobi Desert, China (41.2\u00b0N, 91.2\u00b0E)",
+     "adjusted": 87.37,
+     "raw": 87.37,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Sahara Desert, Egypt (26.2\u00b0N, 33.8\u00b0E)",
+     "adjusted": 87.23,
+     "raw": 87.23,
+     "coverage": 1.0,
+     "confidence": "high"
+    },
+    {
+     "label": "Iranian Plateau, Iran (33.8\u00b0N, 56.2\u00b0E)",
+     "adjusted": 87.15,
+     "raw": 87.15,
+     "coverage": 1.0,
+     "confidence": "high"
+    }
+   ],
+   "jaccard_vs_neutral": 1.0,
+   "limits": [
+    "Real communication delay and true isolation from Earth",
+    "Mars gravity, pressure and radiation",
+    "Actual suit and habitat pressure loads"
+   ],
+   "experiment_description_present": true,
+   "target_body_matches_experiment": true,
+   "n_candidate_regions": 5,
+   "data_sufficiency": "partial",
+   "gate_status": {
+    "gates": [],
+    "cells_excluded_unverified": 1068,
+    "regions_pass_gates": true
+   },
+   "mean_region_coverage": 1.0,
+   "suitability_statuses": [
+    "Geological suitability unverified"
+   ],
+   "screening_scope": "climate_terrain_similarity_only",
+   "ranking_stability": {
+    "weights_top1_within_5deg": 0.3,
+    "weights_mean_jaccard_top5": 0.618,
+    "missing_20pct_top1_within_5deg": 0.05,
+    "missing_20pct_mean_jaccard_top5": 0.091,
+    "note": "Precomputed (scripts/ranking_stability.py) for the default weights: how often the #1 region stays within 5 degrees when dimension weights are perturbed (sigma 0.3) or 20% of cells lose a dimension."
+   },
+   "scientific_warnings": [
+    "climate/terrain similarity only: the geology that defines this target is not measured",
+    "every recommended region is labelled 'Geological suitability unverified'",
+    "data state is 'partial': D5_rock, D5_rock",
+    "#1 region unstable under weight noise (30% within 5 degrees)",
+    "#1 region unstable when data are missing (5%)"
+   ],
+   "validation_result": "pass_with_warnings"
+  }
+ ],
+ "problems": []
+}

@@ -1,0 +1,6 @@
+.venv-data
+frontend
+data/raw
+data/sample
+.git
+**/__pycache__

@@ -1,8 +1,32 @@
-.DS_Store
-Thumbs.db
+__pycache__/
+*.pyc
+.venv/
 node_modules/
+dist/
 .env
-.env.*
-!.env.example
+.DS_Store
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+.venv-data/
+frontend/dist/
+
+# Deployable, small, versioned Earth-grid outputs (the API needs these at runtime)
+!data/processed/earth_grid.csv
+!data/processed/earth_grid_features.csv
+!data/processed/earth_grid_metadata.json
+!data/processed/archive/
+# legacy duplicate grid backups: kept on the local disk, not in Git (small JSON provenance and pre_d6_mean/ stay tracked)
+data/processed/archive/*.csv
+# frozen baseline snapshot used by the tests (153 KB)
+!data/processed/baseline_2026-11-16/
+
+!data/processed/stage2.json
+
+# local tooling and logs
+.pytest_cache/
+.venv*/
 *.log
-.openai/
+.claude/

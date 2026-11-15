@@ -1,0 +1,463 @@
+{
+  "_meta": {
+    "purpose": "User-facing experiment / mission-objective scenarios. Each one maps onto an EXISTING mission profile in data/purposes.json; scoring, gates and target compatibility are still computed by model/recommend.py. This file only adds labels, explanations and NASA source links.",
+    "sources_verified_on": "2026-11-15",
+    "classification": {
+      "direct": "NASA publishes an activity/objective that directly matches this scenario.",
+      "related": "NASA publishes a closely related analog activity or objective; ASTRANOVUS maps it onto this scenario.",
+      "indirect": "NASA documents only general analog/testing context; the scenario itself is an ASTRANOVUS proposal."
+    },
+    "notice": "These are candidate user-facing categories proposed by ASTRANOVUS. They are NOT claims that NASA has scheduled or endorsed each described experiment.",
+    "sources": {
+      "analogs": {
+        "label": "NASA Science - Planetary Analogs",
+        "url": "https://science.nasa.gov/solar-system/planetary-analogs/"
+      },
+      "analog_missions": {
+        "label": "NASA - Analog Missions",
+        "url": "https://www.nasa.gov/analog-missions/"
+      },
+      "mars_science": {
+        "label": "NASA Science - Mars Science Objectives (page marked draft by NASA)",
+        "url": "https://science.nasa.gov/planetary-science/programs/mars-exploration/mars-science-objectives/"
+      },
+      "perseverance": {
+        "label": "NASA Science - Mars 2020 Perseverance Science Objectives",
+        "url": "https://science.nasa.gov/mission/mars-2020-perseverance/science-objectives/"
+      },
+      "rovers": {
+        "label": "NASA/JPL - Testing Advanced Capabilities for Moon & Mars Rovers",
+        "url": "https://www.nasa.gov/solar-system/moon/nasa-testing-advanced-capabilities-for-moon-mars-rovers/"
+      },
+      "chapea": {
+        "label": "NASA - About CHAPEA",
+        "url": "https://www.nasa.gov/humans-in-space/chapea/about-chapea/"
+      },
+      "dust_roadmap": {
+        "label": "NASA Lunar Dust Mitigation Roadmap (Fall 2024, NTRS)",
+        "url": "https://ntrs.nasa.gov/api/citations/20240013978/downloads/NASA%20Lunar%20Dust%20Mitigation%20Roadmap%20Fall%202024.pdf"
+      },
+      "simulant_testing": {
+        "label": "NASA - Digging the Dirt: lunar surface simulant testing",
+        "url": "https://www.nasa.gov/science-research/tech-research/digging-the-dirt-nasa-benefits-from-lunar-surface-simulant-testing/"
+      },
+      "fsp": {
+        "label": "NASA Fission Surface Power project briefing (NTRS)",
+        "url": "https://ntrs.nasa.gov/api/citations/20240003580/downloads/240423%20FSP%20SPW%20Final.pdf?attachment=true"
+      },
+      "lunar_presence": {
+        "label": "NASA - A Sustained Lunar Presence (NSpC report): Artemis Base Camp",
+        "url": "https://www.nasa.gov/sites/default/files/atoms/files/a_sustained_lunar_presence_nspc_report4220final.pdf"
+      },
+      "heoc_analogs": {
+        "label": "NASA Advisory Council HEO committee record (mentions DesertRATS-Lite analog in Arizona)",
+        "url": "https://www.nasa.gov/wp-content/uploads/2023/10/heoc-july-13-2022-final.pdf"
+      }
+    }
+  },
+  "experiments": [
+    {
+      "id": "MOON_WATER_ICE",
+      "body": "moon",
+      "name": "Water-ice prospecting & resource-utilization field testing",
+      "short_name": "Water ice & ISRU",
+      "purpose_id": "ISRU_WATER",
+      "what_is_tested": "Drilling, sampling and processing of ice-bearing frozen ground with sensors and hardware that must work in extreme cold.",
+      "why": "Water ice is a candidate resource for life support and propellant, so teams need cold, dry, ice-bearing ground to rehearse prospecting and extraction before flight.",
+      "environment_requirements": [
+        "Persistently cold ground",
+        "Dry surroundings (little rain)",
+        "Ice or frozen ground present",
+        "Moderate surface roughness"
+      ],
+      "applications": [
+        "Ice-coring drill trials",
+        "Subsurface ice sensing / radar surveys",
+        "Cold-soil sample handling"
+      ],
+      "nasa_documented": {
+        "level": "related",
+        "summary": "NASA lists In-Situ Resource Utilization among its analog capabilities and describes field analog sites used to test equipment for the Moon and Mars.",
+        "sources": [
+          "analog_missions",
+          "analogs"
+        ]
+      },
+      "cannot_reproduce": [
+        "Lunar permanently shadowed regions are far colder than any Earth surface",
+        "Vacuum and 1/6 g (Moon surface gravity)",
+        "Lunar ice origin, age and chemistry"
+      ]
+    },
+    {
+      "id": "MOON_ROVER_MOBILITY",
+      "body": "moon",
+      "name": "Lunar rover mobility & navigation testing",
+      "short_name": "Rover mobility",
+      "purpose_id": "MOBILITY",
+      "what_is_tested": "Slope climbing, obstacle crossing, autonomous navigation and landing-style hazard avoidance on bare, rough, rocky ground.",
+      "why": "Rovers must cross rugged, sparsely vegetated terrain with long shadows; unvegetated rough terrain on Earth lets engineers test traction and autonomy.",
+      "environment_requirements": [
+        "Rugged terrain",
+        "Little or no vegetation",
+        "Exposed rock / regolith-like ground"
+      ],
+      "applications": [
+        "Rover traverse and slope trials",
+        "Autonomous hazard-avoidance tests",
+        "Low-light navigation (dusk / dawn) tests"
+      ],
+      "nasa_documented": {
+        "level": "direct",
+        "summary": "NASA/JPL field-tested the ERNEST prototype rover in the Colorado Desert (March 2026), running at dusk, dawn and night to mimic the long shadows of the Moon's polar regions, with obstacle tests in JPL's Mars Yard.",
+        "sources": [
+          "rovers",
+          "analogs"
+        ]
+      },
+      "cannot_reproduce": [
+        "1/6 g changes wheel-soil loads and slip",
+        "Lunar regolith is sharper and more electrostatic than Earth sand",
+        "No atmosphere (dust and thermal behaviour differ)"
+      ]
+    },
+    {
+      "id": "MOON_REGOLITH_DUST",
+      "body": "moon",
+      "name": "Regolith & dust-related equipment evaluation",
+      "short_name": "Regolith & dust",
+      "purpose_id": "MOBILITY",
+      "multiplier_overrides": {
+        "D2_aridity": 1.5
+      },
+      "extra_gates": [
+        {
+          "dim": "D2_aridity",
+          "op": ">=",
+          "value": 0.4,
+          "why": "rain/humidity would invalidate dust tests (same threshold used by the POWER_THERMAL mission profile)"
+        }
+      ],
+      "draft_assumption": "ASTRANOVUS-proposed variation of the MOBILITY profile: extra weight and gate on dryness. Draft - not NASA-verified.",
+      "what_is_tested": "How seals, joints, wheels and optics behave in dry, fine, abrasive ground material.",
+      "why": "Dust and regolith wear is a documented Artemis hardware risk. Because NASA stresses that simulant composition changes the result, natural dry, barren Earth ground complements (does not replace) laboratory simulant testing.",
+      "environment_requirements": [
+        "Very dry ground",
+        "Barren surface",
+        "Exposed rock / fine mineral ground"
+      ],
+      "applications": [
+        "Seal and joint abrasion trials",
+        "Dust-contamination tests on optics and connectors",
+        "Wheel-soil interaction tests"
+      ],
+      "nasa_documented": {
+        "level": "related",
+        "summary": "NASA's lunar dust mitigation roadmap lists Taber abrasion, dust adhesion and surface-energy tests with regolith-simulant abrasive wheels as standard Artemis hardware tests, warns that results vary strongly with the simulant (lunar soil composition differs by location) and recommends more than one simulant. These are laboratory tests; NASA's sources checked do not describe testing at natural Earth sites, which is the ASTRANOVUS proposal.",
+        "sources": [
+          "dust_roadmap",
+          "simulant_testing",
+          "analogs"
+        ]
+      },
+      "cannot_reproduce": [
+        "Lunar dust is electrostatically charged and extremely abrasive",
+        "Vacuum changes dust transport",
+        "Earth air and humidity alter adhesion"
+      ]
+    },
+    {
+      "id": "MOON_POWER_THERMAL",
+      "body": "moon",
+      "name": "Power, illumination & thermal environment testing",
+      "short_name": "Power & thermal",
+      "purpose_id": "POWER_THERMAL",
+      "what_is_tested": "Solar power, batteries and hardware under strong day-night temperature swings and extreme or low-angle lighting.",
+      "why": "Surface systems must survive extreme thermal cycling and long darkness; dry, high-swing Earth sites let teams rehearse thermal-cycling and insulation tests, but cannot reproduce multi-week lunar night or vacuum.",
+      "environment_requirements": [
+        "Large day-night temperature swing",
+        "Strong seasonal light variation (high latitude)",
+        "Dry conditions"
+      ],
+      "applications": [
+        "Battery and electronics thermal cycling",
+        "Solar-array performance in low sun angle",
+        "Hardware insulation trials"
+      ],
+      "nasa_documented": {
+        "level": "indirect",
+        "summary": "NASA Fission Surface Power material documents the problem this scenario addresses: polar night temperatures of about 50-100 K, nights lasting up to ~14.5 Earth days, and battery mass limits. It describes systems and requirements, not an Earth analog field campaign; the rover test at dusk/dawn/night simulates lunar polar lighting for mobility only.",
+        "sources": [
+          "fsp",
+          "rovers"
+        ]
+      },
+      "cannot_reproduce": [
+        "Lunar day/night cycle lasts about two Earth weeks",
+        "Vacuum: no convective cooling",
+        "Lunar polar permanent shadow / near-permanent sunlight geometry"
+      ]
+    },
+    {
+      "id": "MOON_HABITAT_OPS",
+      "body": "moon",
+      "name": "Habitat & surface operations rehearsal",
+      "short_name": "Habitat & operations",
+      "purpose_id": "HABITAT",
+      "what_is_tested": "Habitat construction, regolith handling, shelter concepts and crew workflows in an isolated, harsh site.",
+      "why": "Long stays need shelters and procedures validated in remote analog environments before use.",
+      "environment_requirements": [
+        "Rocky / volcanic ground",
+        "Barren surroundings",
+        "Thermal swing"
+      ],
+      "applications": [
+        "Construction and shelter trials",
+        "Lava-tube / cave-style shelter studies",
+        "Operations rehearsal in isolation"
+      ],
+      "nasa_documented": {
+        "level": "related",
+        "summary": "NASA's Artemis Base Camp plan includes a foundation surface habitat for up to four crew and frames the base camp as a testbed for Mars-surface analog operations; NASA's analog pages describe habitat/isolation analogs (HERA, Antarctic stations) and lava-tube mapping at Lava Beds National Monument.",
+        "sources": [
+          "lunar_presence",
+          "analog_missions",
+          "analogs"
+        ]
+      },
+      "cannot_reproduce": [
+        "Radiation exposure is far higher on the Moon",
+        "1/6 g and vacuum",
+        "Micrometeoroid environment"
+      ]
+    },
+    {
+      "id": "MOON_GEO_FIELDWORK",
+      "body": "moon",
+      "name": "Geological sampling & astronaut fieldwork",
+      "short_name": "Geology fieldwork",
+      "purpose_id": "SCIENCE",
+      "what_is_tested": "Sampling procedures, field geology workflows and crew training on rocky, dry, little-vegetated terrain.",
+      "why": "Astronauts and scientists practise recognising, documenting and collecting rocks in analog terrain.",
+      "environment_requirements": [
+        "Dry climate",
+        "Exposed bedrock",
+        "Barren surface"
+      ],
+      "applications": [
+        "Sample-collection procedure rehearsal",
+        "Field geology training",
+        "Instrument testing against known geology"
+      ],
+      "nasa_documented": {
+        "level": "related",
+        "summary": "NASA's analogs page describes desert rover/geology testing and Artemis crew training at analog sites and pairs Meteor Crater with the Moon's Copernicus crater; a NASA advisory-committee record cites ground analogs such as DesertRATS-Lite in Arizona.",
+        "sources": [
+          "analogs",
+          "heoc_analogs",
+          "analog_missions"
+        ]
+      },
+      "cannot_reproduce": [
+        "Lunar rock types and ages differ from most Earth rock",
+        "No weathering or biology on the Moon",
+        "Suited operations in vacuum and 1/6 g"
+      ]
+    },
+    {
+      "id": "MARS_ROVER_MOBILITY",
+      "body": "mars",
+      "name": "Rover mobility & autonomous navigation testing",
+      "short_name": "Rover mobility",
+      "purpose_id": "MOBILITY",
+      "what_is_tested": "Driving, slope and obstacle crossing, and autonomous path planning on barren, rocky or sandy terrain.",
+      "why": "Rovers must cross unvegetated, rocky and sandy terrain; Earth analog terrain lets teams validate mobility and autonomy.",
+      "environment_requirements": [
+        "Little vegetation",
+        "Rough / mixed rocky terrain",
+        "Exposed rock or sand"
+      ],
+      "applications": [
+        "Autonomous traverse trials",
+        "Sand and rubble crossing",
+        "Slope and hazard handling"
+      ],
+      "nasa_documented": {
+        "level": "direct",
+        "summary": "NASA/JPL's ERNEST rover campaign (Colorado Desert, March 2026) tested mobility and reinforcement-learning autonomy for future Moon rovers and says it could apply to Mars; obstacle tests were run in JPL's Mars Yard.",
+        "sources": [
+          "rovers"
+        ]
+      },
+      "cannot_reproduce": [
+        "Mars gravity is about 0.38 g",
+        "Thin CO2 atmosphere (about 6 mbar)",
+        "Martian soil mechanics and dust differ from Earth sand"
+      ]
+    },
+    {
+      "id": "MARS_GEOLOGY_SAMPLING",
+      "body": "mars",
+      "name": "Geological sampling & sedimentary exploration",
+      "short_name": "Geology & sampling",
+      "purpose_id": "SCIENCE",
+      "what_is_tested": "Rock and soil sampling, stratigraphy reading and sample-caching procedures in dry, rock-exposed terrain.",
+      "why": "Mars science aims to read the planet's crustal and surface history; analog geology lets teams practise sampling and context documentation.",
+      "environment_requirements": [
+        "Dry climate",
+        "Exposed rock and sediments",
+        "Barren surface"
+      ],
+      "applications": [
+        "Sample selection and documentation drills",
+        "Stratigraphic field mapping",
+        "Instrument calibration on known geology"
+      ],
+      "nasa_documented": {
+        "level": "direct",
+        "summary": "Perseverance's stated objectives include studying Jezero Crater's geology and caching the most promising rock and soil samples; NASA's Mars science objectives include a geology goal.",
+        "sources": [
+          "perseverance",
+          "mars_science"
+        ]
+      },
+      "cannot_reproduce": [
+        "Martian rocks formed under different conditions and ages",
+        "No Earth-like biology or weathering history",
+        "Atmosphere and gravity differ"
+      ]
+    },
+    {
+      "id": "MARS_ASTROBIOLOGY",
+      "body": "mars",
+      "name": "Astrobiology & biosignature-detection instrument testing",
+      "short_name": "Astrobiology",
+      "purpose_id": "SCIENCE",
+      "what_is_tested": "Instruments and protocols that look for signs of past life in ancient, dry sedimentary or mineral settings.",
+      "why": "Searching for biosignatures needs instruments proven on real Earth rocks and soils that preserve (or lack) traces of life.",
+      "environment_requirements": [
+        "Dry climate",
+        "Exposed rock / minerals",
+        "Barren surface"
+      ],
+      "applications": [
+        "Biosignature-instrument field trials",
+        "Sampling-protocol validation",
+        "Contamination-control rehearsal"
+      ],
+      "nasa_documented": {
+        "level": "direct",
+        "summary": "Perseverance's objectives include determining whether Jezero's ancient environments were habitable and searching for signs of past microbial life; NASA's Mars science objectives include a Life and Habitability goal; NASA's analogs page cites soil sampling in Chile's Atacama Desert.",
+        "sources": [
+          "perseverance",
+          "mars_science",
+          "analogs"
+        ]
+      },
+      "shares_profile_note": "Uses the same SCIENCE mission profile as geology & sampling; the reference site you choose differentiates the ranking.",
+      "cannot_reproduce": [
+        "Earth life contaminates Earth samples in ways not present on Mars",
+        "Martian radiation and perchlorate chemistry",
+        "Different atmosphere and gravity"
+      ]
+    },
+    {
+      "id": "MARS_SUBSURFACE_ICE",
+      "body": "mars",
+      "name": "Subsurface ice exploration & resource-utilization research",
+      "short_name": "Subsurface ice & ISRU",
+      "purpose_id": "ISRU_WATER",
+      "what_is_tested": "Detecting, drilling and processing ice-rich ground in cold, dry, mid-to-high latitude terrain.",
+      "why": "Mars water ice records climate history and is a candidate resource for crews.",
+      "environment_requirements": [
+        "Cold ground",
+        "Dry surroundings",
+        "Ice or frozen ground present",
+        "Low relief"
+      ],
+      "applications": [
+        "Ice-detection (radar / geophysics) trials",
+        "Drilling and core handling in permafrost",
+        "Ice-processing hardware tests"
+      ],
+      "nasa_documented": {
+        "level": "related",
+        "summary": "NASA's Mars science objectives include an Ice, Weather and Climate goal on how near-surface water ice forms and changes; Perseverance's human-preparation objective covers producing propellant and oxygen from the Martian atmosphere (a different resource); NASA lists ISRU as an analog.",
+        "sources": [
+          "mars_science",
+          "perseverance",
+          "analog_missions"
+        ]
+      },
+      "cannot_reproduce": [
+        "Mars surface pressure (about 6 mbar) and CO2 atmosphere cause rapid ice sublimation",
+        "Ice depth, age and purity differ",
+        "Mars gravity about 0.38 g"
+      ]
+    },
+    {
+      "id": "MARS_DUST_THERMAL",
+      "body": "mars",
+      "name": "Dust, terrain & thermal equipment evaluation",
+      "short_name": "Dust & thermal",
+      "purpose_id": "POWER_THERMAL",
+      "what_is_tested": "Power and thermal hardware and dust-tolerant components under large temperature swings and dry, barren ground.",
+      "why": "Mars surface systems face dust and strong day-night temperature swings; dry high-swing analogs let teams rehearse this.",
+      "environment_requirements": [
+        "Large day-night temperature swing",
+        "Dry conditions",
+        "Barren ground"
+      ],
+      "applications": [
+        "Thermal-cycling trials",
+        "Dust-tolerance tests on power hardware",
+        "Weather and dust sensor checks"
+      ],
+      "nasa_documented": {
+        "level": "related",
+        "summary": "Perseverance's human-preparation objective includes measuring atmospheric dust and collecting surface weather data; the sources checked do not describe an Earth-analog dust/thermal campaign.",
+        "sources": [
+          "perseverance",
+          "analogs"
+        ]
+      },
+      "cannot_reproduce": [
+        "Martian dust is fine, electrostatic and wind-lofted in a 6 mbar atmosphere",
+        "Much higher UV and radiation at the surface",
+        "Different atmospheric heat transfer"
+      ]
+    },
+    {
+      "id": "MARS_CREW_OPS",
+      "body": "mars",
+      "name": "Habitat, crew operations & simulated EVA missions",
+      "short_name": "Crew operations & EVA",
+      "purpose_id": "CREW_OPS",
+      "what_is_tested": "Crew routines, simulated spacewalks, maintenance and isolation in a harsh, remote setting.",
+      "why": "Long-duration crews need operations, health and performance rehearsed in isolated analogs.",
+      "environment_requirements": [
+        "Cold or hostile climate",
+        "Barren surroundings",
+        "Dry conditions"
+      ],
+      "applications": [
+        "Simulated EVA and field-science drills",
+        "Isolation and confinement studies",
+        "Equipment-failure scenario training"
+      ],
+      "nasa_documented": {
+        "level": "direct",
+        "summary": "NASA's CHAPEA missions simulate year-long stays on Mars with a crew of four in an isolated habitat, including simulated spacewalks; NASA's analog missions page also lists Antarctic stations and HERA.",
+        "sources": [
+          "chapea",
+          "analog_missions"
+        ]
+      },
+      "cannot_reproduce": [
+        "Real communication delay and true isolation from Earth",
+        "Mars gravity, pressure and radiation",
+        "Actual suit and habitat pressure loads"
+      ]
+    }
+  ]
+}

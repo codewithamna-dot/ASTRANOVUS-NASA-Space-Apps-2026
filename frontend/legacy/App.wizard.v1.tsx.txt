@@ -1,0 +1,114 @@
+import { useEffect, useState } from "react";
+import { MapContainer, TileLayer, CircleMarker, Tooltip, useMap } from "react-leaflet";
+
+const API = import.meta.env.VITE_API_URL ?? "/api";
+
+type Purpose = { id: string; name: string; question: string; nasa_basis: string };
+type Target = { id: string; name: string; description: string };
+type Reason = { dimension: string; percentile: number; similarity: number; weight: number; source: string };
+type Region = {
+  rank: number; lat: number; lon: number; n_cells: number; best_score: number; mean_score: number;
+  coverage: number; confidence: string; why_match: Reason[]; weak_points: Reason[]; missing_data: string[]; notes: string[];
+};
+type Result = { regions: Region[]; allowed_targets: Target[]; target_info: Target; purpose: Purpose; n_cells_passed: number };
+
+const NAMES: Record<string, string> = {
+  D1_cold: "Cold", D2_aridity: "Dryness", D3_barren: "Barren ground", D4_terrain: "Terrain roughness",
+  D5_rock: "Rock / minerals", D6_ice: "Ice / frozen ground", D7_polar_light: "Light extremes", D8_thermal_swing: "Day-night swing",
+};
+const color = (s: number) => `hsl(${Math.round((s / 100) * 120)}, 85%, 42%)`;
+
+function FlyTo({ r }: { r?: Region }) {
+  const map = useMap();
+  useEffect(() => { if (r) map.flyTo([r.lat, r.lon], 4); }, [r, map]);
+  return null;
+}
+
+export default function App() {
+  const [body, setBody] = useState<"moon" | "mars" | "">("");
+  const [purposes, setPurposes] = useState<Purpose[]>([]);
+  const [purpose, setPurpose] = useState("");
+  const [target, setTarget] = useState("");
+  const [res, setRes] = useState<Result | null>(null);
+  const [sel, setSel] = useState<Region | undefined>();
+  const [err, setErr] = useState("");
+
+  useEffect(() => {
+    if (!body) return;
+    setPurpose(""); setTarget(""); setRes(null); setSel(undefined);
+    fetch(`${API}/purposes?body=${body}`).then(r => r.json()).then(setPurposes).catch(() => setErr("Backend not reachable"));
+  }, [body]);
+
+  useEffect(() => {
+    if (!body || !purpose) return;
+    setErr("");
+    const q = `body=${body}&purpose=${purpose}${target ? `&target=${target}` : ""}&top=10`;
+    fetch(`${API}/recommend?${q}`).then(r => r.ok ? r.json() : Promise.reject(r.statusText)).then((d: Result) => {
+      setRes(d); setSel(d.regions[0]); if (!target) setTarget(d.target_info.id);
+    }).catch(e => setErr(String(e)));
+  }, [body, purpose, target]);
+
+  const btn = (on: boolean) => ({ padding: "8px 12px", margin: "0 8px 8px 0", borderRadius: 8, cursor: "pointer",
+    border: on ? "2px solid #1a56db" : "1px solid #bbb", background: on ? "#e8f0fe" : "#fff" });
+
+  return (
+    <div style={{ display: "flex", height: "100vh", fontFamily: "system-ui" }}>
+      <aside style={{ width: 380, padding: 16, overflow: "auto", borderRight: "1px solid #ddd" }}>
+        <h2 style={{ margin: 0 }}>ASTRANOVUS</h2>
+        <p style={{ color: "#666", marginTop: 4 }}>Find the Earth location that best stands in for your Moon/Mars mission.</p>
+
+        <h4>1. Where is the mission going?</h4>
+        <button style={btn(body === "moon")} onClick={() => setBody("moon")}>Moon</button>
+        <button style={btn(body === "mars")} onClick={() => setBody("mars")}>Mars</button>
+
+        {body && <><h4>2. What do you want to do there?</h4>
+          {purposes.map(p => (
+            <div key={p.id} onClick={() => { setPurpose(p.id); setTarget(""); }}
+              style={{ ...btn(purpose === p.id), display: "block", marginRight: 0 }}>
+              <b>{p.name}</b><div style={{ fontSize: 12, color: "#555" }}>{p.question}</div>
+            </div>))}</>}
+
+        {res && <>
+          <h4>3. Reference site</h4>
+          <select value={target} onChange={e => setTarget(e.target.value)} style={{ width: "100%", padding: 6 }}>
+            {res.allowed_targets.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}
+          </select>
+          <p style={{ fontSize: 12, color: "#555" }}>{res.target_info.description}</p>
+          <p style={{ fontSize: 11, color: "#888" }}>NASA basis: {res.purpose.nasa_basis}</p>
+
+          <h4>Best Earth regions</h4>
+          {res.regions.length === 0 && <p>No region passed the safety gates. Try another site.</p>}
+          {res.regions.map(r => (
+            <div key={r.rank} onClick={() => setSel(r)} style={{ ...btn(sel?.rank === r.rank), display: "block", marginRight: 0 }}>
+              <b>#{r.rank} &nbsp;{r.best_score.toFixed(0)}/100</b>
+              <span style={{ float: "right", fontSize: 11 }}>{r.confidence} confidence</span>
+              <div style={{ fontSize: 12 }}>{r.lat}°, {r.lon}° &middot; {r.n_cells} cells</div>
+            </div>))}
+
+          {sel && <div style={{ background: "#f7f7f7", padding: 10, borderRadius: 8, fontSize: 13 }}>
+            <b>Why region #{sel.rank} matches</b>
+            {sel.why_match.map(w => <div key={w.dimension}>+ {NAMES[w.dimension]} ({Math.round(w.similarity * 100)}% match)
+              <div style={{ fontSize: 10, color: "#888" }}>{w.source}</div></div>)}
+            {sel.weak_points.length > 0 && <><b>Weak points</b>
+              {sel.weak_points.map(w => <div key={w.dimension}>- {NAMES[w.dimension]} ({Math.round(w.similarity * 100)}%)</div>)}</>}
+            {sel.missing_data.length > 0 && <div style={{ color: "#a15c00", marginTop: 6 }}>
+              Not yet checked: {sel.missing_data.map(d => NAMES[d]).join(", ")}</div>}
+            {sel.notes.map((n, i) => <div key={i} style={{ color: "#a15c00" }}>{n}</div>)}
+          </div>}
+        </>}
+        {err && <p style={{ color: "crimson" }}>{err}</p>}
+      </aside>
+
+      <MapContainer center={[20, 30]} zoom={2} style={{ flex: 1 }}>
+        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution="&copy; OpenStreetMap" />
+        <FlyTo r={sel} />
+        {res?.regions.map(r => (
+          <CircleMarker key={r.rank} center={[r.lat, r.lon]} radius={8 + Math.min(r.n_cells, 12)}
+            eventHandlers={{ click: () => setSel(r) }}
+            pathOptions={{ color: sel?.rank === r.rank ? "#000" : color(r.best_score), fillColor: color(r.best_score), fillOpacity: 0.65, weight: sel?.rank === r.rank ? 3 : 1 }}>
+            <Tooltip>#{r.rank}: {r.best_score.toFixed(0)}/100</Tooltip>
+          </CircleMarker>))}
+      </MapContainer>
+    </div>
+  );
+}

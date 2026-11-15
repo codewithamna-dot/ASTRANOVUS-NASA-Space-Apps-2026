@@ -1,0 +1,58 @@
+[
+  {
+    "id": "D1_cold",
+    "name": "Cold",
+    "description": "Low mean annual surface temperature",
+    "earth_source": "NASA POWER climatology (T2M) [supporting]",
+    "target_source": "Moon target value: LRO Diviner temperature maps"
+  },
+  {
+    "id": "D2_aridity",
+    "name": "Aridity",
+    "description": "Very low precipitation / water availability",
+    "earth_source": "NASA POWER climatology (precipitation) [supporting]; EMIT arid-region coverage",
+    "target_source": "Mars/Moon target: dry by definition (literature)"
+  },
+  {
+    "id": "D3_barren",
+    "name": "Barren ground",
+    "description": "Little or no vegetation",
+    "earth_source": "EMIT L2B (bare mineral surface); HLSL30 reflectance/NDVI for zoom on top candidates",
+    "target_source": "Mars target: CRISM / CTX imagery"
+  },
+  {
+    "id": "D4_terrain",
+    "name": "Terrain roughness",
+    "description": "Slope / relief within the cell",
+    "earth_source": "NASA SRTMGL30 (~1 km) and NSIDC-0422 Antarctic 1 km DEM: relief within the cell [coarse]",
+    "target_source": "Moon: LOLA DEM; Mars: MOLA via Mars Trek"
+  },
+  {
+    "id": "D5_rock",
+    "name": "Rock / regolith composition",
+    "description": "Mafic (silica-poor, basalt-like) character of bare ground; thermal-emissivity proxy. Not rock exposure, not mineral identification.",
+    "earth_source": "NASA ASTER Global Emissivity Dataset v4.1 (silicate contrast, bare ground only) [proxy]",
+    "target_source": "Mars: CRISM MTRDR mineral maps"
+  },
+  {
+    "id": "D6_ice",
+    "name": "Ice / permafrost",
+    "description": "Snow, glacier or ground-ice presence",
+    "earth_source": "MODIS MOD10CM snow cover, 2015-2024 monthly climatology [proxy: not glacier, permafrost or subsurface ice]",
+    "target_source": "Moon: Diviner polar cold-trap maps; Mars: SWIM/SHARAD (literature)"
+  },
+  {
+    "id": "D7_polar_light",
+    "name": "Seasonal light extremes",
+    "description": "Large seasonal swing in daylight (polar illumination regime)",
+    "earth_source": "NASA POWER insolation (seasonal swing) [supporting]",
+    "target_source": "Moon: LOLA illumination (literature)"
+  },
+  {
+    "id": "D8_thermal_swing",
+    "name": "Thermal swing",
+    "description": "Large day-night temperature range",
+    "earth_source": "NASA POWER day/night T range [supporting]",
+    "target_source": "Moon: LRO Diviner day/night temperatures [PRIMARY]"
+  }
+]

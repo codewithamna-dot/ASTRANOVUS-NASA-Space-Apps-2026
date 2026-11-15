@@ -1,0 +1,299 @@
+[
+  {
+    "id": "MOON_SP_RIDGE",
+    "body": "moon",
+    "name": "Lunar south-pole ridge (near Shackleton)",
+    "description": "Near-permanent sunlight on ridges, extreme cold nearby, rugged regolith. Candidate Artemis base area.",
+    "status": "core",
+    "rules": {
+      "D1_cold": {
+        "rule": "high",
+        "weight": 2
+      },
+      "D2_aridity": {
+        "rule": "high",
+        "weight": 3
+      },
+      "D3_barren": {
+        "rule": "high",
+        "weight": 3
+      },
+      "D4_terrain": {
+        "rule": "high",
+        "weight": 2
+      },
+      "D5_rock": {
+        "rule": "high",
+        "weight": 0,
+        "_reason": "Set to 0 on 2026-11-15: D5 is now a mafic (silica-poor) composition proxy; NASA sample-science planning describes the south-polar candidate sites as feldspathic highlands with South Pole-Aitken breccias, far from basaltic terrain. Earlier weight was 2."
+      },
+      "D7_polar_light": {
+        "rule": "high",
+        "weight": 3
+      },
+      "D8_thermal_swing": {
+        "rule": "high",
+        "weight": 1
+      }
+    },
+    "_note": "v0 DRAFT - Boy 2 refines from Moon/Mars Trek, LOLA, MOLA, Diviner"
+  },
+  {
+    "id": "MOON_PSR",
+    "body": "moon",
+    "name": "Permanently shadowed crater floor",
+    "description": "Never sees sunlight: extreme cold, ice-bearing regolith, flat crater floors.",
+    "status": "core",
+    "rules": {
+      "D1_cold": {
+        "rule": "high",
+        "weight": 3
+      },
+      "D2_aridity": {
+        "rule": "high",
+        "weight": 2
+      },
+      "D3_barren": {
+        "rule": "high",
+        "weight": 3
+      },
+      "D6_ice": {
+        "rule": "high",
+        "weight": 3
+      },
+      "D4_terrain": {
+        "rule": "low",
+        "weight": 2
+      },
+      "D7_polar_light": {
+        "rule": "high",
+        "weight": 0,
+        "_reason": "Set to 0 on 2026-11-15: a permanently shadowed floor receives no direct sunlight (LROC/NASA: most of Shackleton's interior is in permanent shadow), so an Earth seasonal-insolation-swing proxy cannot represent it. Earlier weight was 2."
+      }
+    },
+    "_note": "v0 DRAFT - Boy 2 refines from Moon/Mars Trek, LOLA, MOLA, Diviner"
+  },
+  {
+    "id": "MOON_LAVATUBE",
+    "body": "moon",
+    "name": "Lunar lava-tube / pit region (Mare)",
+    "description": "Basaltic volcanic plains with collapse pits; stable radiation-shielded interiors.",
+    "status": "core",
+    "rules": {
+      "D5_rock": {
+        "rule": "high",
+        "weight": 3
+      },
+      "D3_barren": {
+        "rule": "high",
+        "weight": 3
+      },
+      "D2_aridity": {
+        "rule": "high",
+        "weight": 2
+      },
+      "D4_terrain": {
+        "rule": "band",
+        "lo": 0.3,
+        "hi": 0.7,
+        "weight": 2
+      },
+      "D8_thermal_swing": {
+        "rule": "high",
+        "weight": 2,
+        "_clarification": "Applies to the SURFACE above lava tubes (large diurnal swing: Diviner ~95-100 K to ~385-400 K at the equator). Pit interiors are thermally stable (~17 C), which is why they are studied; Earth cannot reproduce either value."
+      }
+    },
+    "_note": "v0 DRAFT - Boy 2 refines from Moon/Mars Trek, LOLA, MOLA, Diviner"
+  },
+  {
+    "id": "MARS_ICE",
+    "body": "mars",
+    "name": "Mars mid-latitude ice (Arcadia/Utopia)",
+    "description": "Buried water ice at mid latitudes: cold, dry, flat plains with periglacial ground.",
+    "status": "core",
+    "rules": {
+      "D1_cold": {
+        "rule": "high",
+        "weight": 3
+      },
+      "D2_aridity": {
+        "rule": "high",
+        "weight": 2
+      },
+      "D6_ice": {
+        "rule": "high",
+        "weight": 3
+      },
+      "D4_terrain": {
+        "rule": "low",
+        "weight": 2
+      },
+      "D3_barren": {
+        "rule": "high",
+        "weight": 2
+      },
+      "D8_thermal_swing": {
+        "rule": "high",
+        "weight": 1
+      }
+    },
+    "_note": "v0 DRAFT - Boy 2 refines from Moon/Mars Trek, LOLA, MOLA, Diviner"
+  },
+  {
+    "id": "MARS_JEZERO",
+    "body": "mars",
+    "name": "Jezero crater delta",
+    "description": "Ancient river delta in a crater: dry, barren, rocky, moderate relief, strong thermal swing.",
+    "status": "core",
+    "rules": {
+      "D2_aridity": {
+        "rule": "high",
+        "weight": 3
+      },
+      "D3_barren": {
+        "rule": "high",
+        "weight": 3
+      },
+      "D5_rock": {
+        "rule": "high",
+        "weight": 2
+      },
+      "D4_terrain": {
+        "rule": "band",
+        "lo": 0.3,
+        "hi": 0.7,
+        "weight": 2
+      },
+      "D8_thermal_swing": {
+        "rule": "high",
+        "weight": 2
+      },
+      "D1_cold": {
+        "rule": "band",
+        "lo": 0.5,
+        "hi": 0.9,
+        "weight": 1
+      }
+    },
+    "_note": "v0 DRAFT - Boy 2 refines from Moon/Mars Trek, LOLA, MOLA, Diviner"
+  },
+  {
+    "id": "MARS_MUDVOLC",
+    "body": "mars",
+    "name": "Mars mud volcanoes (Acidalia/Utopia)",
+    "description": "Possible mud-volcano fields: fine sediment, low relief, dry, cold.",
+    "status": "core",
+    "rules": {
+      "D2_aridity": {
+        "rule": "high",
+        "weight": 2
+      },
+      "D3_barren": {
+        "rule": "high",
+        "weight": 2
+      },
+      "D4_terrain": {
+        "rule": "low",
+        "weight": 3
+      },
+      "D5_rock": {
+        "rule": "low",
+        "weight": 0,
+        "_reason": "Set to 0 on 2026-11-15: D5 is a bare-ground composition proxy that cannot represent fine-grained sediment/'low rock'. Earlier weight was 2."
+      },
+      "D1_cold": {
+        "rule": "high",
+        "weight": 2
+      }
+    },
+    "_note": "v0 DRAFT - Boy 2 refines from Moon/Mars Trek, LOLA, MOLA, Diviner"
+  },
+  {
+    "id": "MARS_CHLORIDE",
+    "body": "mars",
+    "name": "Mars chloride / salt deposits",
+    "description": "Dry salt flats in southern highlands.",
+    "status": "optional",
+    "rules": {
+      "D2_aridity": {
+        "rule": "high",
+        "weight": 3
+      },
+      "D3_barren": {
+        "rule": "high",
+        "weight": 3
+      },
+      "D4_terrain": {
+        "rule": "low",
+        "weight": 2
+      },
+      "D8_thermal_swing": {
+        "rule": "high",
+        "weight": 2
+      }
+    },
+    "_note": "v0 DRAFT - Boy 2 refines from Moon/Mars Trek, LOLA, MOLA, Diviner"
+  },
+  {
+    "id": "MARS_AEOLIAN",
+    "body": "mars",
+    "name": "Mars dune fields",
+    "description": "Wind-blown sand: very dry, barren, low rock exposure.",
+    "status": "optional",
+    "rules": {
+      "D2_aridity": {
+        "rule": "high",
+        "weight": 3
+      },
+      "D3_barren": {
+        "rule": "high",
+        "weight": 3
+      },
+      "D5_rock": {
+        "rule": "low",
+        "weight": 0,
+        "_reason": "Set to 0 on 2026-11-15: Martian dune sand is basaltic (olivine/pyroxene; USGS/JPL), so a 'low mafic' Earth rule (quartz-rich sand) would point the wrong way. Earlier weight was 2."
+      },
+      "D4_terrain": {
+        "rule": "low",
+        "weight": 2
+      },
+      "D8_thermal_swing": {
+        "rule": "high",
+        "weight": 2
+      }
+    },
+    "_note": "v0 DRAFT - Boy 2 refines from Moon/Mars Trek, LOLA, MOLA, Diviner"
+  },
+  {
+    "id": "MOON_MARE",
+    "body": "moon",
+    "name": "Lunar mare basalt plain",
+    "description": "Flat dark basaltic plains, good for landing.",
+    "status": "optional",
+    "rules": {
+      "D5_rock": {
+        "rule": "high",
+        "weight": 2
+      },
+      "D4_terrain": {
+        "rule": "low",
+        "weight": 3
+      },
+      "D3_barren": {
+        "rule": "high",
+        "weight": 3
+      },
+      "D2_aridity": {
+        "rule": "high",
+        "weight": 2
+      },
+      "D8_thermal_swing": {
+        "rule": "high",
+        "weight": 2
+      }
+    },
+    "_note": "v0 DRAFT - Boy 2 refines from Moon/Mars Trek, LOLA, MOLA, Diviner"
+  }
+]

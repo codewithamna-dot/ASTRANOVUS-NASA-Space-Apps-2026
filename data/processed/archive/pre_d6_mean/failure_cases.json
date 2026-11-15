@@ -1,0 +1,1384 @@
+{
+ "all_pairs": [
+  {
+   "site": "atacama",
+   "name": "Atacama Desert, Chile",
+   "cohort": "A_historical",
+   "target": "MARS_JEZERO",
+   "exploratory": false,
+   "strength": "strong",
+   "verification": "primary_fetched",
+   "dist_deg": 0.73,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.979,
+   "coverage": 1.0,
+   "cell": [
+    -23.75,
+    -68.75
+   ],
+   "relief_1km_m": 3513,
+   "elevation_m": 2849,
+   "dimensions": [
+    {
+     "dimension": "D2_aridity",
+     "weight": 3,
+     "similarity": 0.99
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 3,
+     "similarity": 0.99
+    },
+    {
+     "dimension": "D5_rock",
+     "weight": 2,
+     "similarity": 0.62
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 2,
+     "similarity": 0.42
+    },
+    {
+     "dimension": "D8_thermal_swing",
+     "weight": 2,
+     "similarity": 1.0
+    },
+    {
+     "dimension": "D1_cold",
+     "weight": 1,
+     "similarity": 0.62
+    }
+   ],
+   "missing": {}
+  },
+  {
+   "site": "atacama",
+   "name": "Atacama Desert, Chile",
+   "cohort": "A_historical",
+   "target": "MARS_CHLORIDE",
+   "exploratory": false,
+   "strength": "strong",
+   "verification": "primary_fetched",
+   "dist_deg": 0.73,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.925,
+   "coverage": 1.0,
+   "cell": [
+    -23.75,
+    -68.75
+   ],
+   "relief_1km_m": 3513,
+   "elevation_m": 2849,
+   "dimensions": [
+    {
+     "dimension": "D2_aridity",
+     "weight": 3,
+     "similarity": 0.99
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 3,
+     "similarity": 0.99
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 2,
+     "similarity": 0.01
+    },
+    {
+     "dimension": "D8_thermal_swing",
+     "weight": 2,
+     "similarity": 1.0
+    }
+   ],
+   "missing": {}
+  },
+  {
+   "site": "devon_haughton",
+   "name": "Devon Island / Haughton crater, Canada",
+   "cohort": "A_historical",
+   "target": "MARS_ICE",
+   "exploratory": false,
+   "strength": "strong",
+   "verification": "search_summary_or_unverified",
+   "dist_deg": 0.92,
+   "in_grid": true,
+   "screening_scope": "partial_environmental_assessment",
+   "percentile": 0.989,
+   "coverage": 1.0,
+   "cell": [
+    76.25,
+    -91.25
+   ],
+   "relief_1km_m": 313,
+   "elevation_m": 114,
+   "dimensions": [
+    {
+     "dimension": "D1_cold",
+     "weight": 3,
+     "similarity": 0.69
+    },
+    {
+     "dimension": "D2_aridity",
+     "weight": 2,
+     "similarity": 0.59
+    },
+    {
+     "dimension": "D6_ice",
+     "weight": 3,
+     "similarity": 0.81
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 2,
+     "similarity": 0.59
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 2,
+     "similarity": 0.87
+    },
+    {
+     "dimension": "D8_thermal_swing",
+     "weight": 1,
+     "similarity": 0.25
+    }
+   ],
+   "missing": {}
+  },
+  {
+   "site": "lava_beds",
+   "name": "Lava Beds National Monument, USA",
+   "cohort": "A_historical",
+   "target": "MOON_LAVATUBE",
+   "exploratory": false,
+   "strength": "strong",
+   "verification": "primary_fetched",
+   "dist_deg": 0.49,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.59,
+   "coverage": 0.75,
+   "cell": [
+    41.25,
+    -121.25
+   ],
+   "relief_1km_m": 1706,
+   "elevation_m": 1400,
+   "dimensions": [
+    {
+     "dimension": "D5_rock",
+     "weight": 3,
+     "similarity": null
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 3,
+     "similarity": 0.69
+    },
+    {
+     "dimension": "D2_aridity",
+     "weight": 2,
+     "similarity": 0.31
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 2,
+     "similarity": 0.57
+    },
+    {
+     "dimension": "D8_thermal_swing",
+     "weight": 2,
+     "similarity": 0.81
+    }
+   ],
+   "missing": {
+    "D5_rock": "vegetated: the composition proxy only applies to bare ground"
+   }
+  },
+  {
+   "site": "kilauea",
+   "name": "Kilauea volcano, Hawaii, USA",
+   "cohort": "A_historical",
+   "target": "MOON_LAVATUBE",
+   "exploratory": false,
+   "strength": "moderate",
+   "verification": "primary_fetched",
+   "dist_deg": 34.24,
+   "in_grid": false,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": null,
+   "reason_code": "outside_land_grid",
+   "note": "island/coastal site: nearest land cell too far"
+  },
+  {
+   "site": "iceland",
+   "name": "Icelandic volcanic fields",
+   "cohort": "A_historical",
+   "target": "MOON_LAVATUBE",
+   "exploratory": false,
+   "strength": "moderate",
+   "verification": "search_summary_or_unverified",
+   "dist_deg": 1.27,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.495,
+   "coverage": 0.75,
+   "cell": [
+    63.75,
+    -18.75
+   ],
+   "relief_1km_m": 1218,
+   "elevation_m": 390,
+   "dimensions": [
+    {
+     "dimension": "D5_rock",
+     "weight": 3,
+     "similarity": null
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 3,
+     "similarity": 0.8
+    },
+    {
+     "dimension": "D2_aridity",
+     "weight": 2,
+     "similarity": 0.02
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 2,
+     "similarity": 0.74
+    },
+    {
+     "dimension": "D8_thermal_swing",
+     "weight": 2,
+     "similarity": 0.55
+    }
+   ],
+   "missing": {
+    "D5_rock": "vegetated: the composition proxy only applies to bare ground"
+   }
+  },
+  {
+   "site": "death_valley",
+   "name": "Death Valley, USA",
+   "cohort": "A_historical",
+   "target": "MARS_CHLORIDE",
+   "exploratory": false,
+   "strength": "weak",
+   "verification": "primary_fetched",
+   "dist_deg": 0.73,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.828,
+   "coverage": 1.0,
+   "cell": [
+    36.25,
+    -116.25
+   ],
+   "relief_1km_m": 1629,
+   "elevation_m": 1109,
+   "dimensions": [
+    {
+     "dimension": "D2_aridity",
+     "weight": 3,
+     "similarity": 0.71
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 3,
+     "similarity": 0.89
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 2,
+     "similarity": 0.09
+    },
+    {
+     "dimension": "D8_thermal_swing",
+     "weight": 2,
+     "similarity": 0.95
+    }
+   ],
+   "missing": {}
+  },
+  {
+   "site": "death_valley",
+   "name": "Death Valley, USA",
+   "cohort": "A_historical",
+   "target": "MARS_JEZERO",
+   "exploratory": false,
+   "strength": "weak",
+   "verification": "primary_fetched",
+   "dist_deg": 0.73,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.906,
+   "coverage": 1.0,
+   "cell": [
+    36.25,
+    -116.25
+   ],
+   "relief_1km_m": 1629,
+   "elevation_m": 1109,
+   "dimensions": [
+    {
+     "dimension": "D2_aridity",
+     "weight": 3,
+     "similarity": 0.71
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 3,
+     "similarity": 0.89
+    },
+    {
+     "dimension": "D5_rock",
+     "weight": 2,
+     "similarity": 0.77
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 2,
+     "similarity": 0.59
+    },
+    {
+     "dimension": "D8_thermal_swing",
+     "weight": 2,
+     "similarity": 0.95
+    },
+    {
+     "dimension": "D1_cold",
+     "weight": 1,
+     "similarity": 0.53
+    }
+   ],
+   "missing": {}
+  },
+  {
+   "site": "colorado_desert",
+   "name": "Colorado Desert, California, USA",
+   "cohort": "A_historical",
+   "target": "MOON_MARE",
+   "exploratory": false,
+   "strength": "weak",
+   "verification": "search_summary_or_unverified",
+   "dist_deg": 0.84,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.77,
+   "coverage": 1.0,
+   "cell": [
+    33.75,
+    -116.25
+   ],
+   "relief_1km_m": 1457,
+   "elevation_m": 599,
+   "dimensions": [
+    {
+     "dimension": "D5_rock",
+     "weight": 2,
+     "similarity": 0.65
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 3,
+     "similarity": 0.12
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 3,
+     "similarity": 0.82
+    },
+    {
+     "dimension": "D2_aridity",
+     "weight": 2,
+     "similarity": 0.73
+    },
+    {
+     "dimension": "D8_thermal_swing",
+     "weight": 2,
+     "similarity": 0.93
+    }
+   ],
+   "missing": {}
+  },
+  {
+   "site": "colorado_desert",
+   "name": "Colorado Desert, California, USA",
+   "cohort": "A_historical",
+   "target": "MARS_JEZERO",
+   "exploratory": false,
+   "strength": "weak",
+   "verification": "search_summary_or_unverified",
+   "dist_deg": 0.84,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.876,
+   "coverage": 1.0,
+   "cell": [
+    33.75,
+    -116.25
+   ],
+   "relief_1km_m": 1457,
+   "elevation_m": 599,
+   "dimensions": [
+    {
+     "dimension": "D2_aridity",
+     "weight": 3,
+     "similarity": 0.73
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 3,
+     "similarity": 0.82
+    },
+    {
+     "dimension": "D5_rock",
+     "weight": 2,
+     "similarity": 0.65
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 2,
+     "similarity": 0.64
+    },
+    {
+     "dimension": "D8_thermal_swing",
+     "weight": 2,
+     "similarity": 0.93
+    },
+    {
+     "dimension": "D1_cold",
+     "weight": 1,
+     "similarity": 0.52
+    }
+   ],
+   "missing": {}
+  },
+  {
+   "site": "mcmurdo_dry_valleys",
+   "name": "McMurdo Dry Valleys, Antarctica",
+   "cohort": "A_historical",
+   "target": "MARS_ICE",
+   "exploratory": false,
+   "strength": "strong",
+   "verification": "search_summary_or_unverified",
+   "dist_deg": 1.28,
+   "in_grid": true,
+   "screening_scope": "partial_environmental_assessment",
+   "percentile": null,
+   "reason_code": "unrankable_exposed_surface_rule",
+   "note": "snow/ice-covered surface: MODIS flags vegetation-index pixels as snow/ice, so barren ground is undefined"
+  },
+  {
+   "site": "svalbard",
+   "name": "Svalbard, Norway (AMASE)",
+   "cohort": "A_historical",
+   "target": "MARS_JEZERO",
+   "exploratory": false,
+   "strength": "moderate",
+   "verification": "search_summary_or_unverified",
+   "dist_deg": 0.57,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.57,
+   "coverage": 0.846,
+   "cell": [
+    78.75,
+    16.25
+   ],
+   "relief_1km_m": 1000,
+   "elevation_m": 376,
+   "dimensions": [
+    {
+     "dimension": "D2_aridity",
+     "weight": 3,
+     "similarity": 0.3
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 3,
+     "similarity": 0.83
+    },
+    {
+     "dimension": "D5_rock",
+     "weight": 2,
+     "similarity": null
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 2,
+     "similarity": 0.87
+    },
+    {
+     "dimension": "D8_thermal_swing",
+     "weight": 2,
+     "similarity": 0.21
+    },
+    {
+     "dimension": "D1_cold",
+     "weight": 1,
+     "similarity": 1.0
+    }
+   ],
+   "missing": {
+    "D5_rock": "vegetated: the composition proxy only applies to bare ground"
+   }
+  },
+  {
+   "site": "craters_of_the_moon",
+   "name": "Craters of the Moon National Monument, Idaho, USA",
+   "cohort": "A_historical",
+   "target": "MOON_MARE",
+   "exploratory": false,
+   "strength": "moderate",
+   "verification": "search_summary_or_unverified",
+   "dist_deg": 0.58,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.543,
+   "coverage": 0.833,
+   "cell": [
+    43.75,
+    -113.75
+   ],
+   "relief_1km_m": 1571,
+   "elevation_m": 1881,
+   "dimensions": [
+    {
+     "dimension": "D5_rock",
+     "weight": 2,
+     "similarity": null
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 3,
+     "similarity": 0.1
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 3,
+     "similarity": 0.75
+    },
+    {
+     "dimension": "D2_aridity",
+     "weight": 2,
+     "similarity": 0.45
+    },
+    {
+     "dimension": "D8_thermal_swing",
+     "weight": 2,
+     "similarity": 0.84
+    }
+   ],
+   "missing": {
+    "D5_rock": "vegetated: the composition proxy only applies to bare ground"
+   }
+  },
+  {
+   "site": "craters_of_the_moon",
+   "name": "Craters of the Moon National Monument, Idaho, USA",
+   "cohort": "A_historical",
+   "target": "MOON_LAVATUBE",
+   "exploratory": false,
+   "strength": "moderate",
+   "verification": "search_summary_or_unverified",
+   "dist_deg": 0.58,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.71,
+   "coverage": 0.75,
+   "cell": [
+    43.75,
+    -113.75
+   ],
+   "relief_1km_m": 1571,
+   "elevation_m": 1881,
+   "dimensions": [
+    {
+     "dimension": "D5_rock",
+     "weight": 3,
+     "similarity": null
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 3,
+     "similarity": 0.75
+    },
+    {
+     "dimension": "D2_aridity",
+     "weight": 2,
+     "similarity": 0.45
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 2,
+     "similarity": 0.6
+    },
+    {
+     "dimension": "D8_thermal_swing",
+     "weight": 2,
+     "similarity": 0.84
+    }
+   ],
+   "missing": {
+    "D5_rock": "vegetated: the composition proxy only applies to bare ground"
+   }
+  },
+  {
+   "site": "mdrs_utah",
+   "name": "Mars Desert Research Station area (San Rafael Swell), Utah, USA",
+   "cohort": "A_historical",
+   "target": "MARS_JEZERO",
+   "exploratory": false,
+   "strength": "moderate",
+   "verification": "search_summary_or_unverified",
+   "dist_deg": 0.5,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.806,
+   "coverage": 0.846,
+   "cell": [
+    38.75,
+    -111.25
+   ],
+   "relief_1km_m": 1512,
+   "elevation_m": 2000,
+   "dimensions": [
+    {
+     "dimension": "D2_aridity",
+     "weight": 3,
+     "similarity": 0.59
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 3,
+     "similarity": 0.8
+    },
+    {
+     "dimension": "D5_rock",
+     "weight": 2,
+     "similarity": null
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 2,
+     "similarity": 0.62
+    },
+    {
+     "dimension": "D8_thermal_swing",
+     "weight": 2,
+     "similarity": 0.89
+    },
+    {
+     "dimension": "D1_cold",
+     "weight": 1,
+     "similarity": 0.78
+    }
+   ],
+   "missing": {
+    "D5_rock": "vegetated: the composition proxy only applies to bare ground"
+   }
+  },
+  {
+   "site": "gobustan_azerbaijan",
+   "name": "Gobustan / Caspian mud-volcano province",
+   "cohort": "C_frozen_independent",
+   "target": "MARS_MUDVOLC",
+   "exploratory": false,
+   "strength": "strong",
+   "verification": "primary_fetched",
+   "dist_deg": 1.25,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.332,
+   "coverage": 1.0,
+   "cell": [
+    41.25,
+    48.75
+   ],
+   "relief_1km_m": 2154,
+   "elevation_m": 420,
+   "dimensions": [
+    {
+     "dimension": "D2_aridity",
+     "weight": 2,
+     "similarity": 0.57
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 2,
+     "similarity": 0.72
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 3,
+     "similarity": 0.05
+    },
+    {
+     "dimension": "D1_cold",
+     "weight": 2,
+     "similarity": 0.3
+    }
+   ],
+   "missing": {}
+  },
+  {
+   "site": "lanzarote_corona",
+   "name": "Corona lava tube, Lanzarote",
+   "cohort": "B_development",
+   "target": "MOON_LAVATUBE",
+   "exploratory": false,
+   "strength": "strong",
+   "verification": "search_summary",
+   "dist_deg": 2.81,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.913,
+   "coverage": 1.0,
+   "cell": [
+    26.25,
+    -13.75
+   ],
+   "relief_1km_m": 273,
+   "elevation_m": 103,
+   "dimensions": [
+    {
+     "dimension": "D5_rock",
+     "weight": 3,
+     "similarity": 0.32
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 3,
+     "similarity": 0.97
+    },
+    {
+     "dimension": "D2_aridity",
+     "weight": 2,
+     "similarity": 0.77
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 2,
+     "similarity": 1.0
+    },
+    {
+     "dimension": "D8_thermal_swing",
+     "weight": 2,
+     "similarity": 0.88
+    }
+   ],
+   "missing": {}
+  },
+  {
+   "site": "qaidam_dalangtan",
+   "name": "Dalangtan playa, Qaidam Basin",
+   "cohort": "C_frozen_independent",
+   "target": "MARS_CHLORIDE",
+   "exploratory": false,
+   "strength": "strong",
+   "verification": "primary_fetched",
+   "dist_deg": 0.45,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.896,
+   "coverage": 1.0,
+   "cell": [
+    38.75,
+    91.25
+   ],
+   "relief_1km_m": 3143,
+   "elevation_m": 2636,
+   "dimensions": [
+    {
+     "dimension": "D2_aridity",
+     "weight": 3,
+     "similarity": 0.87
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 3,
+     "similarity": 1.0
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 2,
+     "similarity": 0.02
+    },
+    {
+     "dimension": "D8_thermal_swing",
+     "weight": 2,
+     "similarity": 1.0
+    }
+   ],
+   "missing": {}
+  },
+  {
+   "site": "qaidam_dalangtan",
+   "name": "Dalangtan playa, Qaidam Basin",
+   "cohort": "C_frozen_independent",
+   "target": "MARS_AEOLIAN",
+   "exploratory": true,
+   "strength": "strong",
+   "verification": "primary_fetched",
+   "dist_deg": 0.45,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.896,
+   "coverage": 1.0,
+   "cell": [
+    38.75,
+    91.25
+   ],
+   "relief_1km_m": 3143,
+   "elevation_m": 2636,
+   "dimensions": [
+    {
+     "dimension": "D2_aridity",
+     "weight": 3,
+     "similarity": 0.87
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 3,
+     "similarity": 1.0
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 2,
+     "similarity": 0.02
+    },
+    {
+     "dimension": "D8_thermal_swing",
+     "weight": 2,
+     "similarity": 1.0
+    }
+   ],
+   "missing": {}
+  },
+  {
+   "site": "white_sands_nm",
+   "name": "White Sands gypsum dune field",
+   "cohort": "C_frozen_independent",
+   "target": "MARS_AEOLIAN",
+   "exploratory": false,
+   "strength": "strong",
+   "verification": "search_summary",
+   "dist_deg": 0.95,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.798,
+   "coverage": 1.0,
+   "cell": [
+    33.75,
+    -106.25
+   ],
+   "relief_1km_m": 1063,
+   "elevation_m": 1747,
+   "dimensions": [
+    {
+     "dimension": "D2_aridity",
+     "weight": 3,
+     "similarity": 0.59
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 3,
+     "similarity": 0.82
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 2,
+     "similarity": 0.21
+    },
+    {
+     "dimension": "D8_thermal_swing",
+     "weight": 2,
+     "similarity": 0.98
+    }
+   ],
+   "missing": {}
+  },
+  {
+   "site": "jingpo_lake",
+   "name": "Jingpo Lake volcanic field",
+   "cohort": "B_development",
+   "target": "MOON_LAVATUBE",
+   "exploratory": true,
+   "strength": "weak",
+   "verification": "search_summary",
+   "dist_deg": 0.18,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.233,
+   "coverage": 0.75,
+   "cell": [
+    43.75,
+    128.75
+   ],
+   "relief_1km_m": 747,
+   "elevation_m": 569,
+   "dimensions": [
+    {
+     "dimension": "D5_rock",
+     "weight": 3,
+     "similarity": null
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 3,
+     "similarity": 0.01
+    },
+    {
+     "dimension": "D2_aridity",
+     "weight": 2,
+     "similarity": 0.33
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 2,
+     "similarity": 1.0
+    },
+    {
+     "dimension": "D8_thermal_swing",
+     "weight": 2,
+     "similarity": 0.6
+    }
+   ],
+   "missing": {
+    "D5_rock": "vegetated: the composition proxy only applies to bare ground"
+   }
+  },
+  {
+   "site": "jingpo_lake",
+   "name": "Jingpo Lake volcanic field",
+   "cohort": "B_development",
+   "target": "MOON_MARE",
+   "exploratory": true,
+   "strength": "weak",
+   "verification": "search_summary",
+   "dist_deg": 0.18,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.089,
+   "coverage": 0.833,
+   "cell": [
+    43.75,
+    128.75
+   ],
+   "relief_1km_m": 747,
+   "elevation_m": 569,
+   "dimensions": [
+    {
+     "dimension": "D5_rock",
+     "weight": 2,
+     "similarity": null
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 3,
+     "similarity": 0.32
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 3,
+     "similarity": 0.01
+    },
+    {
+     "dimension": "D2_aridity",
+     "weight": 2,
+     "similarity": 0.33
+    },
+    {
+     "dimension": "D8_thermal_swing",
+     "weight": 2,
+     "similarity": 0.6
+    }
+   ],
+   "missing": {
+    "D5_rock": "vegetated: the composition proxy only applies to bare ground"
+   }
+  },
+  {
+   "site": "jeju_manjanggul",
+   "name": "Manjanggul lava tube, Jeju",
+   "cohort": "C_frozen_independent",
+   "target": "MOON_LAVATUBE",
+   "exploratory": true,
+   "strength": "weak",
+   "verification": "search_summary",
+   "dist_deg": 3.17,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.181,
+   "coverage": 0.75,
+   "cell": [
+    36.25,
+    128.75
+   ],
+   "relief_1km_m": 753,
+   "elevation_m": 233,
+   "dimensions": [
+    {
+     "dimension": "D5_rock",
+     "weight": 3,
+     "similarity": null
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 3,
+     "similarity": 0.11
+    },
+    {
+     "dimension": "D2_aridity",
+     "weight": 2,
+     "similarity": 0.12
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 2,
+     "similarity": 1.0
+    },
+    {
+     "dimension": "D8_thermal_swing",
+     "weight": 2,
+     "similarity": 0.52
+    }
+   ],
+   "missing": {
+    "D5_rock": "vegetated: the composition proxy only applies to bare ground"
+   }
+  },
+  {
+   "site": "black_point_flow",
+   "name": "Black Point lava flow, San Francisco Volcanic Field",
+   "cohort": "B_development",
+   "target": "MOON_MARE",
+   "exploratory": true,
+   "strength": "weak",
+   "verification": "primary_fetched",
+   "dist_deg": 0.68,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.804,
+   "coverage": 1.0,
+   "cell": [
+    36.25,
+    -111.25
+   ],
+   "relief_1km_m": 964,
+   "elevation_m": 1766,
+   "dimensions": [
+    {
+     "dimension": "D5_rock",
+     "weight": 2,
+     "similarity": 0.6
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 3,
+     "similarity": 0.24
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 3,
+     "similarity": 0.85
+    },
+    {
+     "dimension": "D2_aridity",
+     "weight": 2,
+     "similarity": 0.63
+    },
+    {
+     "dimension": "D8_thermal_swing",
+     "weight": 2,
+     "similarity": 0.97
+    }
+   ],
+   "missing": {}
+  }
+ ],
+ "low_ranked_or_unrankable": [
+  {
+   "site": "kilauea",
+   "name": "Kilauea volcano, Hawaii, USA",
+   "cohort": "A_historical",
+   "target": "MOON_LAVATUBE",
+   "exploratory": false,
+   "strength": "moderate",
+   "verification": "primary_fetched",
+   "dist_deg": 34.24,
+   "in_grid": false,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": null,
+   "reason_code": "outside_land_grid",
+   "note": "island/coastal site: nearest land cell too far"
+  },
+  {
+   "site": "iceland",
+   "name": "Icelandic volcanic fields",
+   "cohort": "A_historical",
+   "target": "MOON_LAVATUBE",
+   "exploratory": false,
+   "strength": "moderate",
+   "verification": "search_summary_or_unverified",
+   "dist_deg": 1.27,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.495,
+   "coverage": 0.75,
+   "cell": [
+    63.75,
+    -18.75
+   ],
+   "relief_1km_m": 1218,
+   "elevation_m": 390,
+   "dimensions": [
+    {
+     "dimension": "D5_rock",
+     "weight": 3,
+     "similarity": null
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 3,
+     "similarity": 0.8
+    },
+    {
+     "dimension": "D2_aridity",
+     "weight": 2,
+     "similarity": 0.02
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 2,
+     "similarity": 0.74
+    },
+    {
+     "dimension": "D8_thermal_swing",
+     "weight": 2,
+     "similarity": 0.55
+    }
+   ],
+   "missing": {
+    "D5_rock": "vegetated: the composition proxy only applies to bare ground"
+   }
+  },
+  {
+   "site": "mcmurdo_dry_valleys",
+   "name": "McMurdo Dry Valleys, Antarctica",
+   "cohort": "A_historical",
+   "target": "MARS_ICE",
+   "exploratory": false,
+   "strength": "strong",
+   "verification": "search_summary_or_unverified",
+   "dist_deg": 1.28,
+   "in_grid": true,
+   "screening_scope": "partial_environmental_assessment",
+   "percentile": null,
+   "reason_code": "unrankable_exposed_surface_rule",
+   "note": "snow/ice-covered surface: MODIS flags vegetation-index pixels as snow/ice, so barren ground is undefined"
+  },
+  {
+   "site": "gobustan_azerbaijan",
+   "name": "Gobustan / Caspian mud-volcano province",
+   "cohort": "C_frozen_independent",
+   "target": "MARS_MUDVOLC",
+   "exploratory": false,
+   "strength": "strong",
+   "verification": "primary_fetched",
+   "dist_deg": 1.25,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.332,
+   "coverage": 1.0,
+   "cell": [
+    41.25,
+    48.75
+   ],
+   "relief_1km_m": 2154,
+   "elevation_m": 420,
+   "dimensions": [
+    {
+     "dimension": "D2_aridity",
+     "weight": 2,
+     "similarity": 0.57
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 2,
+     "similarity": 0.72
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 3,
+     "similarity": 0.05
+    },
+    {
+     "dimension": "D1_cold",
+     "weight": 2,
+     "similarity": 0.3
+    }
+   ],
+   "missing": {}
+  },
+  {
+   "site": "jingpo_lake",
+   "name": "Jingpo Lake volcanic field",
+   "cohort": "B_development",
+   "target": "MOON_LAVATUBE",
+   "exploratory": true,
+   "strength": "weak",
+   "verification": "search_summary",
+   "dist_deg": 0.18,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.233,
+   "coverage": 0.75,
+   "cell": [
+    43.75,
+    128.75
+   ],
+   "relief_1km_m": 747,
+   "elevation_m": 569,
+   "dimensions": [
+    {
+     "dimension": "D5_rock",
+     "weight": 3,
+     "similarity": null
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 3,
+     "similarity": 0.01
+    },
+    {
+     "dimension": "D2_aridity",
+     "weight": 2,
+     "similarity": 0.33
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 2,
+     "similarity": 1.0
+    },
+    {
+     "dimension": "D8_thermal_swing",
+     "weight": 2,
+     "similarity": 0.6
+    }
+   ],
+   "missing": {
+    "D5_rock": "vegetated: the composition proxy only applies to bare ground"
+   }
+  },
+  {
+   "site": "jingpo_lake",
+   "name": "Jingpo Lake volcanic field",
+   "cohort": "B_development",
+   "target": "MOON_MARE",
+   "exploratory": true,
+   "strength": "weak",
+   "verification": "search_summary",
+   "dist_deg": 0.18,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.089,
+   "coverage": 0.833,
+   "cell": [
+    43.75,
+    128.75
+   ],
+   "relief_1km_m": 747,
+   "elevation_m": 569,
+   "dimensions": [
+    {
+     "dimension": "D5_rock",
+     "weight": 2,
+     "similarity": null
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 3,
+     "similarity": 0.32
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 3,
+     "similarity": 0.01
+    },
+    {
+     "dimension": "D2_aridity",
+     "weight": 2,
+     "similarity": 0.33
+    },
+    {
+     "dimension": "D8_thermal_swing",
+     "weight": 2,
+     "similarity": 0.6
+    }
+   ],
+   "missing": {
+    "D5_rock": "vegetated: the composition proxy only applies to bare ground"
+   }
+  },
+  {
+   "site": "jeju_manjanggul",
+   "name": "Manjanggul lava tube, Jeju",
+   "cohort": "C_frozen_independent",
+   "target": "MOON_LAVATUBE",
+   "exploratory": true,
+   "strength": "weak",
+   "verification": "search_summary",
+   "dist_deg": 3.17,
+   "in_grid": true,
+   "screening_scope": "climate_terrain_similarity_only",
+   "percentile": 0.181,
+   "coverage": 0.75,
+   "cell": [
+    36.25,
+    128.75
+   ],
+   "relief_1km_m": 753,
+   "elevation_m": 233,
+   "dimensions": [
+    {
+     "dimension": "D5_rock",
+     "weight": 3,
+     "similarity": null
+    },
+    {
+     "dimension": "D3_barren",
+     "weight": 3,
+     "similarity": 0.11
+    },
+    {
+     "dimension": "D2_aridity",
+     "weight": 2,
+     "similarity": 0.12
+    },
+    {
+     "dimension": "D4_terrain",
+     "weight": 2,
+     "similarity": 1.0
+    },
+    {
+     "dimension": "D8_thermal_swing",
+     "weight": 2,
+     "similarity": 0.52
+    }
+   ],
+   "missing": {
+    "D5_rock": "vegetated: the composition proxy only applies to bare ground"
+   }
+  }
+ ],
+ "note": "explains results; not used to tune anything"
+}
