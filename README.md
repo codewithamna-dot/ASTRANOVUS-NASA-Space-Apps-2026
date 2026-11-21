@@ -7,6 +7,39 @@ You choose **Moon or Mars → an experiment you want to test → a compatible pl
 Python engine ranks the Earth regions that best fit that purpose, showing the NASA data behind every number, what is
 missing, and what Earth cannot reproduce.
 
+## 🛠️ Tech Stack
+
+### Frontend
+
+![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+
+### Backend
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+
+### Maps & 3D Visualization
+
+![Leaflet](https://img.shields.io/badge/Leaflet-199900?style=for-the-badge&logo=leaflet&logoColor=white)
+![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=threedotjs&logoColor=white)
+
+### Scientific Data & Research
+
+![NASA](https://img.shields.io/badge/NASA_Datasets-0B3D91?style=for-the-badge&logo=nasa&logoColor=white)
+![MODIS](https://img.shields.io/badge/MODIS-Satellite_Data-386CB0?style=for-the-badge)
+![NASA POWER](https://img.shields.io/badge/NASA_POWER-Research_Data-154C79?style=for-the-badge)
+
+### Testing & Development
+
+![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+
+
 ## Architecture
 ```
 NASA POWER + MODIS (MOD11C3, MOD13C2, MOD10CM) + GPM IMERG  --scripts/build_earth_grid.py-->  data/processed/earth_grid.csv (+ features, metadata)
